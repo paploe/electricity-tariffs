@@ -1,4 +1,4 @@
-# Swiss Electricity Tariffs
+# Swiss Electricity Tariffs - Scraper
 
 # API documentation
 
