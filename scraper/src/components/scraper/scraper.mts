@@ -3,6 +3,7 @@ import * as fsPromises from "fs/promises";
 import * as fs from "fs";
 import * as path from "path";
 import axios from "axios";
+import pLimit from "p-limit";
 
 async function downloadPDF(outputPath, url) {
   try {
@@ -57,7 +58,14 @@ async function scrapePDF(operatorId: number, year) {
     await page.goto(url, { waitUntil: "networkidle2" });
 
     // Wait for the page to load and ensure the button exists
-    await page.waitForSelector("h4", { timeout: 10000 });
+    await page.waitForFunction(
+        (year) => {
+          const anchorElements = Array.from(document.querySelectorAll('a'));
+          return anchorElements.some(el => el.innerText === `Tarifblatt ${year} (PDF-Datei)`);
+        },
+        { timeout: 10000 },  // Optional timeout
+        year  // Argument to pass to the function inside the browser context
+    );
     pdfDownloadURL = await page.evaluate((year) => {
       return Array.from(document.querySelectorAll("a")).filter(
         (el) => el.innerText === `Tarifblatt ${year} (PDF-Datei)`,
@@ -90,12 +98,20 @@ async function scrapePDF(operatorId: number, year) {
     if (browser) {
       await browser.close(); // Ensure browser is closed even on error
     }
-    return {
-      pdfDownloadURLFilePath,
-      pdfDownloadURL,
-      pdfFilePath,
-    };
   }
+  return {
+    pdfDownloadURLFilePath,
+    pdfDownloadURL,
+    pdfFilePath,
+  };
 }
 
-export { scrapePDF };
+async function scrapePDFBatch(operatorIdArray, year, maxConcurrent = 1) {
+  const limit = pLimit(maxConcurrent);
+  const limitInput = operatorIdArray.map((operatorId) => {
+    return limit(() => scrapePDF(operatorId, year));
+  });
+  return Promise.all(limitInput);
+}
+
+export { scrapePDF, scrapePDFBatch };

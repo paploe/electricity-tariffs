@@ -8,5 +8,5 @@ export default defineConfig(({ mode }) => ({
       provider: "v8", // 'istanbul' 'v8'
     },
     env: loadEnv(mode, process.cwd(), ""),
-  },
+  }
 }));
