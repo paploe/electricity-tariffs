@@ -3,17 +3,6 @@
   "title": "Schema für Netzbetreiber",
   "type": "object",
   "definitions": {
-    "Einheit": {
-      "type": "string",
-      "enum": [
-        "CHF/Monat",
-        "CHF/Jahr",
-        "Rp./kWh",
-        "CHF/kW/Monat",
-        "Rp./kVarh",
-        "weitere"
-      ]
-    },
     "Komponente": {
       "type": "object",
       "properties": {
@@ -27,13 +16,13 @@
           "$ref": "#/definitions/Einheit"
         },
         "Unterkategorie": {
-          "type": "string"
+          "$ref": "#/definitions/Unterkategorie"
         },
         "Menge": {
           "type": "string"
         },
         "Tariftyp": {
-          "type": "string"
+          "$ref": "#/definitions/Tariftyp"
         },
         "Tarifzeiten": {
           "type": "string"
@@ -67,12 +56,50 @@
         "weitere"
       ]
     },
+    "Einheit": {
+      "type": "string",
+      "enum": [
+        "CHF/Monat",
+        "CHF/Jahr",
+        "Rp./kWh",
+        "CHF/kW/Monat",
+        "Rp./kVarh",
+        "weitere"
+      ]
+    },
     "Kategorie": {
       "type": "string",
       "enum": [
         "Energie",
         "Netznutzung",
         "öffentliche Abgaben"
+      ]
+    },
+    "Unterkategorie": {
+      "type": "string",
+      "enum": [
+        "Energie",
+        "Grundpreis Energie",
+        "Rabatt Energie",
+        "Netznutzung",
+        "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+        "Leistungspreis",
+        "Blindenergie",
+        "Systemdienstleistungen swissgrid (SDL)",
+        "Stromreserve",
+        "Rabatt Netz",
+        "Netzzuschlag (gem. Art. 35 EnG)",
+        "Konzessionsgebühren",
+        "Abgaben an Gemeinde",
+        "Abgaben an Kanton",
+        "weitere Abgaben"
+      ]
+    },
+    "Tariftyp": {
+      "type": "string",
+      "enum": [
+        "Einfachtarif",
+        "Doppeltarif"
       ]
     }
   },

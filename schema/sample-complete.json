@@ -10,9 +10,9 @@
           "Beschreibung": "Beschreibung",
           "Einheit": "CHF/Monat",
           "Kategorie": "Netznutzung",
-          "Unterkategorie": "Unterkategorie",
+          "Unterkategorie": "Leistungspreis",
           "Menge": "Menge",
-          "Tariftyp": "Tariftyp",
+          "Tariftyp": "Einfachtarif",
           "Tarifzeiten": "Tarifzeiten"
         }
       ],
