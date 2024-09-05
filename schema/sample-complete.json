@@ -1,0 +1,26 @@
+{
+  "Netzbetreiber": "Name des Netzbetreiber",
+  "Produkte": [
+    {
+      "Name": "The product name",
+      "Beschreibung": "The product description",
+      "Komponenten": [
+        {
+          "Name": "Name",
+          "Beschreibung": "Beschreibung",
+          "Einheit": "CHF/Monat",
+          "Kategorie": "Netznutzung",
+          "Unterkategorie": "Unterkategorie",
+          "Menge": "Menge",
+          "Tariftyp": "Tariftyp",
+          "Tarifzeiten": "Tarifzeiten"
+        }
+      ],
+      "Gültigkeit": "Gültigkeit",
+      "Verbrauchskategorie": "Verbrauchskategorie",
+      "Verbrauchstyp": "weitere",
+      "Netzebene": "Niederspannung",
+      "Standardprodukt": "Ja"
+    }
+  ]
+}

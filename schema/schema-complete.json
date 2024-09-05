@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Schema für Netzbetreiber",
+  "type": "object",
+  "definitions": {
+    "Einheit": {
+      "type": "string",
+      "enum": [
+        "CHF/Monat",
+        "CHF/Jahr",
+        "Rp./kWh",
+        "CHF/kW/Monat",
+        "Rp./kVarh",
+        "weitere"
+      ]
+    },
+    "Komponente": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "Beschreibung": {
+          "type": "string"
+        },
+        "Einheit": {
+          "$ref": "#/definitions/Einheit"
+        },
+        "Unterkategorie": {
+          "type": "string"
+        },
+        "Menge": {
+          "type": "string"
+        },
+        "Tariftyp": {
+          "type": "string"
+        },
+        "Tarifzeiten": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Name",
+        "Beschreibung",
+        "Einheit",
+        "Unterkategorie",
+        "Menge",
+        "Tariftyp",
+        "Tarifzeiten"
+      ]
+    },
+    "Verbrauchstyp": {
+      "type": "string",
+      "enum": [
+        "Haushalt",
+        "Gewerbe & Industrie",
+        "Bau",
+        "Strassenbeleuchtung",
+        "weitere"
+      ]
+    },
+    "Netzebene": {
+      "type": "string",
+      "enum": [
+        "Niederspannung",
+        "Mittelspannung",
+        "weitere"
+      ]
+    },
+    "Kategorie": {
+      "type": "string",
+      "enum": [
+        "Energie",
+        "Netznutzung",
+        "öffentliche Abgaben"
+      ]
+    }
+  },
+  "properties": {
+    "Netzbetreiber": {
+      "type": "string"
+    },
+    "Produkte": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Beschreibung": {
+            "type": "string"
+          },
+          "Komponenten": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "#/definitions/Komponente"
+            }
+          },
+          "Gültigkeit": {
+            "type": "string"
+          },
+          "Verbrauchskategorie": {
+            "type": "string"
+          },
+          "Verbrauchstyp": {
+            "type": "string",
+            "$ref": "#/definitions/Verbrauchstyp"
+          },
+          "Netzebene": {
+            "type": "string",
+            "$ref": "#/definitions/Netzebene"
+          },
+          "Standardprodukt": {
+            "type": "string",
+            "enum": ["Ja", "Nein"]
+          }
+        },
+        "required": [
+          "Name",
+          "Beschreibung",
+          "Komponenten",
+          "Gültigkeit",
+          "Verbrauchskategorie",
+          "Verbrauchstyp",
+          "Netzebene",
+          "Standardprodukt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "Netzbetreiber",
+    "Produkte"
+  ]
+}
