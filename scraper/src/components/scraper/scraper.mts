@@ -29,43 +29,69 @@ async function downloadPDF(outputPath, url) {
   }
 }
 
-async function scrapePDF(operatorId: number, year) {
+async function scrapePDF(operatorId: number, year: number) {
   let browser: puppeteer.Browser | null = null;
-  // Define the path to save the PDF
-  const pdfDownloadURLFilePath = path.resolve(
-    `${__dirname}/../../../../database/pdf-links`,
-    `operator_${operatorId}_Tarifblatt_2024_link.txt`,
-  );
-  const pdfFilePath = path.resolve(
-    `${__dirname}/../../../../database/pdf`,
-    `operator_${operatorId}_Tarifblatt_2024.pdf`,
-  );
-
   let page: puppeteer.Page;
   let pdfDownloadURL: string;
+  const longTimeout = 10 * 1000;
+
+  // Define the path to save the PDF
+  const pdfDownloadURLFilePath = path.resolve(
+    `${__dirname}/../../../../database/pdf-links/${year}`,
+    `operator_${operatorId}_Tarifblatt_${year}_link.txt`,
+  );
+  const pdfFilePath = path.resolve(
+    `${__dirname}/../../../../database/pdf/${year}`,
+    `operator_${operatorId}_Tarifblatt_${year}.pdf`,
+  );
+  const errorFilePath = path.resolve(
+    `${__dirname}/../../../../database/pdf-errors/${year}`,
+    `operator_${operatorId}_error_Tarifblatt_${year}.json`,
+  );
+  if(fs.existsSync(pdfFilePath)){
+    console.log(`PDF file already exists ${pdfFilePath}`, {
+      pdfFilePath,
+    });
+    return {
+      pdfDownloadURLFilePath,
+      pdfDownloadURL,
+      pdfFilePath,
+    };
+  }
+
   try {
     // Launch Puppeteer browser instance
     browser = await puppeteer.launch({
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      headless: false,
+      headless: true,
       executablePath: "/usr/bin/google-chrome",
+      defaultViewport: null,
     });
 
     page = await browser.newPage();
 
     // Navigate to the page
     const url = `https://www.strompreis.elcom.admin.ch/operator/${operatorId}`;
-    await page.goto(url, { waitUntil: "networkidle2" });
+    console.log(`scraping page url: ${url}`);
+    await page.goto(url, { waitUntil: "networkidle2", timeout: longTimeout });
 
     // Wait for the page to load and ensure the button exists
-    await page.waitForFunction(
+    await page
+      .waitForFunction(
         (year) => {
-          const anchorElements = Array.from(document.querySelectorAll('a'));
-          return anchorElements.some(el => el.innerText === `Tarifblatt ${year} (PDF-Datei)`);
+          const anchorElements = Array.from(document.querySelectorAll("a"));
+          return anchorElements.some(
+            (el) => el.innerText === `Tarifblatt ${year} (PDF-Datei)`,
+          );
         },
-        { timeout: 10000 },  // Optional timeout
-        year  // Argument to pass to the function inside the browser context
-    );
+        { timeout: longTimeout }, // Optional timeout
+        year, // Argument to pass to the function inside the browser context
+      )
+      .catch((e) => {
+        throw new Error(
+          `Couldn't find the ${year} tariffs for ${url}: ${JSON.stringify(e)}`,
+        );
+      });
     pdfDownloadURL = await page.evaluate((year) => {
       return Array.from(document.querySelectorAll("a")).filter(
         (el) => el.innerText === `Tarifblatt ${year} (PDF-Datei)`,
@@ -74,7 +100,7 @@ async function scrapePDF(operatorId: number, year) {
 
     if (!pdfDownloadURL) {
       throw new Error(
-        "PDF link with text 'Tarifblatt 2024 (PDF-Datei)' not found",
+        `PDF link with text 'Tarifblatt ${year} (PDF-Datei)' not found`,
       );
     }
     // Ensure directory exists using fs.mkdirSync with recursive option
@@ -90,12 +116,16 @@ async function scrapePDF(operatorId: number, year) {
 
     console.log(`PDF file saved successfully to ${pdfFilePath}`);
   } catch (error) {
-    console.error(`Error occurred`, error);
+    console.error(`Error occurred: `, error);
+    // Ensure directory exists using fs.mkdirSync with recursive option
+    fs.mkdirSync(path.dirname(errorFilePath), { recursive: true });
+    await fsPromises.writeFile(
+      errorFilePath,
+      JSON.stringify(error, Object.getOwnPropertyNames(error)),
+    );
   } finally {
-    if (page) {
-      await page.close(); // Ensure page is closed even on error
-    }
     if (browser) {
+      console.log("Closing the browser.");
       await browser.close(); // Ensure browser is closed even on error
     }
   }
@@ -109,7 +139,11 @@ async function scrapePDF(operatorId: number, year) {
 async function scrapePDFBatch(operatorIdArray, year, maxConcurrent = 1) {
   const limit = pLimit(maxConcurrent);
   const limitInput = operatorIdArray.map((operatorId) => {
-    return limit(() => scrapePDF(operatorId, year));
+    return limit(() => {
+      console.log(`activeCount: ${limit.activeCount}`);
+      console.log(`pendingCount: ${limit.pendingCount}`);
+      return scrapePDF(operatorId, year);
+    });
   });
   return Promise.all(limitInput);
 }
