@@ -6,8 +6,36 @@ h4_verbrauch_df = pd.read_csv("data/hourly_verbrauch_h4.csv")
 TOT_VERBRAUCH_H4 = 4500
 
 
-def get_df_from_json(json_file):
-    return ()
+# Read the input .json and extracts the seasonal, weekly, hourly prices and returns them organized in a dataframe
+def extract_df_seasonal_tariffs(input_json):
+    tarif = {'Netznutzung': input_json['Netznutzung'], 'Energielieferung': input_json['Energielieferung']}
+    data = []
+    for category, seasons in tarif.items():
+        for season, days in seasons.items():
+            for day, hours in days.items():
+                for hour, value in hours.items():
+                    data.append({
+                        "Category": category,
+                        "Season": season,
+                        "Day": day,
+                        "Hour": hour,
+                        "Value": value
+                    })
+        df = pd.DataFrame(data)
+        cleaned_df = clean_seasonal_data(df)
+    return cleaned_df
+
+def clean_seasonal_data(df):
+    #extract the number of the first hour from string
+    def extract_first_hour(s):
+        split_string = s.split()
+        start_time = split_string[1].split(':')  # Extract the '00' part
+        return int(start_time[0])  # Convert the hour part to integer
+    df['first_hour'] = df['Hour'].apply(extract_first_hour)
+    df.drop(['Hour'], axis=1, inplace=True)
+    df.rename(columns = {'first_hour': 'Hour'},inplace=True)
+    return df
+
 
 
 # This function gets as input the hourly prices from the provider (divided in season, day, hour) and the daily period
@@ -47,7 +75,7 @@ def get_seasonal_averages(df, category):
     if category == "Netz":
         df = df.query("Category=='Netznutzung'")
     else:
-        df = df.query("Category=='Energie'")
+        df = df.query("Category=='Energielieferung'")
 
     # The dataframe is splitted in the periods defined by Elcom
     period1_df = df[(df["Hour"] >= 6) & (df["Hour"] < 12)].copy()
@@ -97,4 +125,5 @@ def durchschnitt_calculation(durchscnitt_df, tariff_df):
     total_duschschnitt_min = total_netz + total_ener + abgaben_min + netzzuschlag
     total_duschschnitt_max = total_netz + total_ener + abgaben_max + netzzuschlag
     return total_duschschnitt_min, total_duschschnitt_max
+
 
