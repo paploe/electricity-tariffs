@@ -11,7 +11,7 @@ async function ask(body){
 async function searchFile(
     files: string[],
     vectorStoreBody,
-    fileAttachBody,
+    fileAttachBodyArray,
     userQuestion: string
 ) {
     const assistant = await openai.beta.assistants.create({
@@ -39,7 +39,18 @@ async function searchFile(
     });
 
     // A user wants to attach a file to a specific message, let's upload it.
-    const userFileAttachment = await openai.files.create(fileAttachBody);
+
+    const userFileAttachments = await Promise.all(
+        fileAttachBodyArray.map((fileAttachBody) => {
+            return openai.files.create(fileAttachBody);
+        })
+    )
+    const attachments = [];
+    userFileAttachments.forEach(attachment => {
+        attachments.push(
+            { file_id: attachment.id, tools: [{ type: "file_search" }] }
+        )
+    })
 
     const thread = await openai.beta.threads.create({
         messages: [
@@ -48,7 +59,7 @@ async function searchFile(
                 content:
                     userQuestion,
                 // Attach the new file to the message.
-                attachments: [{ file_id: userFileAttachment.id, tools: [{ type: "file_search" }] }],
+                attachments: attachments,
             },
         ],
     });

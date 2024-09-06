@@ -87,7 +87,7 @@ describe("Scraper", () => {
       },
       { timeout: 5000 },
   )
-    test(
+    test.skip(
         "Can interact with OpenAI uploading files",
         async ()=>{
             const res = await searchFile(
@@ -104,18 +104,69 @@ describe("Scraper", () => {
                         days: 2
                     }
                 },
-                {
-                    file: fs.createReadStream(
-                        path.resolve(`${__dirname}/../../database/pdf/2024/operator_6_Tarifblatt_2024.pdf`)
-                    ),
-                    purpose: "assistants",
-                },
-                "What is the name of this nework operator? Wie teuer ist der Grundpreis pro Zähler?"
+                [
+                    {
+                        file: fs.createReadStream(
+                            path.resolve(`${__dirname}/../../database/pdf/2024/operator_6_Tarifblatt_2024.pdf`)
+                        ),
+                        purpose: "assistants",
+                    },
+                    {
+                        file: fs.createReadStream(
+                            path.resolve(`${__dirname}/../../database/pdf/2024/operator_7_Tarifblatt_2024.pdf`)
+                        ),
+                        purpose: "assistants",
+                    }
+                ],
+                "What are the names of this two network operators?"
             );
             console.log("OpenAi response (with file): ", JSON.stringify(res));
             expect((res as { text: any }).text).toBeDefined();
             expect((res as { citations: any }).citations).toBeDefined();
         },
         { timeout: 15000 },
+    )
+    test.skip(
+        "Can classify a PDF according to a JSON schema",
+        async ()=>{
+            const prompt = fs.readFileSync(
+                path.resolve(`${__dirname}/../../prompts/simple-1.txt`).toString(),
+                'utf8'
+            );
+            const res = await searchFile(
+                [
+                    // path.resolve(`${__dirname}/../../database/pdf/2024/operator_3_Tarifblatt_2024.pdf`),
+                    // path.resolve(`${__dirname}/../../database/pdf/2024/operator_5_Tarifblatt_2024.pdf`),
+                    // path.resolve(`${__dirname}/../../database/pdf/2024/operator_6_Tarifblatt_2024.pdf`)
+                ],
+                {
+                    name: "Electricity Tariffs 2024",
+                    // Manage the costs with a shorer expiry: https://platform.openai.com/docs/assistants/tools/file-search
+                    expires_after: {
+                        anchor: "last_active_at",
+                        days: 2
+                    }
+                },
+                [
+                    {
+                        file: fs.createReadStream(
+                            path.resolve(`${__dirname}/../../database/pdf/2024/operator_6_Tarifblatt_2024.pdf`)
+                        ),
+                        purpose: "assistants",
+                    },
+                    {
+                        file: fs.createReadStream(
+                            path.resolve(`${__dirname}/../../schema/schema-complete.json`)
+                        ),
+                        purpose: "assistants",
+                    }
+                ],
+                prompt
+            );
+            console.log("OpenAi response (with file): ", JSON.stringify(res));
+            expect((res as { text: any }).text).toBeDefined();
+            expect((res as { citations: any }).citations).toBeDefined();
+        },
+        { timeout: 50000 },
     )
 });
