@@ -1,0 +1,3 @@
+I am trying to harmonize and classify the data contained in the following PDF.
+I want to convert this PDF so that it validates against the provided JSON schema. Please create the
+JSON for me and make sure it is valid according to the schema.
