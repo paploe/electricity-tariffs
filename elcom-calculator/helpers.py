@@ -67,3 +67,34 @@ def get_seasonal_averages(df, category):
 def get_yearly_average_tarif(seasonal_avg_df):
     total_price = seasonal_avg_df["Value"].sum()
     return total_price / TOT_VERBRAUCH_H4 * 100
+
+# Calculate the minimum and maximum average tariff of the product
+def durchschnitt_calculation(durchscnitt_df, tariff_df):
+    # calculation for Netznutzung
+    seasonal_netz_df = get_seasonal_averages(tariff_df, "Netz")
+    avg_netz = get_yearly_average_tarif(seasonal_netz_df)
+    durch_netz = durchscnitt_df[durchscnitt_df["Category"] == "Netznutzung"].copy().drop(["Category"], axis=1)
+    durch_netz.set_index("Type", inplace=True)
+    total_netz = ((durch_netz.loc["grundpreis"].Value + durch_netz.loc[
+        "leistungspreis"].Value) * 100 / TOT_VERBRAUCH_H4) + durch_netz.loc["systemdienstleistung"].Value + avg_netz - \
+                 durch_netz.loc["additional_rabatt"].Value
+
+    # calculation for Energielieferung
+    seasonal_ener_df = get_seasonal_averages(tariff_df, "Energie")
+    avg_ener = get_yearly_average_tarif(seasonal_ener_df)
+    durch_ener = durchscnitt_df[durchscnitt_df["Category"] == "Energielieferung"].copy().drop(["Category"], axis=1)
+    durch_ener.set_index("Type", inplace=True)
+    total_ener = ((durch_ener.loc["grundpreis"].Value + durch_ener.loc[
+        "leistungspreis"].Value) * 100 / TOT_VERBRAUCH_H4) + avg_ener - durch_ener.loc["additional_rabatt"].Value
+
+    # calculation Abgaben
+    abgaben_max = durchscnitt_df[durchscnitt_df["Category"] == "Abgaben"].Value.max()
+    abgaben_min = durchscnitt_df[durchscnitt_df["Category"] == "Abgaben"].Value.min()
+
+    # Netzzuschlag
+    netzzuschlag = durchscnitt_df[durchscnitt_df["Category"] == "Netzuschlag"].Value
+
+    total_duschschnitt_min = total_netz + total_ener + abgaben_min + netzzuschlag
+    total_duschschnitt_max = total_netz + total_ener + abgaben_max + netzzuschlag
+    return total_duschschnitt_min, total_duschschnitt_max
+
