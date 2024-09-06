@@ -1402,60 +1402,60 @@
         "Netznutzung": {
           "type": "object",
           "properties": {
-            "Grundpreis in Rp.": {
+            "Grundpreis in CHF": {
               "type": "number"
             },
-            "Leistungspreis in Rp.": {
+            "Leistungspreis in CHF": {
               "type": "number"
             },
-            "Systemdienstleistung in Rp.": {
+            "Systemdienstleistung in Rp./kWh": {
               "type": "number"
             },
-            "ZusätzlicherRabatt in Rp.": {
+            "ZusätzlicherRabatt in Rp./kWh": {
               "type": "number"
             }
           },
           "required": [
-            "Grundpreis in Rp.",
-            "Leistungspreis in Rp.",
-            "Systemdienstleistung in Rp.",
-            "ZusätzlicherRabatt in Rp."
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "Systemdienstleistung in Rp./kWh",
+            "ZusätzlicherRabatt in Rp./kWh"
           ]
         },
         "Grundpreis": {
           "type": "object",
           "properties": {
-            "Grundpreis in Rp.": {
+            "Grundpreis in CHF": {
               "type": "number"
             },
-            "Leistungspreis in Rp.": {
+            "Leistungspreis in CHF": {
               "type": "number"
             },
-            "ZusätzlicherRabatt in Rp.": {
+            "ZusätzlicherRabatt in Rp./kWh": {
               "type": "number"
             }
           },
           "required": [
-            "Grundpreis in Rp.",
-            "Leistungspreis in Rp.",
-            "ZusätzlicherRabatt in Rp."
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "ZusätzlicherRabatt in Rp./kWh"
           ]
         },
-        "Abgaben in Rp.": {
+        "Abgaben in Rp./kWh": {
           "type": "array",
           "items": {
             "type": "number"
           }
         },
-        "Netzuschlag in Rp.": {
+        "Netzuschlag in Rp./kWh": {
           "type": "number"
         }
       },
       "required": [
         "Netznutzung",
         "Grundpreis",
-        "Abgaben in Rp.",
-        "Netzuschlag in Rp."
+        "Abgaben in Rp./kWh",
+        "Netzuschlag in Rp./kWh"
       ]
     }
   },
