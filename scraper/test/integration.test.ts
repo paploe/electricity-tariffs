@@ -207,7 +207,7 @@ describe("Scraper", () => {
                 [],
                 `Convert this to JSON. Do not make any modification! \n ${(resFileSearch as { text: any }).text.value}`
             );
-            const output = JSON.parse((resFileSearch as { text: any }).text.value)
+            const output = JSON.parse((resStructured as { text: any }).text.value)
             expect(output).toBeDefined();
             expect((resFileSearch as { text: any }).text).toBeDefined();
             expect((resFileSearch as { citations: any }).citations).toBeDefined();
