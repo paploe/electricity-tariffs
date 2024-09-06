@@ -1395,6 +1395,68 @@
         "Winter",
         "Sommer"
       ]
+    },
+    "Durschschnittspreis": {
+      "type": "object",
+      "properties": {
+        "Netznutzung": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "Systemdienstleistung in CHF": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in CHF": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "Systemdienstleistung in CHF",
+            "ZusätzlicherRabatt in CHF"
+          ]
+        },
+        "Grundpreis": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in CHF": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "ZusätzlicherRabatt in CHF"
+          ]
+        },
+        "Abgaben in CHF": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Netzuschlag in CHF": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "Netznutzung",
+        "Grundpreis",
+        "Abgaben in CHF",
+        "Netzuschlag in CHF"
+      ]
     }
   },
   "properties": {
@@ -1455,12 +1517,16 @@
     },
     "Energielieferung": {
       "$ref": "#/definitions/Energielieferung"
+    },
+    "Durschschnittspreis": {
+      "$ref": "#/definitions/Durschschnittspreis"
     }
   },
   "required": [
     "Netzbetreiber",
     "Produkte",
     "Netznutzung",
-    "Energielieferung"
+    "Energielieferung",
+    "Durschschnittspreis"
   ]
 }

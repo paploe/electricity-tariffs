@@ -346,5 +346,20 @@
         "Von 23:00 bis 00:00 in Rp./kWh": 9.40
       }
     }
+  },
+  "Durschschnittspreis": {
+    "Netznutzung": {
+      "Grundpreis in CHF": 120,
+      "Leistungspreis in CHF": 0,
+      "Systemdienstleistung in CHF": 0.75,
+      "ZusätzlicherRabatt in CHF": 0
+    },
+    "Grundpreis": {
+      "Grundpreis in CHF": 59,
+      "Leistungspreis in CHF": 0,
+      "ZusätzlicherRabatt in CHF": 0
+    },
+    "Abgaben in CHF": [0.34],
+    "Netzuschlag in CHF": 2.30
   }
 }
