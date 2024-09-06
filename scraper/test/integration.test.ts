@@ -73,7 +73,7 @@ describe("Scraper", () => {
       "Can interact with OpenAI",
       async ()=>{
           const res = await ask({
-              model: "gpt-4o-mini",
+              model: "gpt-4o",
               messages: [
                   { role: "system", content: "You are a helpful assistant." },
                   {
@@ -91,6 +91,13 @@ describe("Scraper", () => {
         "Can interact with OpenAI uploading files",
         async ()=>{
             const res = await searchFile(
+                {
+                    name: "Electricity Tariff Analyst Assistant",
+                    instructions: "You are an expert analyst in electricity tariffs. Use you the provided files as a base to answer questions about electricity tarffs. Always give a JSON output like {\"jsonDownloadURL\": \"the url to download the generated file\"}",
+                    model: "gpt-4o",
+                    tools: [{ type: "file_search" }],
+                    response_format: { "type": "json_object" }
+                },
                 [
                     // path.resolve(`${__dirname}/../../database/pdf/2024/operator_3_Tarifblatt_2024.pdf`),
                     // path.resolve(`${__dirname}/../../database/pdf/2024/operator_5_Tarifblatt_2024.pdf`),
@@ -126,14 +133,25 @@ describe("Scraper", () => {
         },
         { timeout: 15000 },
     )
-    test.skip(
+    test.only(
         "Can classify a PDF according to a JSON schema",
         async ()=>{
             const prompt = fs.readFileSync(
                 path.resolve(`${__dirname}/../../prompts/simple-1.txt`).toString(),
                 'utf8'
             );
-            const res = await searchFile(
+            const resFileSearch = await searchFile(
+                {
+                    name: "Electricity Tariff Analyst Assistant",
+                    instructions: "You are an expert analyst in electricity tariffs. Use you the provided files as a base to answer questions about electricity tarffs. Always give a JSON output like {\"jsonDownloadURL\": \"the url to download the generated file\"}",
+                    model: "gpt-4o",
+                    tools: [
+                        { type: "file_search" }
+                    ],
+                    // issue: https://community.openai.com/t/structured-outputs-dont-currently-work-with-file-search-tool-in-assistants-api/900538
+                    // issue: https://community.openai.com/t/assistants-api-why-is-json-mode-not-available-when-using-file-search-code-interpreter/743449/7
+                    // response_format: { "type": "json_object" }
+                },
                 [
                     // path.resolve(`${__dirname}/../../database/pdf/2024/operator_3_Tarifblatt_2024.pdf`),
                     // path.resolve(`${__dirname}/../../database/pdf/2024/operator_5_Tarifblatt_2024.pdf`),
@@ -163,10 +181,37 @@ describe("Scraper", () => {
                 ],
                 prompt
             );
-            console.log("OpenAi response (with file): ", JSON.stringify(res));
-            expect((res as { text: any }).text).toBeDefined();
-            expect((res as { citations: any }).citations).toBeDefined();
+            console.log("OpenAi response (file search): ", JSON.stringify(resFileSearch));
+
+
+            // turn the text into a structured json output
+            const resStructured = await searchFile(
+                {
+                    name: "Electricity Tariff Analyst Assistant",
+                    instructions: "You are an expert analyst in electricity tariffs. Use you the provided JSON file and provide it as a structured JSON output as is, without any modification.",
+                    model: "gpt-4o",
+                    tools: [],
+                    // issue: https://community.openai.com/t/structured-outputs-dont-currently-work-with-file-search-tool-in-assistants-api/900538
+                    // issue: https://community.openai.com/t/assistants-api-why-is-json-mode-not-available-when-using-file-search-code-interpreter/743449/7
+                    response_format: { "type": "json_object" }
+                },
+                [],
+                {
+                    name: "Electricity Tariffs 2024",
+                    // Manage the costs with a shorer expiry: https://platform.openai.com/docs/assistants/tools/file-search
+                    expires_after: {
+                        anchor: "last_active_at",
+                        days: 2
+                    }
+                },
+                [],
+                `Convert this to JSON. Do not make any modification! \n ${(resFileSearch as { text: any }).text.value}`
+            );
+            const output = JSON.parse((resFileSearch as { text: any }).text.value)
+            expect(output).toBeDefined();
+            expect((resFileSearch as { text: any }).text).toBeDefined();
+            expect((resFileSearch as { citations: any }).citations).toBeDefined();
         },
-        { timeout: 50000 },
+        { timeout: 5*60*1000 },
     )
 });
