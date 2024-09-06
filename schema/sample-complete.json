@@ -349,17 +349,17 @@
   },
   "Durschschnittspreis": {
     "Netznutzung": {
-      "Grundpreis in CHF": 120,
-      "Leistungspreis in CHF": 0,
-      "Systemdienstleistung in CHF": 0.75,
-      "ZusätzlicherRabatt in CHF": 0
+      "Grundpreis in Rp.": 120,
+      "Leistungspreis in Rp.": 0,
+      "Systemdienstleistung in Rp.": 0.75,
+      "ZusätzlicherRabatt in Rp.": 0
     },
     "Grundpreis": {
-      "Grundpreis in CHF": 59,
-      "Leistungspreis in CHF": 0,
-      "ZusätzlicherRabatt in CHF": 0
+      "Grundpreis in Rp.": 59,
+      "Leistungspreis in Rp.": 0,
+      "ZusätzlicherRabatt in Rp.": 0
     },
-    "Abgaben in CHF": [0.34],
-    "Netzuschlag in CHF": 2.30
+    "Abgaben in Rp.": [0.34],
+    "Netzuschlag in Rp.": 2.30
   }
 }

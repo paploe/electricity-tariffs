@@ -1402,60 +1402,60 @@
         "Netznutzung": {
           "type": "object",
           "properties": {
-            "Grundpreis in CHF": {
+            "Grundpreis in Rp.": {
               "type": "number"
             },
-            "Leistungspreis in CHF": {
+            "Leistungspreis in Rp.": {
               "type": "number"
             },
-            "Systemdienstleistung in CHF": {
+            "Systemdienstleistung in Rp.": {
               "type": "number"
             },
-            "ZusätzlicherRabatt in CHF": {
+            "ZusätzlicherRabatt in Rp.": {
               "type": "number"
             }
           },
           "required": [
-            "Grundpreis in CHF",
-            "Leistungspreis in CHF",
-            "Systemdienstleistung in CHF",
-            "ZusätzlicherRabatt in CHF"
+            "Grundpreis in Rp.",
+            "Leistungspreis in Rp.",
+            "Systemdienstleistung in Rp.",
+            "ZusätzlicherRabatt in Rp."
           ]
         },
         "Grundpreis": {
           "type": "object",
           "properties": {
-            "Grundpreis in CHF": {
+            "Grundpreis in Rp.": {
               "type": "number"
             },
-            "Leistungspreis in CHF": {
+            "Leistungspreis in Rp.": {
               "type": "number"
             },
-            "ZusätzlicherRabatt in CHF": {
+            "ZusätzlicherRabatt in Rp.": {
               "type": "number"
             }
           },
           "required": [
-            "Grundpreis in CHF",
-            "Leistungspreis in CHF",
-            "ZusätzlicherRabatt in CHF"
+            "Grundpreis in Rp.",
+            "Leistungspreis in Rp.",
+            "ZusätzlicherRabatt in Rp."
           ]
         },
-        "Abgaben in CHF": {
+        "Abgaben in Rp.": {
           "type": "array",
           "items": {
             "type": "number"
           }
         },
-        "Netzuschlag in CHF": {
+        "Netzuschlag in Rp.": {
           "type": "number"
         }
       },
       "required": [
         "Netznutzung",
         "Grundpreis",
-        "Abgaben in CHF",
-        "Netzuschlag in CHF"
+        "Abgaben in Rp.",
+        "Netzuschlag in Rp."
       ]
     }
   },
