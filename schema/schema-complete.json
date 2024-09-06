@@ -1449,10 +1449,18 @@
           "Standardprodukt"
         ]
       }
+    },
+    "Netznutzung": {
+      "$ref": "#/definitions/Netznutzung"
+    },
+    "Energielieferung": {
+      "$ref": "#/definitions/Energielieferung"
     }
   },
   "required": [
     "Netzbetreiber",
-    "Produkte"
+    "Produkte",
+    "Netznutzung",
+    "Energielieferung"
   ]
 }
