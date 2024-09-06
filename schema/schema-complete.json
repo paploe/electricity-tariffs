@@ -1422,7 +1422,7 @@
             "ZusätzlicherRabatt in Rp./kWh"
           ]
         },
-        "Grundpreis": {
+        "Energielieferung": {
           "type": "object",
           "properties": {
             "Grundpreis in CHF": {
@@ -1453,7 +1453,7 @@
       },
       "required": [
         "Netznutzung",
-        "Grundpreis",
+        "Energielieferung",
         "Abgaben in Rp./kWh",
         "Netzuschlag in Rp./kWh"
       ]

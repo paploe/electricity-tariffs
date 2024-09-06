@@ -349,17 +349,17 @@
   },
   "Durschschnittspreis": {
     "Netznutzung": {
-      "Grundpreis in Rp.": 120,
-      "Leistungspreis in Rp.": 0,
-      "Systemdienstleistung in Rp.": 0.75,
-      "ZusätzlicherRabatt in Rp.": 0
+      "Grundpreis in CHF": 120,
+      "Leistungspreis in CHF": 0,
+      "Systemdienstleistung in Rp./kWh": 0.75,
+      "ZusätzlicherRabatt in Rp./kWh": 0
     },
-    "Grundpreis": {
-      "Grundpreis in Rp.": 59,
-      "Leistungspreis in Rp.": 0,
-      "ZusätzlicherRabatt in Rp.": 0
+    "Energielieferung": {
+      "Grundpreis in CHF": 59,
+      "Leistungspreis in CHF": 0,
+      "ZusätzlicherRabatt in Rp./kWh": 0
     },
-    "Abgaben in Rp.": [0.34],
-    "Netzuschlag in Rp.": 2.30
+    "Abgaben in Rp./kWh": [0.34],
+    "Netzuschlag in Rp./kWh": 2.30
   }
 }
