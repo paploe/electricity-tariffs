@@ -453,13 +453,13 @@ describe.skip("OpenAI", () => {
   );
 });
 
-describe.skip("Utils", () => {
-  test.skip(
+describe.only("Utils", () => {
+  test.only(
     "Can merge multiple json files",
     async () => {
       const splits = [1, 2, 3, 4, 5, 6];
       const objectsToMerge = [];
-      const testSubfolder = "2";
+      const testSubfolder = "525";
       for (const split of splits) {
         const partialObjectPath = path.resolve(
           `${__dirname}/../../output/test/${testSubfolder}/res_harmonized_1_split_${split}_json_parsed.json`,

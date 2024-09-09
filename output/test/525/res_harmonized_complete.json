@@ -264,9 +264,7 @@
                 "Von 22:00 bis 23:00 in Rp./kWh": 0,
                 "Von 23:00 bis 00:00 in Rp./kWh": 0
             }
-        }
-    },
-    "Netznutzung_1": {
+        },
         "Sommer": {
             "Montag-Freitag": {
                 "Von 00:00 bis 01:00 in Rp./kWh": 0,
@@ -428,9 +426,7 @@
                 "Von 22:00 bis 23:00 in Rp./kWh": 0,
                 "Von 23:00 bis 00:00 in Rp./kWh": 0
             }
-        }
-    },
-    "Energielieferung_1": {
+        },
         "Sommer": {
             "Montag-Freitag": {
                 "Von 00:00 bis 01:00 in Rp./kWh": 0,
