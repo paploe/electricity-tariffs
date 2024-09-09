@@ -73,7 +73,7 @@ describe.skip("Scraper", () => {
   );
 });
 
-describe("OpenAI", () => {
+describe.skip("OpenAI", () => {
   test.skip(
     "Can interact with OpenAI",
     async () => {
@@ -232,7 +232,7 @@ describe("OpenAI", () => {
     },
     { timeout: 5 * 60 * 1000 },
   );
-  test.only(
+  test.skip(
     "Can harmonize a PDF according to a JSON schema (all splits) and a previous query result (operator_10_Tarifblatt_2024)",
     async () => {
       const testSubfolder = "2";
@@ -459,7 +459,7 @@ describe.skip("Utils", () => {
     async () => {
       const splits = [1, 2, 3, 4, 5, 6];
       const objectsToMerge = [];
-      const testSubfolder = "1";
+      const testSubfolder = "2";
       for (const split of splits) {
         const partialObjectPath = path.resolve(
           `${__dirname}/../../output/test/${testSubfolder}/res_harmonized_1_split_${split}_json_parsed.json`,
