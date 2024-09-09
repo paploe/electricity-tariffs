@@ -15,24 +15,28 @@ async function searchFile(
     fileAttachBodyArray,
     userQuestion: string
 ) {
-    const assistant = await openai.beta.assistants.create(assistantBody);
+    const assistant = await openai.beta.assistants.create({
+        ...assistantBody,
+        temperature: 0
+    });
     const fileStreams = files.map((path) =>
         fs.createReadStream(path),
     );
 
     // Create a vector store including our two files.
-    const vectorStore = await openai.beta.vectorStores.create(vectorStoreBody);
+    if(vectorStoreBody){
+        const vectorStore = await openai.beta.vectorStores.create(vectorStoreBody);
 
-    if(fileStreams.length > 0){
-        // @ts-expect-error I don't know why TS complains here. https://platform.openai.com/docs/assistants/quickstart
-        await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, fileStreams).catch(async e => {
-            console.warn("Error uploading and polling", e.message);
+        if(fileStreams.length > 0){
+            // @ts-expect-error I don't know why TS complains here. https://platform.openai.com/docs/assistants/quickstart
+            await openai.beta.vectorStores.fileBatches.uploadAndPoll(vectorStore.id, fileStreams).catch(async e => {
+                console.warn("Error uploading and polling", e.message);
+            });
+        }
+        await openai.beta.assistants.update(assistant.id, {
+            tool_resources: { file_search: { vector_store_ids: [vectorStore.id] } },
         });
     }
-
-    await openai.beta.assistants.update(assistant.id, {
-        tool_resources: { file_search: { vector_store_ids: [vectorStore.id] } },
-    });
 
     // A user wants to attach a file to a specific message, let's upload it.
 

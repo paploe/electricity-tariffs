@@ -1,107 +1,7 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Schema für Netzbetreiber",
   "type": "object",
-  "definitions": {
-    "Komponente": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "Beschreibung": {
-          "type": "string"
-        },
-        "Einheit": {
-          "$ref": "#/definitions/Einheit"
-        },
-        "Unterkategorie": {
-          "$ref": "#/definitions/Unterkategorie"
-        },
-        "Menge": {
-          "type": "string"
-        },
-        "Tariftyp": {
-          "$ref": "#/definitions/Tariftyp"
-        },
-        "Tarifzeiten": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "Name",
-        "Beschreibung",
-        "Einheit",
-        "Unterkategorie",
-        "Menge",
-        "Tariftyp",
-        "Tarifzeiten"
-      ]
-    },
-    "Verbrauchstyp": {
-      "type": "string",
-      "enum": [
-        "Haushalt",
-        "Gewerbe & Industrie",
-        "Bau",
-        "Strassenbeleuchtung",
-        "weitere"
-      ]
-    },
-    "Netzebene": {
-      "type": "string",
-      "enum": [
-        "Niederspannung",
-        "Mittelspannung",
-        "weitere"
-      ]
-    },
-    "Einheit": {
-      "type": "string",
-      "enum": [
-        "CHF/Monat",
-        "CHF/Jahr",
-        "Rp./kWh",
-        "CHF/kW/Monat",
-        "Rp./kVarh",
-        "weitere"
-      ]
-    },
-    "Kategorie": {
-      "type": "string",
-      "enum": [
-        "Energie",
-        "Netznutzung",
-        "öffentliche Abgaben"
-      ]
-    },
-    "Unterkategorie": {
-      "type": "string",
-      "enum": [
-        "Energie",
-        "Grundpreis Energie",
-        "Rabatt Energie",
-        "Netznutzung",
-        "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
-        "Leistungspreis",
-        "Blindenergie",
-        "Systemdienstleistungen swissgrid (SDL)",
-        "Stromreserve",
-        "Rabatt Netz",
-        "Netzzuschlag (gem. Art. 35 EnG)",
-        "Konzessionsgebühren",
-        "Abgaben an Gemeinde",
-        "Abgaben an Kanton",
-        "weitere Abgaben"
-      ]
-    },
-    "Tariftyp": {
-      "type": "string",
-      "enum": [
-        "Einfachtarif",
-        "Doppeltarif"
-      ]
-    },
+  "properties": {
     "Netznutzung": {
       "type": "object",
       "properties": {
@@ -184,6 +84,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -287,6 +188,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -390,6 +292,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -418,6 +321,7 @@
               ]
             }
           },
+          "additionalProperties": false,
           "required": [
             "Montag-Freitag",
             "Samstag",
@@ -503,6 +407,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -606,6 +511,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -709,6 +615,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -737,6 +644,7 @@
               ]
             }
           },
+          "additionalProperties": false,
           "required": [
             "Montag-Freitag",
             "Samstag",
@@ -744,6 +652,7 @@
           ]
         }
       },
+      "additionalProperties": false,
       "required": [
         "Winter",
         "Sommer"
@@ -831,6 +740,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -934,6 +844,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -1037,6 +948,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -1065,6 +977,7 @@
               ]
             }
           },
+          "additionalProperties": false,
           "required": [
             "Montag-Freitag",
             "Samstag",
@@ -1150,6 +1063,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -1253,6 +1167,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -1356,6 +1271,7 @@
                   "type": "number"
                 }
               },
+              "additionalProperties": false,
               "required": [
                 "Von 00:00 bis 01:00 in Rp./kWh",
                 "Von 01:00 bis 02:00 in Rp./kWh",
@@ -1384,6 +1300,7 @@
               ]
             }
           },
+          "additionalProperties": false,
           "required": [
             "Montag-Freitag",
             "Samstag",
@@ -1391,6 +1308,7 @@
           ]
         }
       },
+      "additionalProperties": false,
       "required": [
         "Winter",
         "Sommer"
@@ -1415,6 +1333,7 @@
               "type": "number"
             }
           },
+          "additionalProperties": false,
           "required": [
             "Grundpreis in CHF",
             "Leistungspreis in CHF",
@@ -1435,6 +1354,7 @@
               "type": "number"
             }
           },
+          "additionalProperties": false,
           "required": [
             "Grundpreis in CHF",
             "Leistungspreis in CHF",
@@ -1454,6 +1374,7 @@
           "type": "number"
         }
       },
+      "additionalProperties": false,
       "required": [
         "Netznutzung",
         "Energielieferung",
@@ -1463,72 +1384,8 @@
       ]
     }
   },
-  "properties": {
-    "Netzbetreiber": {
-      "type": "string"
-    },
-    "Produkte": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "Name": {
-            "type": "string"
-          },
-          "Beschreibung": {
-            "type": "string"
-          },
-          "Komponenten": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "$ref": "#/definitions/Komponente"
-            }
-          },
-          "Gültigkeit": {
-            "type": "string"
-          },
-          "Verbrauchskategorie": {
-            "type": "string"
-          },
-          "Verbrauchstyp": {
-            "type": "string",
-            "$ref": "#/definitions/Verbrauchstyp"
-          },
-          "Netzebene": {
-            "type": "string",
-            "$ref": "#/definitions/Netzebene"
-          },
-          "Standardprodukt": {
-            "type": "string",
-            "enum": ["Ja", "Nein"]
-          }
-        },
-        "required": [
-          "Name",
-          "Beschreibung",
-          "Komponenten",
-          "Gültigkeit",
-          "Verbrauchskategorie",
-          "Verbrauchstyp",
-          "Netzebene",
-          "Standardprodukt"
-        ]
-      }
-    },
-    "Netznutzung": {
-      "$ref": "#/definitions/Netznutzung"
-    },
-    "Energielieferung": {
-      "$ref": "#/definitions/Energielieferung"
-    },
-    "Durschschnittspreis": {
-      "$ref": "#/definitions/Durschschnittspreis"
-    }
-  },
+  "additionalProperties": false,
   "required": [
-    "Netzbetreiber",
-    "Produkte",
     "Netznutzung",
     "Energielieferung",
     "Durschschnittspreis"
