@@ -9,50 +9,61 @@ TOT_VERBRAUCH_H4 = 4500
 
 # Read the input .json and extracts the seasonal, weekly, hourly prices and returns them organized in a dataframe
 def extract_df_seasonal_tariffs(input_json):
-    tarif = {'Netznutzung': input_json['Netznutzung'], 'Energielieferung': input_json['Energielieferung']}
+    tarif = {
+        "Netznutzung": input_json["Netznutzung"],
+        "Energielieferung": input_json["Energielieferung"],
+    }
     data = []
     for category, seasons in tarif.items():
         for season, days in seasons.items():
             for day, hours in days.items():
                 for hour, value in hours.items():
-                    data.append({
-                        "Category": category,
-                        "Season": season,
-                        "Day": day,
-                        "Hour": hour,
-                        "Value": value
-                    })
+                    data.append(
+                        {
+                            "Category": category,
+                            "Season": season,
+                            "Day": day,
+                            "Hour": hour,
+                            "Value": value,
+                        }
+                    )
         df = pd.DataFrame(data)
         cleaned_df = clean_seasonal_data(df)
     return cleaned_df
 
+
 # Read the input .json and extracts the prices of the product and returns them organized in a dataframe
 def extract_df_durchschnitt(input_json):
-    durchschnitt = input_json['Durschschnittspreis']
+    durchschnitt = input_json["Durschschnittspreis"]
     flattened_data = []
     for key, value in durchschnitt.items():
         if isinstance(value, dict):
             for sub_key, sub_value in value.items():
-                flattened_data.append({"Category": key, "Type": sub_key, "Value": sub_value})
+                flattened_data.append(
+                    {"Category": key, "Type": sub_key, "Value": sub_value}
+                )
         elif isinstance(value, list):
             for i, item in enumerate(value):
-                flattened_data.append({"Category": key, "Type": f"value_{i+1}", "Value": item})
+                flattened_data.append(
+                    {"Category": key, "Type": f"value_{i+1}", "Value": item}
+                )
         else:
             flattened_data.append({"Category": key, "Type": "value", "Value": value})
     return pd.DataFrame(flattened_data)
 
+
 # Change the timings of the dataframe in a series of integers (0 to 23) representing the hours of day
 def clean_seasonal_data(df):
-    #extract the number of the first hour from string
+    # extract the number of the first hour from string
     def extract_first_hour(s):
         split_string = s.split()
-        start_time = split_string[1].split(':')  # Extract the '00' part
+        start_time = split_string[1].split(":")  # Extract the '00' part
         return int(start_time[0])  # Convert the hour part to integer
-    df['first_hour'] = df['Hour'].apply(extract_first_hour)
-    df.drop(['Hour'], axis=1, inplace=True)
-    df.rename(columns = {'first_hour': 'Hour'},inplace=True)
-    return df
 
+    df["first_hour"] = df["Hour"].apply(extract_first_hour)
+    df.drop(["Hour"], axis=1, inplace=True)
+    df.rename(columns={"first_hour": "Hour"}, inplace=True)
+    return df
 
 
 # This function gets as input the hourly prices from the provider (divided in season, day, hour) and the daily period
@@ -113,38 +124,82 @@ def get_yearly_average_tarif(seasonal_avg_df):
     total_price = seasonal_avg_df["Value"].sum()
     return total_price / TOT_VERBRAUCH_H4 * 100
 
+
 # Calculate the minimum and maximum average tariff of the product
 def durchschnitt_calculation(durchscnitt_df, tariff_df):
     # calculation for Netznutzung
     seasonal_netz_df = get_seasonal_averages(tariff_df, "Netz")
     avg_netz = get_yearly_average_tarif(seasonal_netz_df)
-    durch_netz = durchscnitt_df[durchscnitt_df["Category"] == "Netznutzung"].copy().drop(["Category"], axis=1)
+    durch_netz = (
+        durchscnitt_df[durchscnitt_df["Category"] == "Netznutzung"]
+        .copy()
+        .drop(["Category"], axis=1)
+    )
     durch_netz.set_index("Type", inplace=True)
-    total_netz = ((durch_netz.loc["Grundpreis in CHF"].Value + durch_netz.loc[
-        "Leistungspreis in CHF"].Value) * 100 / TOT_VERBRAUCH_H4) + durch_netz.loc[
-                     "Systemdienstleistung in Rp./kWh"].Value + avg_netz - durch_netz.loc[
-                     "ZusätzlicherRabatt in Rp./kWh"].Value
+    total_netz = (
+        (
+            (
+                durch_netz.loc["Grundpreis in CHF"].Value
+                + durch_netz.loc["Leistungspreis in CHF"].Value
+            )
+            * 100
+            / TOT_VERBRAUCH_H4
+        )
+        + durch_netz.loc["Systemdienstleistung in Rp./kWh"].Value
+        + avg_netz
+        - durch_netz.loc["ZusätzlicherRabatt in Rp./kWh"].Value
+    )
 
     # calculation for Energielieferung
     seasonal_ener_df = get_seasonal_averages(tariff_df, "Energie")
     avg_ener = get_yearly_average_tarif(seasonal_ener_df)
-    durch_ener = durchscnitt_df[durchscnitt_df["Category"] == "Energielieferung"].copy().drop(["Category"], axis=1)
+    durch_ener = (
+        durchscnitt_df[durchscnitt_df["Category"] == "Energielieferung"]
+        .copy()
+        .drop(["Category"], axis=1)
+    )
     durch_ener.set_index("Type", inplace=True)
-    total_ener = ((durch_ener.loc["Grundpreis in CHF"].Value + durch_ener.loc[
-        "Leistungspreis in CHF"].Value) * 100 / TOT_VERBRAUCH_H4) + avg_ener - durch_ener.loc[
-                     "ZusätzlicherRabatt in Rp./kWh"].Value
+    total_ener = (
+        (
+            (
+                durch_ener.loc["Grundpreis in CHF"].Value
+                + durch_ener.loc["Leistungspreis in CHF"].Value
+            )
+            * 100
+            / TOT_VERBRAUCH_H4
+        )
+        + avg_ener
+        - durch_ener.loc["ZusätzlicherRabatt in Rp./kWh"].Value
+    )
 
     # calculation Gemeinde Abgaben
-    abgaben_max = durchscnitt_df[durchscnitt_df["Category"] == "Abgaben in Rp./kWh"].Value.max()
-    abgaben_min = durchscnitt_df[durchscnitt_df["Category"] == "Abgaben in Rp./kWh"].Value.min()
+    abgaben_max = durchscnitt_df[
+        durchscnitt_df["Category"] == "Abgaben in Rp./kWh"
+    ].Value.max()
+    abgaben_min = durchscnitt_df[
+        durchscnitt_df["Category"] == "Abgaben in Rp./kWh"
+    ].Value.min()
 
     # Netzzuschlag
-    netzzuschlag = durchscnitt_df[durchscnitt_df["Category"] == "Netzuschlag in Rp./kWh"].Value.iloc[0]
+    netzzuschlag = durchscnitt_df[
+        durchscnitt_df["Category"] == "Netzuschlag in Rp./kWh"
+    ].Value.iloc[0]
 
-    total_duschschnitt_min = total_netz + total_ener + abgaben_min + netzzuschlag
-    total_duschschnitt_max = total_netz + total_ener + abgaben_max + netzzuschlag
+    # Stromreserve / Winterstromreserve
+    stromreserve = durchscnitt_df[
+        durchscnitt_df["Category"]
+        == "Stromreserve/Winterstromreserve in in Rp./kWh"
+    ].Value.iloc[0]
+
+    total_duschschnitt_min = (
+        total_netz + total_ener + abgaben_min + netzzuschlag + stromreserve
+    )
+    total_duschschnitt_max = (
+        total_netz + total_ener + abgaben_max + netzzuschlag + stromreserve
+    )
 
     return total_duschschnitt_min, total_duschschnitt_max
+
 
 def write_output(input_json, output_values):
     if type(output_values) is not list:
@@ -152,14 +207,10 @@ def write_output(input_json, output_values):
     else:
         new_fields = {
             "tiefster Preis [exkl. MWST]": output_values[0],
-            "höchster Preis [exkl. MWST]": output_values[1]
+            "höchster Preis [exkl. MWST]": output_values[1],
         }
         # Create the new structure
-        new_json_data = {
-            "input": input_json,
-            "output": new_fields
-        }
+        new_json_data = {"input": input_json, "output": new_fields}
         # Write the updated JSON data to a new file
-        with open('output/output.json', 'w', encoding='utf-8') as file:
+        with open("output/output.json", "w", encoding="utf-8") as file:
             json.dump(new_json_data, file, indent=4, ensure_ascii=False)
-

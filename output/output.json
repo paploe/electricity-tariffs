@@ -363,11 +363,12 @@
             "Abgaben in Rp./kWh": [
                 0.34
             ],
+            "Stromreserve/Winterstromreserve in in Rp./kWh": 0.4,
             "Netzuschlag in Rp./kWh": 2.3
         }
     },
     "output": {
-        "tiefster Preis [exkl. MWST]": 32.22677777777778,
-        "höchster Preis [exkl. MWST]": 32.22677777777778
+        "tiefster Preis [exkl. MWST]": 32.626777777777775,
+        "höchster Preis [exkl. MWST]": 32.626777777777775
     }
 }
