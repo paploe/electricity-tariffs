@@ -9,17 +9,13 @@ async function ask(body){
 }
 
 async function searchFile(
+    assistantBody,
     files: string[],
     vectorStoreBody,
     fileAttachBodyArray,
     userQuestion: string
 ) {
-    const assistant = await openai.beta.assistants.create({
-        name: "Financial Analyst Assistant",
-        instructions: "You are an expert financial analyst. Use you knowledge base to answer questions about audited financial statements.",
-        model: "gpt-4o",
-        tools: [{ type: "file_search" }],
-    });
+    const assistant = await openai.beta.assistants.create(assistantBody);
     const fileStreams = files.map((path) =>
         fs.createReadStream(path),
     );
