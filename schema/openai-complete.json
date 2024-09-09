@@ -1,0 +1,36 @@
+{
+  "name": "tariff_response",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "components": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "components",
+      "summary"
+    ],
+    "additionalProperties": false
+  },
+  "strict": true
+}

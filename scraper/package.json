@@ -25,6 +25,7 @@
     "@types/jsonwebtoken": "^9.0.6",
     "@types/pg": "^8.11.6",
     "@types/yargs": "^17.0.33",
+    "ajv": "^6.12.6",
     "axios": "^1.7.2",
     "jsonwebtoken": "^9.0.2",
     "koa": "~2.14.1",
