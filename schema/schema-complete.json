@@ -1449,13 +1449,17 @@
         },
         "Netzuschlag in Rp./kWh": {
           "type": "number"
+        },
+        "Stromreserve/Winterstromreserve in in Rp./kWh": {
+          "type": "number"
         }
       },
       "required": [
         "Netznutzung",
         "Energielieferung",
         "Abgaben in Rp./kWh",
-        "Netzuschlag in Rp./kWh"
+        "Netzuschlag in Rp./kWh",
+        "Stromreserve/Winterstromreserve in in Rp./kWh"
       ]
     }
   },

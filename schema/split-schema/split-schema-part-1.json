@@ -1,0 +1,135 @@
+{
+  "title": "Schema für Netzbetreiber",
+  "type": "object",
+  "properties": {
+    "Netzbetreiber": {
+      "type": "string"
+    },
+    "Produkte": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Beschreibung": {
+            "type": "string"
+          },
+          "Komponenten": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "Beschreibung": {
+                  "type": "string"
+                },
+                "Einheit": {
+                  "type": "string",
+                  "enum": [
+                    "CHF/Monat",
+                    "CHF/Jahr",
+                    "Rp./kWh",
+                    "CHF/kW/Monat",
+                    "Rp./kVarh",
+                    "weitere"
+                  ]
+                },
+                "Unterkategorie": {
+                  "type": "string",
+                  "enum": [
+                    "Energie",
+                    "Grundpreis Energie",
+                    "Rabatt Energie",
+                    "Netznutzung",
+                    "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Leistungspreis",
+                    "Blindenergie",
+                    "Systemdienstleistungen swissgrid (SDL)",
+                    "Stromreserve",
+                    "Rabatt Netz",
+                    "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Konzessionsgebühren",
+                    "Abgaben an Gemeinde",
+                    "Abgaben an Kanton",
+                    "weitere Abgaben"
+                  ]
+                },
+                "Menge": {
+                  "type": "string"
+                },
+                "Tariftyp": {
+                  "type": "string",
+                  "enum": [
+                    "Einfachtarif",
+                    "Doppeltarif"
+                  ]
+                },
+                "Tarifzeiten": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Name",
+                "Beschreibung",
+                "Einheit",
+                "Unterkategorie",
+                "Menge",
+                "Tariftyp",
+                "Tarifzeiten"
+              ]
+            }
+          },
+          "Gültigkeit": {
+            "type": "string"
+          },
+          "Verbrauchskategorie": {
+            "type": "string"
+          },
+          "Verbrauchstyp": {
+            "type": "string",
+            "enum": [
+              "Haushalt",
+              "Gewerbe & Industrie",
+              "Bau",
+              "Strassenbeleuchtung",
+              "weitere"
+            ]
+          },
+          "Netzebene": {
+            "type": "string",
+            "enum": [
+              "Niederspannung",
+              "Mittelspannung",
+              "weitere"
+            ]
+          },
+          "Standardprodukt": {
+            "type": "string",
+            "enum": ["Ja", "Nein"]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Beschreibung",
+          "Komponenten",
+          "Gültigkeit",
+          "Verbrauchskategorie",
+          "Verbrauchstyp",
+          "Netzebene",
+          "Standardprodukt"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Netzbetreiber",
+    "Produkte"
+  ]
+}

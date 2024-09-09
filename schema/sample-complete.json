@@ -360,6 +360,7 @@
       "ZusätzlicherRabatt in Rp./kWh": 0
     },
     "Abgaben in Rp./kWh": [0.34],
+    "Stromreserve/Winterstromreserve in in Rp./kWh": 0.40,
     "Netzuschlag in Rp./kWh": 2.30
   }
 }

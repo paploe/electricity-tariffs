@@ -1,36 +1,1519 @@
 {
-  "name": "tariff_response",
-  "schema": {
-    "type": "object",
-    "properties": {
-      "components": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
+  "title": "Schema für Netzbetreiber",
+  "type": "object",
+  "properties": {
+    "Netzbetreiber": {
+      "type": "string"
+    },
+    "Produkte": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string"
+          },
+          "Beschreibung": {
+            "type": "string"
+          },
+          "Komponenten": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "type": "string"
+                },
+                "Beschreibung": {
+                  "type": "string"
+                },
+                "Einheit": {
+                  "type": "string",
+                  "enum": [
+                    "CHF/Monat",
+                    "CHF/Jahr",
+                    "Rp./kWh",
+                    "CHF/kW/Monat",
+                    "Rp./kVarh",
+                    "weitere"
+                  ]
+                },
+                "Unterkategorie": {
+                  "type": "string",
+                  "enum": [
+                    "Energie",
+                    "Grundpreis Energie",
+                    "Rabatt Energie",
+                    "Netznutzung",
+                    "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Leistungspreis",
+                    "Blindenergie",
+                    "Systemdienstleistungen swissgrid (SDL)",
+                    "Stromreserve",
+                    "Rabatt Netz",
+                    "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Konzessionsgebühren",
+                    "Abgaben an Gemeinde",
+                    "Abgaben an Kanton",
+                    "weitere Abgaben"
+                  ]
+                },
+                "Menge": {
+                  "type": "string"
+                },
+                "Tariftyp": {
+                  "type": "string",
+                  "enum": [
+                    "Einfachtarif",
+                    "Doppeltarif"
+                  ]
+                },
+                "Tarifzeiten": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Name",
+                "Beschreibung",
+                "Einheit",
+                "Unterkategorie",
+                "Menge",
+                "Tariftyp",
+                "Tarifzeiten"
+              ]
             }
           },
-          "required": [
-            "name",
-            "description"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "summary": {
-        "type": "string"
+          "Gültigkeit": {
+            "type": "string"
+          },
+          "Verbrauchskategorie": {
+            "type": "string"
+          },
+          "Verbrauchstyp": {
+            "type": "string",
+            "enum": [
+              "Haushalt",
+              "Gewerbe & Industrie",
+              "Bau",
+              "Strassenbeleuchtung",
+              "weitere"
+            ]
+          },
+          "Netzebene": {
+            "type": "string",
+            "enum": [
+              "Niederspannung",
+              "Mittelspannung",
+              "weitere"
+            ]
+          },
+          "Standardprodukt": {
+            "type": "string",
+            "enum": ["Ja", "Nein"]
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "Name",
+          "Beschreibung",
+          "Komponenten",
+          "Gültigkeit",
+          "Verbrauchskategorie",
+          "Verbrauchstyp",
+          "Netzebene",
+          "Standardprodukt"
+        ]
       }
     },
-    "required": [
-      "components",
-      "summary"
-    ],
-    "additionalProperties": false
+    "Netznutzung": {
+      "type": "object",
+      "properties": {
+        "Winter": {
+          "type": "object",
+          "properties": {
+            "Montag-Freitag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Samstag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Sonntag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Montag-Freitag",
+            "Samstag",
+            "Sonntag"
+          ]
+        },
+        "Sommer": {
+          "type": "object",
+          "properties": {
+            "Montag-Freitag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Samstag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Sonntag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Montag-Freitag",
+            "Samstag",
+            "Sonntag"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "Winter",
+        "Sommer"
+      ]
+    },
+    "Energielieferung": {
+      "type": "object",
+      "properties": {
+        "Winter": {
+          "type": "object",
+          "properties": {
+            "Montag-Freitag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Samstag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Sonntag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Montag-Freitag",
+            "Samstag",
+            "Sonntag"
+          ]
+        },
+        "Sommer": {
+          "type": "object",
+          "properties": {
+            "Montag-Freitag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Samstag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            },
+            "Sonntag": {
+              "type": "object",
+              "properties": {
+                "Von 00:00 bis 01:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 01:00 bis 02:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 02:00 bis 03:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 03:00 bis 04:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 04:00 bis 05:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 05:00 bis 06:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 06:00 bis 07:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 07:00 bis 08:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 08:00 bis 09:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 09:00 bis 10:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 10:00 bis 11:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 11:00 bis 12:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 12:00 bis 13:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 13:00 bis 14:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 14:00 bis 15:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 15:00 bis 16:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 16:00 bis 17:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 17:00 bis 18:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 18:00 bis 19:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 19:00 bis 20:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 20:00 bis 21:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 21:00 bis 22:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 22:00 bis 23:00 in Rp./kWh": {
+                  "type": "number"
+                },
+                "Von 23:00 bis 00:00 in Rp./kWh": {
+                  "type": "number"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "Von 00:00 bis 01:00 in Rp./kWh",
+                "Von 01:00 bis 02:00 in Rp./kWh",
+                "Von 02:00 bis 03:00 in Rp./kWh",
+                "Von 03:00 bis 04:00 in Rp./kWh",
+                "Von 04:00 bis 05:00 in Rp./kWh",
+                "Von 05:00 bis 06:00 in Rp./kWh",
+                "Von 06:00 bis 07:00 in Rp./kWh",
+                "Von 07:00 bis 08:00 in Rp./kWh",
+                "Von 08:00 bis 09:00 in Rp./kWh",
+                "Von 09:00 bis 10:00 in Rp./kWh",
+                "Von 10:00 bis 11:00 in Rp./kWh",
+                "Von 11:00 bis 12:00 in Rp./kWh",
+                "Von 12:00 bis 13:00 in Rp./kWh",
+                "Von 13:00 bis 14:00 in Rp./kWh",
+                "Von 14:00 bis 15:00 in Rp./kWh",
+                "Von 15:00 bis 16:00 in Rp./kWh",
+                "Von 16:00 bis 17:00 in Rp./kWh",
+                "Von 17:00 bis 18:00 in Rp./kWh",
+                "Von 18:00 bis 19:00 in Rp./kWh",
+                "Von 19:00 bis 20:00 in Rp./kWh",
+                "Von 20:00 bis 21:00 in Rp./kWh",
+                "Von 21:00 bis 22:00 in Rp./kWh",
+                "Von 22:00 bis 23:00 in Rp./kWh",
+                "Von 23:00 bis 00:00 in Rp./kWh"
+              ]
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Montag-Freitag",
+            "Samstag",
+            "Sonntag"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "Winter",
+        "Sommer"
+      ]
+    },
+    "Durschschnittspreis": {
+      "type": "object",
+      "properties": {
+        "Netznutzung": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "Systemdienstleistung in Rp./kWh": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in Rp./kWh": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "Systemdienstleistung in Rp./kWh",
+            "ZusätzlicherRabatt in Rp./kWh"
+          ]
+        },
+        "Energielieferung": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in Rp./kWh": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "ZusätzlicherRabatt in Rp./kWh"
+          ]
+        },
+        "Abgaben in Rp./kWh": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Netzuschlag in Rp./kWh": {
+          "type": "number"
+        },
+        "Stromreserve/Winterstromreserve in in Rp./kWh": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "Netznutzung",
+        "Energielieferung",
+        "Abgaben in Rp./kWh",
+        "Netzuschlag in Rp./kWh",
+        "Stromreserve/Winterstromreserve in in Rp./kWh"
+      ]
+    }
   },
-  "strict": true
+  "additionalProperties": false,
+  "required": [
+    "Netzbetreiber",
+    "Produkte",
+    "Netznutzung",
+    "Energielieferung",
+    "Durschschnittspreis"
+  ]
 }
