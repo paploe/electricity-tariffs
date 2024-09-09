@@ -28,7 +28,7 @@ describe("Combined workflows", () => {
   test(
     "Workflow: Download PDF --> Extract info by prompt --> Harmonize by split schemas --> merge JSON",
     async () => {
-        const networkOperators = [525];
+        const networkOperators = [290];
         for(const networkOperator of networkOperators) {
             console.log(`Downloading PDF for network operator ${networkOperator}`);
             const res = await scrapePDF(networkOperator, 2024);
