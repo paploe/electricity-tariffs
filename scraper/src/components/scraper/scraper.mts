@@ -48,7 +48,7 @@ async function scrapePDF(operatorId: number, year: number) {
     `${__dirname}/../../../../database/pdf-errors/${year}`,
     `operator_${operatorId}_error_Tarifblatt_${year}.json`,
   );
-  if(fs.existsSync(pdfFilePath)){
+  if (fs.existsSync(pdfFilePath)) {
     console.log(`PDF file already exists ${pdfFilePath}`, {
       pdfFilePath,
     });
