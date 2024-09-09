@@ -2,7 +2,7 @@
   "title": "Schema für Netzbetreiber",
   "type": "object",
   "properties": {
-    "Netznutzung": {
+    "Energielieferung": {
       "type": "object",
       "properties": {
         "Winter": {
@@ -337,6 +337,6 @@
   },
   "additionalProperties": false,
   "required": [
-    "Netznutzung"
+    "Energielieferung"
   ]
 }

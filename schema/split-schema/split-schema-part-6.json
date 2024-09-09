@@ -1,0 +1,79 @@
+{
+  "title": "Schema für Netzbetreiber",
+  "type": "object",
+  "properties": {
+    "Durschschnittspreis": {
+      "type": "object",
+      "properties": {
+        "Netznutzung": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "Systemdienstleistung in Rp./kWh": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in Rp./kWh": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "Systemdienstleistung in Rp./kWh",
+            "ZusätzlicherRabatt in Rp./kWh"
+          ]
+        },
+        "Energielieferung": {
+          "type": "object",
+          "properties": {
+            "Grundpreis in CHF": {
+              "type": "number"
+            },
+            "Leistungspreis in CHF": {
+              "type": "number"
+            },
+            "ZusätzlicherRabatt in Rp./kWh": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "Grundpreis in CHF",
+            "Leistungspreis in CHF",
+            "ZusätzlicherRabatt in Rp./kWh"
+          ]
+        },
+        "Abgaben in Rp./kWh": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "Netzuschlag in Rp./kWh": {
+          "type": "number"
+        },
+        "Stromreserve/Winterstromreserve in in Rp./kWh": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "Netznutzung",
+        "Energielieferung",
+        "Abgaben in Rp./kWh",
+        "Netzuschlag in Rp./kWh",
+        "Stromreserve/Winterstromreserve in in Rp./kWh"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "Durschschnittspreis"
+  ]
+}

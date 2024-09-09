@@ -2,10 +2,10 @@
   "title": "Schema für Netzbetreiber",
   "type": "object",
   "properties": {
-    "Netznutzung": {
+    "Energielieferung": {
       "type": "object",
       "properties": {
-        "Winter": {
+        "Sommer": {
           "type": "object",
           "properties": {
             "Montag-Freitag": {
@@ -331,12 +331,12 @@
       },
       "additionalProperties": false,
       "required": [
-        "Winter"
+        "Sommer"
       ]
     }
   },
   "additionalProperties": false,
   "required": [
-    "Netznutzung"
+    "Energielieferung"
   ]
 }
