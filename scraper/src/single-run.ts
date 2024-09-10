@@ -1,6 +1,4 @@
 import packageJson from "../package.json" with { type: "json" };
-import * as dotenv from "dotenv";
-dotenv.config({ path: '../.env' });
 
 import { processNetworkOperator } from "./components/scraper/scraper.mjs";
 
