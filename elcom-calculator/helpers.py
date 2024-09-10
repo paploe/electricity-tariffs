@@ -202,7 +202,7 @@ def durchschnitt_calculation(durchscnitt_df, tariff_df):
     return total_duschschnitt_min, total_duschschnitt_max
 
 
-def write_output(input_json, output_values):
+def write_output(input_json, output_values, output_json):
     if type(output_values) is not list:
         raise ValueError("Invalid option. 'output_values' must be a list.")
     else:
@@ -213,5 +213,5 @@ def write_output(input_json, output_values):
         # Create the new structure
         new_json_data = {"input": input_json, "output": new_fields}
         # Write the updated JSON data to a new file
-        with open("output/output.json", "w", encoding="utf-8") as file:
+        with open(output_json, "w", encoding="utf-8") as file:
             json.dump(new_json_data, file, indent=4, ensure_ascii=False)
