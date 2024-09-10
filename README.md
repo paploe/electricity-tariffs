@@ -123,8 +123,8 @@ Before running the project, you need to provide the correct path to your Chrome 
 #### **Verifying the Browser Path**
 - To ensure that Puppeteer can find the browser, test the path by running the following command:
   - **Windows**:
-    ```bash
-    "C:/Program Files/Google/Chrome/Application/chrome.exe" --version
+    ```powershell
+    (Get-Item "C:\Program Files\Google\Chrome\Application\chrome.exe").VersionInfo
     ```
   - **macOS**:
     ```bash
