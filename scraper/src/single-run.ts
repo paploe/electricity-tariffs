@@ -38,15 +38,25 @@ const outputFileName = argv["output-file-name"];
 
 (async () => {
   for (const networkOperator of networkOperators) {
-    const res = await processNetworkOperator(
-      networkOperator,
-      promptFileName,
-      outputFileName,
-    );
-    console.log(
-      `Finished Swiss Electricity Tariffs for elcom number ${networkOperator}.`,
-      res,
-    );
+    try {
+      const res = await processNetworkOperator(
+          networkOperator,
+          promptFileName,
+          outputFileName,
+      ).catch(e => {
+        console.error("Could not retrieve network operator. Proceeding to the next operator.", e);
+        return null;
+      });
+      console.log(
+          `Finished Swiss Electricity Tariffs for elcom number ${networkOperator}.`,
+          res,
+      );
+    }catch (e){
+      console.error(
+          `processNetworkOperator error on network operator ${networkOperator}.`,
+          e,
+      );
+    }
   }
 
   console.log(

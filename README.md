@@ -33,6 +33,8 @@ The main idea:
 ### Process a single network operator
 ````bash
 cd scraper
+npm i
+npm run compile
 # run compiled script
 node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=final-output.json
 # run in test mode
