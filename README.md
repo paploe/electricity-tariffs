@@ -15,11 +15,11 @@ electricity-tariffs/
 ### Goals
 
 The goal of this hackathon is the harmonization of tariff data. We want to be able to convert unstructured PDF of
-network operators into a predefined JSON-schema, so that we can build services on top of strucutred data.
+network operators into a predefined JSON-schema, so that we can build services on top of structured data.
 
 The main idea:
 1. Scrape the tariff-PDF and store it on ``database/pdf/2024/operator_21_Tarifblatt_2024.pdf``
-2. Make some OpenAI magic bases on the modifiable prompt `prompts/simple-3.txt` an store the results on ``output/test/21/final-output.json.json``
+2. Make some OpenAI magic based on the modifiable prompt `prompts/simple-3.txt` an store the results on ``output/test/21/final-output.json.json``
 3. Validate the harmonized data with a python script
 
 ### Challanges
@@ -34,6 +34,7 @@ The main idea:
 ````bash
 cd scraper
 npm i
+mv .env.sample .env # replace the env variables from the sample
 npm run compile
 # run compiled script
 node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=final-output.json
