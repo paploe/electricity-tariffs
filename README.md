@@ -13,7 +13,8 @@ electricity-tariffs/
 ## Running the Price Analysis:
 To run the Elcom analysis from terminal giving as input the sample JSON, use:
 ````bash
-docker build -t elcom-calculator -f ./elcom-calculator/Dockerfile . --progress=plain --no-cache
+cd elcom-calculator
+docker build -t elcom-calculator -f Dockerfile . --progress=plain
 # python elcom-calculator/run.py schema/sample-complete.json 
-docker run -it --rm --name elcom-calculator -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 python elcom-calculator/run.py schema/sample-complete.json
+docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py ./output/test/525/res_harmonized_complete.json ./output/run_1_output.json
 ````

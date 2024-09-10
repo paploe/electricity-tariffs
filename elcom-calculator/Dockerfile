@@ -4,7 +4,9 @@ WORKDIR /usr/src/app
 
 COPY . .
 RUN ls -lah
-RUN pip install --no-cache-dir -r requirements.txt
+RUN echo "Current dir:"
+RUN pwd
+RUN pip install -r requirements.txt
 RUN ls -lah
 
 CMD [ "python", "./run.py" ]
