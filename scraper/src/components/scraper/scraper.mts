@@ -4,14 +4,21 @@ import * as fs from "fs";
 import * as path from "path";
 import axios from "axios";
 import pLimit from "p-limit";
+import { searchFile } from "../openai/openai.mjs";
+import { mergeJsonFiles } from "../util/util.mjs";
+import process from "node:process";
 
-async function downloadPDF(outputPath, url) {
+const cwd = process.cwd();
+console.log("The current working directory is", cwd);
+async function downloadPDF(outputPath: fs.PathLike, url: string) {
   try {
     // Fetch the binary data (PDF) from the URL
     const response = await axios.get(url, { responseType: "stream" }); // Get as a stream
 
     // Ensure directory exists using fs.mkdirSync with recursive option
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    if (typeof outputPath === "string") {
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    }
     // Create a write stream to the file
     const writer = fs.createWriteStream(outputPath);
 
@@ -32,20 +39,20 @@ async function downloadPDF(outputPath, url) {
 async function scrapePDF(operatorId: number, year: number) {
   let browser: puppeteer.Browser | null = null;
   let page: puppeteer.Page;
-  let pdfDownloadURL: string;
+  let pdfDownloadURL: string = "";
   const longTimeout = 10 * 1000;
 
   // Define the path to save the PDF
   const pdfDownloadURLFilePath = path.resolve(
-    `${__dirname}/../../../../database/pdf-links/${year}`,
+    `${cwd}/../database/pdf-links/${year}`,
     `operator_${operatorId}_Tarifblatt_${year}_link.txt`,
   );
   const pdfFilePath = path.resolve(
-    `${__dirname}/../../../../database/pdf/${year}`,
+    `${cwd}/../database/pdf/${year}`,
     `operator_${operatorId}_Tarifblatt_${year}.pdf`,
   );
   const errorFilePath = path.resolve(
-    `${__dirname}/../../../../database/pdf-errors/${year}`,
+    `${cwd}/../database/pdf-errors/${year}`,
     `operator_${operatorId}_error_Tarifblatt_${year}.json`,
   );
   if (fs.existsSync(pdfFilePath)) {
@@ -136,7 +143,11 @@ async function scrapePDF(operatorId: number, year: number) {
   };
 }
 
-async function scrapePDFBatch(operatorIdArray, year, maxConcurrent = 1) {
+async function scrapePDFBatch(
+  operatorIdArray: any[],
+  year: number,
+  maxConcurrent = 1,
+) {
   const limit = pLimit(maxConcurrent);
   const limitInput = operatorIdArray.map((operatorId) => {
     return limit(() => {
@@ -148,4 +159,181 @@ async function scrapePDFBatch(operatorIdArray, year, maxConcurrent = 1) {
   return Promise.all(limitInput);
 }
 
-export { scrapePDF, scrapePDFBatch };
+async function processNetworkOperator(
+  elcomNumber: number,
+  promptFileName: string,
+  outputFileName: string,
+) {
+  console.log(
+    `Processing network operator ${elcomNumber} with prompt ${promptFileName}`,
+  );
+  const networkOperators = [elcomNumber];
+  for (const networkOperator of networkOperators) {
+    console.log(`Downloading PDF for network operator ${networkOperator}`);
+    const res = await scrapePDF(networkOperator, 2024);
+    console.log(`Prompt OpenAI with the PDF and save the raw output`, res);
+
+    const testSubfolder = networkOperator;
+    const prompt = fs.readFileSync(
+      path.resolve(`${cwd}/../prompts/${promptFileName}`).toString(),
+      "utf8",
+    );
+    const inputFile = path.resolve(
+      `${cwd}/../database/pdf/2024/operator_${networkOperator}_Tarifblatt_2024.pdf`,
+    );
+    const resFileSearch = await searchFile(
+      {
+        name: "Electricity Tariff Analyst Assistant",
+        instructions:
+          "You are an expert analyst in electricity tariffs. Use you the provided files as a base to answer questions about electricity tarffs. Your output will be a JSON string without anything else.",
+        model: "gpt-4o-mini",
+        tools: [
+          {
+            type: "file_search",
+          },
+        ],
+        // issue: https://community.openai.com/t/structured-outputs-dont-currently-work-with-file-search-tool-in-assistants-api/900538
+        // issue: https://community.openai.com/t/assistants-api-why-is-json-mode-not-available-when-using-file-search-code-interpreter/743449/7
+      },
+      [inputFile],
+      {
+        name: "Electricity Tariffs 2024",
+        // Manage the costs with a shorer expiry: https://platform.openai.com/docs/assistants/tools/file-search
+        expires_after: {
+          anchor: "last_active_at",
+          days: 2,
+        },
+      },
+      [
+        {
+          file: fs.createReadStream(inputFile),
+          purpose: "assistants",
+        },
+      ],
+      prompt,
+    );
+    console.log(
+      "OpenAI's response to the PDF search: ",
+      JSON.stringify(resFileSearch),
+    );
+
+    const outputFilePath = path.resolve(
+      `${cwd}/../output/test/${testSubfolder}/res_harmonized_1_raw.json`,
+    );
+    // Ensure directory exists using fs.mkdirSync with recursive option
+    fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
+    await fsPromises.writeFile(
+      outputFilePath,
+      JSON.stringify(resFileSearch, null, 4),
+    );
+
+    console.log(
+      `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas...`,
+    );
+    const textInputPath = path.resolve(
+      `${cwd}/../output/test/${testSubfolder}/res_harmonized_1_raw.json`,
+    );
+    const textInputString = fs.readFileSync(textInputPath, "utf8");
+
+    const splits = [1, 2, 3, 4, 5, 6];
+
+    for (const split of splits) {
+      console.log(
+        `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas... split ${split}`,
+      );
+      const JSONSchemaPath = path.resolve(
+        `${cwd}/../schema/split-schema/split-schema-part-${split}.json`,
+      );
+      const JSONSchemaString = fs.readFileSync(JSONSchemaPath, "utf8");
+      const JSONSchema = JSON.parse(JSONSchemaString);
+
+      const resFileSearch = await searchFile(
+        {
+          name: "Electricity Tariff Analyst Assistant",
+          instructions:
+            "You are an expert analyst in electricity tariffs. Use you the provided files as a base to answer questions about electricity tarffs.",
+          // model: "gpt-4o-2024-08-06",
+          model: "gpt-4o-mini",
+          tools: [],
+          // issue: https://community.openai.com/t/structured-outputs-dont-currently-work-with-file-search-tool-in-assistants-api/900538
+          // issue: https://community.openai.com/t/assistants-api-why-is-json-mode-not-available-when-using-file-search-code-interpreter/743449/7
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "tariff_response",
+              schema: JSONSchema,
+              strict: true,
+            },
+          },
+        },
+        [inputFile],
+        {
+          name: "Electricity Tariffs 2024",
+          // Manage the costs with a shorer expiry: https://platform.openai.com/docs/assistants/tools/file-search
+          expires_after: {
+            anchor: "last_active_at",
+            days: 2,
+          },
+        },
+        [
+          {
+            file: fs.createReadStream(inputFile),
+            purpose: "assistants",
+          },
+        ],
+        `Convert this snippet to JSON: \n ${textInputString}`,
+      );
+      console.log(
+        "OpenAi response (file search): ",
+        JSON.stringify(resFileSearch),
+      );
+
+      const outputSplitFilePath = path.resolve(
+        `${cwd}/../output/test/${testSubfolder}/res_harmonized_1_split_${split}_json_raw.json`,
+      );
+      // Ensure directory exists using fs.mkdirSync with recursive option
+      fs.mkdirSync(path.dirname(outputSplitFilePath), { recursive: true });
+      await fsPromises.writeFile(
+        outputSplitFilePath,
+        JSON.stringify(resFileSearch, null, 4),
+      );
+      const outputSplitFilePathParsed = path.resolve(
+        `${cwd}/../output/test/${testSubfolder}/res_harmonized_1_split_${split}_json_parsed.json`,
+      );
+      // Ensure directory exists using fs.mkdirSync with recursive option
+      fs.mkdirSync(path.dirname(outputSplitFilePathParsed), {
+        recursive: true,
+      });
+      const jsonObject = JSON.parse(
+        (resFileSearch as { text: any }).text.value,
+      );
+      await fsPromises.writeFile(
+        outputSplitFilePathParsed,
+        JSON.stringify(jsonObject, null, 4),
+      );
+    }
+    console.log(`Merging all split files: ${splits.toString()}`);
+    const objectsToMerge = [];
+    for (const split of splits) {
+      const partialObjectPath = path.resolve(
+        `${cwd}/../output/test/${testSubfolder}/res_harmonized_1_split_${split}_json_parsed.json`,
+      );
+      const partialObjectString = fs.readFileSync(partialObjectPath, "utf8");
+      const partialObject = JSON.parse(partialObjectString);
+      objectsToMerge.push(partialObject);
+    }
+    const resMerge = mergeJsonFiles(objectsToMerge);
+    const outputMergedFilePath = path.resolve(
+      `${cwd}/../output/test/${testSubfolder}/${outputFileName}`,
+    );
+    // Ensure directory exists using fs.mkdirSync with recursive option
+    fs.mkdirSync(path.dirname(outputMergedFilePath), { recursive: true });
+    await fsPromises.writeFile(
+      outputMergedFilePath,
+      JSON.stringify(resMerge, null, 4),
+    );
+    return { outputMergedFilePath, res: resMerge };
+  }
+}
+
+export { scrapePDF, scrapePDFBatch, processNetworkOperator };

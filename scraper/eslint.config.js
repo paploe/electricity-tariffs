@@ -11,6 +11,7 @@ export default [
     files: ["src/**/*.{ts,mts}", "test/**/*.{ts,mts}"], // Specify the file patterns to lint within the src folder
     rules: {
       "@typescript-eslint/no-explicit-any": "off", // Disable the rule globally
+      "@typescript-eslint/ban-ts-comment": "off",
     },
   },
   {

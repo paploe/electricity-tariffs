@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node --env-file=.env dist/src/index.js",
+    "start-single": "node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=final-output.json",
     "compile": "npx tsc --project tsconfig.json",
     "compile-watch": "npx tsc --project tsconfig.json --watch",
     "lint": "npx eslint --config eslint.config.js",
@@ -24,7 +25,6 @@
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.6",
     "@types/pg": "^8.11.6",
-    "@types/yargs": "^17.0.33",
     "ajv": "^6.12.6",
     "axios": "^1.7.2",
     "jsonwebtoken": "^9.0.2",
@@ -44,6 +44,7 @@
     "@types/node": "~18.16.9",
     "@types/node-jose": "^1.1.13",
     "@types/xml2js": "^0.4.14",
+    "@types/yargs": "^17.0.33",
     "@vitest/coverage-v8": "^2.0.5",
     "apidoc": "^1.2.0",
     "eslint": "^9.9.1",

@@ -9,8 +9,8 @@ export function mergeJsonFiles(jsonObjects: JsonObject[]): JsonObject {
         // Increment the count for this key
         result[key] = {
           ...(result[key] || {}),
-          ...jsonObject[key]
-        }
+          ...jsonObject[key],
+        };
       } else {
         // First occurrence of the key
         result[key] = jsonObject[key];

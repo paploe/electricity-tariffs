@@ -1,17 +1,18 @@
 import OpenAI from "openai";
 import * as fs from "fs";
-
 const openai = new OpenAI();
 
-async function ask(body) {
+async function ask(
+  body: OpenAI.Chat.Completions.ChatCompletionCreateParamsNonStreaming,
+) {
   return await openai.chat.completions.create(body);
 }
 
 async function searchFile(
-  assistantBody,
+  assistantBody: OpenAI.Beta.Assistants.AssistantCreateParams,
   files: string[],
-  vectorStoreBody,
-  fileAttachBodyArray,
+  vectorStoreBody: OpenAI.Beta.VectorStores.VectorStoreCreateParams,
+  fileAttachBodyArray: any[],
   userQuestion: string,
 ) {
   const assistant = await openai.beta.assistants.create({
@@ -25,8 +26,8 @@ async function searchFile(
     const vectorStore = await openai.beta.vectorStores.create(vectorStoreBody);
 
     if (fileStreams.length > 0) {
-      // @ts-expect-error I don't know why TS complains here. https://platform.openai.com/docs/assistants/quickstart
       await openai.beta.vectorStores.fileBatches
+        // @ts-expect-error
         .uploadAndPoll(vectorStore.id, fileStreams)
         .catch(async (e) => {
           console.warn("Error uploading and polling", e.message);
@@ -44,7 +45,7 @@ async function searchFile(
       return openai.files.create(fileAttachBody);
     }),
   );
-  const attachments = [];
+  const attachments: { file_id: any; tools: { type: string }[] }[] = [];
   userFileAttachments.forEach((attachment) => {
     attachments.push({
       file_id: attachment.id,
@@ -52,6 +53,7 @@ async function searchFile(
     });
   });
 
+  // @ts-expect-error ???
   const thread = await openai.beta.threads.create({
     messages: [
       {
