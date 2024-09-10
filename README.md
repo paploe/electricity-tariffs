@@ -56,6 +56,102 @@ This project focuses on creating a solution for harmonizing the complex and frag
 ````
 
 ## Hacking quickstart
+### Finding the Path to the Browser Executable
+
+Before running the project, you need to provide the correct path to your Chrome or Chromium browser executable in the `.env` file. Follow the instructions below to find the path on your system:
+
+#### **Windows**
+
+1. **Find Chrome Executable Path**:
+    - Open the Start Menu and search for **"Google Chrome"**.
+    - Right-click on the Chrome icon and choose **"Open file location"**.
+    - In the file location window, right-click on the **Google Chrome** shortcut and again choose **"Open file location"**.
+    - This will take you to the folder where Chrome is installed. The default path is usually:
+      ```plaintext
+      C:\Program Files\Google\Chrome\Application\chrome.exe
+      ```
+    - Copy the full path to `chrome.exe` and paste it into your `.env` file like this:
+      ```plaintext
+      CHROME_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe"
+      ```
+
+2. **Alternative: Use File Explorer**:
+    - Navigate to `C:\Program Files\Google\Chrome\Application\` or `C:\Program Files (x86)\Google\Chrome\Application\`.
+    - Find `chrome.exe` in that folder, right-click, and choose **"Copy as Path"** to get the full executable path.
+
+#### **macOS**
+
+1. **Find Chrome Executable Path**:
+    - Open **Finder**.
+    - Navigate to the **Applications** folder.
+    - Find **Google Chrome.app**, right-click it, and select **"Show Package Contents"**.
+    - Navigate to `Contents/MacOS/` inside the Chrome app package.
+    - The path to Chrome’s executable is typically:
+      ```plaintext
+      /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+      ```
+    - Copy this path and paste it into your `.env` file like this:
+      ```plaintext
+      CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+      ```
+
+#### **Linux**
+
+1. **Find Chrome or Chromium Executable Path**:
+    - Open a terminal.
+    - Type the following command to locate Chrome or Chromium on your system:
+      ```bash
+      which google-chrome
+      ```
+      or for Chromium:
+      ```bash
+      which chromium-browser
+      ```
+    - This will give you the path to the browser executable, such as:
+      ```plaintext
+      /usr/bin/google-chrome
+      ```
+      or
+      ```plaintext
+      /usr/bin/chromium-browser
+      ```
+    - Copy the output and paste it into your `.env` file like this:
+      ```plaintext
+      CHROME_PATH="/usr/bin/google-chrome"
+      ```
+
+#### **Verifying the Browser Path**
+- To ensure that Puppeteer can find the browser, test the path by running the following command:
+  - **Windows**:
+    ```bash
+    "C:/Program Files/Google/Chrome/Application/chrome.exe" --version
+    ```
+  - **macOS**:
+    ```bash
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --version
+    ```
+  - **Linux**:
+    ```bash
+    /usr/bin/google-chrome --version
+    ```
+  
+  If the browser version is printed, the path is correct.
+
+---
+
+### Example `.env` File Configuration
+
+```plaintext
+# Windows example
+CHROME_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe"
+
+# macOS example
+CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# Linux example
+CHROME_PATH="/usr/bin/google-chrome"
+```
+
 
 ### Process a single network operator
 ````bash
