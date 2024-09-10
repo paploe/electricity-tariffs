@@ -44,7 +44,7 @@ After we have a ``output/test/21/final-output.json`` file, we analyze it.
 cd elcom-calculator
 docker build -t elcom-calculator -f Dockerfile . --progress=plain
 # python elcom-calculator/run.py schema/sample-complete.json 
-docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py ./output/test/21/final-output.json ./output/analysis_21.json
+docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/test/21/final-output.json --output ./output/analysis_21.json
 ````
 
 
