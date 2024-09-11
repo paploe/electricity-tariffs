@@ -58,7 +58,9 @@ This project focuses on creating a solution for harmonizing the complex and frag
 ## Hacking quickstart
 ### Finding the Path to the Browser Executable
 
-Before running the project, you need to provide the correct path to your Chrome or Chromium browser executable in the `.env` file. Follow the instructions below to find the path on your system:
+Before running the project, copy the ``scraper/.env.sample`` to ``scraper/.env``.
+You need to provide the correct path to your Chrome or Chromium browser executable in the `scraper/.env` file.
+Follow the instructions below to find the path on your system:
 
 #### **Windows**
 
@@ -157,7 +159,6 @@ CHROME_PATH="/usr/bin/google-chrome"
 ````bash
 cd scraper
 npm i
-mv .env.sample .env # replace the env variables from the sample
 npm run compile
 # run compiled script
 node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=final-output.json
