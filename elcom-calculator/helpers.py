@@ -1,6 +1,9 @@
 import pandas as pd
 import json
 import os
+import numpy as np
+import warnings
+import re
 
 # Definition from Elcom H4 period consumption:
 # "Wohnung mit einem Gesamtverbrauch pro Jahr von 4,500 kWh, aufgeteilt wie folgt"
@@ -188,8 +191,7 @@ def durchschnitt_calculation(durchscnitt_df, tariff_df):
 
     # Stromreserve / Winterstromreserve
     stromreserve = durchscnitt_df[
-        durchscnitt_df["Category"]
-        == "Stromreserve/Winterstromreserve in in Rp./kWh"
+        durchscnitt_df["Category"] == "Stromreserve/Winterstromreserve in in Rp./kWh"
     ].Value.iloc[0]
 
     total_duschschnitt_min = (
@@ -202,16 +204,84 @@ def durchschnitt_calculation(durchscnitt_df, tariff_df):
     return total_duschschnitt_min, total_duschschnitt_max
 
 
-def write_output(input_json, output_values, output_json):
+def write_output_tarif(input_json, output_values, output_json):
     if type(output_values) is not list:
         raise ValueError("Invalid option. 'output_values' must be a list.")
     else:
         new_fields = {
-            "tiefster Preis [exkl. MWST]": output_values[0],
-            "höchster Preis [exkl. MWST]": output_values[1],
+            "tiefster Preis [exkl. MWST]": round(output_values[0], 2),
+            "höchster Preis [exkl. MWST]": round(output_values[1], 2),
         }
         # Create the new structure
         new_json_data = {"input": input_json, "output": new_fields}
         # Write the updated JSON data to a new file
         with open(output_json, "w", encoding="utf-8") as file:
             json.dump(new_json_data, file, indent=4, ensure_ascii=False)
+
+
+def write_output_validation(input_json, output_values, output_json):
+    with open(input_json, "r", encoding="utf-8") as file:
+        input_json_val = json.load(file)
+    if type(output_values) is not list:
+        raise ValueError("Invalid option. 'output_values' must be a list.")
+    else:
+        input_json_val["Elcom validation"] = {
+            "Elcom tiefster Preis [exkl. MWST]": output_values[0],
+            "Elcom höchster Preis [exkl. MWST]": output_values[1],
+        }
+
+        # Write the updated JSON data to a new file
+        with open(output_json, "w", encoding="utf-8") as file:
+            json.dump(input_json_val, file, indent=4, ensure_ascii=False)
+
+
+# def validate_tarif_output(input_json, path_elcom_file, output_json):
+#    with open(input_json, 'r', encoding='utf-8') as file:
+#        input_json_val = json.load(file)
+#    min_input_tarif = input_json_val["output"]['tiefster Preis [exkl. MWST]']
+#    max_input_tarif = input_json_val["output"]['höchster Preis [exkl. MWST]']
+#    nr_elcom = get_number_from_json(input_json)
+#    min_validated, max_validated = compare_data_elcom(min_input_tarif, max_input_tarif, nr_elcom, path_elcom_file)
+#    write_output_validation(input_json, [min_validated, max_validated], output_json)
+
+
+# Utility function to get the elcom number from the .json file name
+def get_number_from_json(path):
+    filename = os.path.basename(path)
+    # Check if the file has a .json extension
+    if filename.endswith(".json"):
+        # Use regex to extract any number in file name
+        match = re.search(r"(\d+)", filename)
+        if match:
+            return int(match.group(0))
+        else:
+            warnings.warn(
+                f"The name of the input file does not contain any number. Validation not possible."
+            )
+            return 9999
+    else:
+        raise Exception("Input file is not .JSON")
+
+
+# Utility function to compare the elcom prices for 2024 with the calculated prices from the .json file
+def compare_data_elcom(input_min, input_max, nr_elcom, path_elcom_file):
+    df = pd.read_csv(path_elcom_file)
+    if nr_elcom in df["nr_elcom"].unique():
+        min_elcom = df[df["nr_elcom"] == nr_elcom]["tarif_elcom"].min()
+        max_elcom = df[df["nr_elcom"] == nr_elcom]["tarif_elcom"].max()
+        if np.abs(min_elcom - input_min) <= 0.01:
+            min_validated = True
+        else:
+            min_validated = False
+        if np.abs(max_elcom - input_max) <= 0.01:
+            max_validated = True
+        else:
+            max_validated = False
+    else:
+        warnings.warn(
+            f"Input file does not contain this elcom number provider. Validation not possible."
+        )
+        min_validated = None
+        max_validated = None
+
+    return min_validated, max_validated

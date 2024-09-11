@@ -3,12 +3,25 @@ import json
 import argparse
 import os
 
+
 def parse_args():
     parser = argparse.ArgumentParser(
         description="Run the pipeline with a specific JSON input file"
     )
-    parser.add_argument("--input", "-i", type=str, required=True, help="Absolut path to the input JSON file")
-    parser.add_argument("--output", "-o", type=str, required=True, help="Absolut path to the output JSON file")
+    parser.add_argument(
+        "--input",
+        "-i",
+        type=str,
+        required=True,
+        help="Absolut path to the input JSON file",
+    )
+    parser.add_argument(
+        "--output",
+        "-o",
+        type=str,
+        required=True,
+        help="Absolut path to the output JSON file",
+    )
     return parser.parse_args()
 
 
@@ -27,7 +40,7 @@ def main():
     lower_price, higher_price = durchschnitt_calculation(
         durchschnitt_df, merged_tarif_df
     )
-    write_output(input_json, [lower_price, higher_price], output_file_path)
+    write_output_tarif(input_json, [lower_price, higher_price], output_file_path)
 
 
 if __name__ == "__main__":
