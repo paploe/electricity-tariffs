@@ -4,6 +4,10 @@ import os
 import numpy as np
 import warnings
 import re
+import logging
+
+# Set up the default logger
+logging.basicConfig(level=logging.WARNING)
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
@@ -257,9 +261,7 @@ def get_number_from_json(path):
         if match:
             return int(match.group(0))
         else:
-            warnings.warn(
-                f"The name of the input file does not contain any number. Validation not possible."
-            )
+            logging.warning("The name of the input file does not contain any number. Validation not possible.")
             return 9999
     else:
         raise Exception("Input file is not .JSON")
@@ -280,9 +282,7 @@ def compare_data_elcom(input_min, input_max, nr_elcom, path_elcom_file):
         else:
             max_validated = False
     else:
-        warnings.warn(
-            f"Input file does not contain this elcom number provider. Validation not possible."
-        )
+        logging.warning("Input file does not contain this elcom number provider. Validation not possible.")
         min_validated = None
         max_validated = None
 

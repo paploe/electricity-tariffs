@@ -180,6 +180,7 @@ docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name el
 We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
 
 ````bash
+# python3 ./run_validation.py --input_json ./output/21/analysis_21.json --input_elcom ./data/sample_elcom_tarife.csv --output_json ./output/21/validation_21.json
 docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name elcom-calculator elcom-calculator python3 ./elcom-calculator/run_validation.py --input_json ./output/21/analysis_21.json --input_elcom ./elcom-calculator/data/sample_elcom_tarife.csv --output_json ./output/21/validation_21.json
 ````
 
