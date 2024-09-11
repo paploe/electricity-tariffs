@@ -61,7 +61,7 @@ This project focuses on creating a solution for harmonizing the complex and frag
 
 ### Prerequisites
 
-Install docker
+#### Install docker
 
 ````bash
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -70,7 +70,21 @@ sudo sh ./get-docker.sh --dry-run
 # sudo sh ./get-docker.sh
 ````
 
-### Finding the Path to the Browser Executable
+#### Install node.js
+
+````bash
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
+````
 
 Before running the project, copy the ``scraper/.env.sample`` to ``scraper/.env``.
 
@@ -78,7 +92,8 @@ Before running the project, copy the ``scraper/.env.sample`` to ``scraper/.env``
 cp scraper/.env.sample scraper/.env
 ````
 
-You need to provide the correct path to your Chrome or Chromium browser executable in the `scraper/.env` file.
+If you want to run the scraper without docker, you need to provide the correct path to your Chrome or Chromium browser
+executable in the `scraper/.env` file.
 Follow the instructions below to find the path on your system:
 
 #### **Windows**
@@ -163,14 +178,17 @@ Follow the instructions below to find the path on your system:
 ### Example `.env` File Configuration
 
 ```plaintext
+HOST=0.0.0.0
+PORT=3050
+OPENAI_API_KEY=<to-replace>
+CHROME_PATH="/usr/bin/google-chrome"
+
 # Windows example
 CHROME_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe"
-
 # macOS example
-CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-
+# CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 # Linux example
-CHROME_PATH="/usr/bin/google-chrome"
+# CHROME_PATH="/usr/bin/google-chrome"
 ```
 
 ## scraper
