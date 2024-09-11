@@ -5,7 +5,7 @@ This is the EnergyHackdays monorepo for challange [Watts & Bots: Energizing Swis
 This project focuses on creating a solution for harmonizing the complex and fragmented electricity tariffs from over 600 local electricity providers across Switzerland. Each provider offers unique products with varying prices and conditions, making it difficult for customers and businesses to compare tariffs accurately. Using AI, specifically OpenAI’s language models, the project automates the extraction, structuring, and validation of electricity tariff data from unstructured sources like PDFs, which are available on the Elcom website.
 
 ### Key Objectives
-- **Scraping**: Gather electricity tariff data from PDFs on the Elcom website using a custom scraper. This data includes detailed breakdowns of tariffs for different municipalities, providers, and customer types.
+- **Scraping**: Gather electricity tariff data from PDFs on the Elcom website using a custom puppeteer scraper. This data includes detailed breakdowns of tariffs for different municipalities, providers, and customer types.
 - **Data Harmonization**: Convert unstructured tariff information into a predefined, structured JSON schema, ensuring it is consistent and ready for further analysis or application.
 - **AI-Powered Processing**: Leverage OpenAI models to assist in interpreting and extracting tariff components, streamlining the process of converting PDFs into usable data.
 - **Validation and Analysis**: Use a Python-based solution to validate that the harmonized data complies with the predefined schema.
