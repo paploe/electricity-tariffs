@@ -1,0 +1,133 @@
+{
+    "Netzbetreiber": "Standardnetzbetreiber",
+    "Produkte": [
+        {
+            "Name": "Standardtarif",
+            "Beschreibung": "Tarif für Haushalte und kleine Gewerbe",
+            "Komponenten": [
+                {
+                    "Name": "Grundgebühr",
+                    "Beschreibung": "Monatliche Grundgebühr für den Anschluss",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "6.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Transportgebühr Tag",
+                    "Beschreibung": "Gebühr für den Transport von Strom während des Tages",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Transportgebühr Nacht",
+                    "Beschreibung": "Gebühr für den Transport von Strom während der Nacht",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Leistungsgebühr",
+                    "Beschreibung": "Gebühr basierend auf der maximalen Leistung",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "1.85",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Energiegebühr Tag",
+                    "Beschreibung": "Gebühr für den Verbrauch von Energie während des Tages",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Energiegebühr Nacht",
+                    "Beschreibung": "Gebühr für den Verbrauch von Energie während der Nacht",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gebühr für lokale erneuerbare Energien",
+                    "Beschreibung": "Beitrag zur Förderung lokaler erneuerbarer Energien",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungsgebühr",
+                    "Beschreibung": "Gebühr für Systemdienstleistungen",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Bundesbeitragsgebühr",
+                    "Beschreibung": "Beitrag an den Bund",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gebühr für die Sanierung von Wasserkraftwerken",
+                    "Beschreibung": "Beitrag zur Sanierung von Wasserkraftwerken",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Öffentlichkeitsgebühr",
+                    "Beschreibung": "Beitrag zur Öffentlichkeitsarbeit",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.93",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Kantonale erneuerbare Energiefondsgebühr",
+                    "Beschreibung": "Beitrag zum kantonalen Fonds für erneuerbare Energien",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreservegebühr",
+                    "Beschreibung": "Beitrag zur Stromreserve",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Jährlich",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}
