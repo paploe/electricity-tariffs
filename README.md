@@ -210,3 +210,9 @@ cd ..
 ````bash
 docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root node:20.16.0-bullseye node coverage-analyzer/src/index.js --directory=./output --pattern="validation_\\d+\\.json"
 ````
+
+## [wip] Batch processing
+````bash
+node process-multiple.js --elcom-numbers ./constants/elcom-numbers/elcom-numbers.json --from 21 --to 21
+# bash process-single.sh 21
+````
