@@ -1,0 +1,17 @@
+{
+  "name": "coverage-analyzer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js --directory=../output --pattern=\"analysis_\\\\d+\\\\.json\"",
+    "start-alt": "node src/index.js --directory=../output --pattern=\"output.json\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}

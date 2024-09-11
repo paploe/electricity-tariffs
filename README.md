@@ -20,6 +20,8 @@ This project focuses on creating a solution for harmonizing the complex and frag
 │   └── elcom-numbers
 │       └── elcom-numbers.json
 │       └── # Contains a JSON file with the mapping or configuration of ELCOM numbers, which may represent different electricity providers or tariff groups.
+├── coverage-analyzer
+│   └── # Contains a simple Node.js script that analyzes how many output.json files and valid and within the elcom range.
 ├── database
 │   └── .gitkeep
 │       └── # This directory holds assets such as PDFs or intermediary data related to the scraping process.
@@ -172,4 +174,11 @@ cd elcom-calculator
 docker build -t elcom-calculator -f Dockerfile . --progress=plain
 # python elcom-calculator/run.py schema/sample-complete.json 
 docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/test/21/final-output.json --output ./output/analysis_21.json
+````
+We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
+
+````bash
+cd coverage-analyzer
+npm i
+npm run start
 ````
