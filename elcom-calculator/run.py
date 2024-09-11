@@ -3,6 +3,7 @@ import json
 import argparse
 import os
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -34,7 +35,7 @@ def main():
     with open(input_file_path, "r", encoding="utf-8") as file:
         input_json = json.load(file)
     raw_tarif_df = extract_df_seasonal_tariffs(input_json)
-    h4_verbrauch_df = pd.read_csv(os.path.abspath("./data/hourly_verbrauch_h4.csv"))
+    h4_verbrauch_df = pd.read_csv(os.path.abspath(current_directory+"/data/hourly_verbrauch_h4.csv"))
     merged_tarif_df = average_price(raw_tarif_df, h4_verbrauch_df)
     durchschnitt_df = extract_df_durchschnitt(input_json)
     lower_price, higher_price = durchschnitt_calculation(

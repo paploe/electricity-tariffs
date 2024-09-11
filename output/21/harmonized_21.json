@@ -3,200 +3,1136 @@
     "Produkte": [
         {
             "Name": "CASA",
-            "Beschreibung": "Standard tariff for residential use",
+            "Beschreibung": "",
             "Komponenten": [
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "10.4",
+                    "Menge": "high",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
                 },
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "10.4",
+                    "Menge": "low",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "00:00-01:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "01:00-02:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "02:00-03:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "03:00-04:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "04:00-05:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "05:00-06:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "06:00-07:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "07:00-08:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "08:00-09:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "09:00-10:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10:00-11:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "11:00-12:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12:00-13:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13:00-14:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14:00-15:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "15:00-16:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16:00-17:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17:00-18:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18:00-19:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "19:00-20:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20:00-21:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "21:00-22:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22:00-23:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23:00-00:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
                 }
             ],
-            "Gültigkeit": "Year-round",
-            "Verbrauchskategorie": "Residential",
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
             "Verbrauchstyp": "Haushalt",
             "Netzebene": "Niederspannung",
             "Standardprodukt": "Ja"
         },
         {
             "Name": "COMM",
-            "Beschreibung": "Commercial tariff for businesses",
+            "Beschreibung": "",
             "Komponenten": [
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "30.1",
+                    "Menge": "high",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
                 },
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "18.2",
+                    "Menge": "low",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "00:00-01:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "01:00-02:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "02:00-03:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "03:00-04:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "04:00-05:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "05:00-06:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "06:00-07:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "07:00-08:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "08:00-09:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "09:00-10:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10:00-11:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "11:00-12:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12:00-13:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13:00-14:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14:00-15:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "15:00-16:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16:00-17:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17:00-18:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18:00-19:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "19:00-20:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20:00-21:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "21:00-22:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22:00-23:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23:00-00:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
                 }
             ],
-            "Gültigkeit": "Year-round",
-            "Verbrauchskategorie": "Commercial",
-            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
             "Netzebene": "Niederspannung",
-            "Standardprodukt": "Nein"
+            "Standardprodukt": "Ja"
         },
         {
             "Name": "BT 50",
-            "Beschreibung": "Tariff for medium-sized businesses",
+            "Beschreibung": "",
             "Komponenten": [
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "30.1",
+                    "Menge": "high",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
                 },
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "18.2",
+                    "Menge": "low",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "00:00-01:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "01:00-02:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "02:00-03:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "03:00-04:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "04:00-05:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "05:00-06:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "06:00-07:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "07:00-08:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "08:00-09:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "09:00-10:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10:00-11:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "11:00-12:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12:00-13:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13:00-14:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14:00-15:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "15:00-16:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16:00-17:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17:00-18:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18:00-19:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "19:00-20:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20:00-21:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "21:00-22:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22:00-23:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23:00-00:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
                 }
             ],
-            "Gültigkeit": "Year-round",
-            "Verbrauchskategorie": "Medium Business",
-            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
             "Netzebene": "Niederspannung",
-            "Standardprodukt": "Nein"
+            "Standardprodukt": "Ja"
         },
         {
             "Name": "MT 600",
-            "Beschreibung": "Tariff for large businesses",
+            "Beschreibung": "",
             "Komponenten": [
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "24.3",
+                    "Menge": "high",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
                 },
                 {
-                    "Name": "Tarif",
-                    "Beschreibung": "Price per kWh during summer and winter",
+                    "Name": "summer",
+                    "Beschreibung": "High and low prices for summer",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "13.9",
+                    "Menge": "low",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "All day"
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "winter",
+                    "Beschreibung": "High and low prices for winter",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "00:00-01:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "01:00-02:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "02:00-03:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "03:00-04:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "04:00-05:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "05:00-06:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "06:00-07:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "07:00-08:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "08:00-09:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "09:00-10:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10:00-11:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "11:00-12:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12:00-13:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13:00-14:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14:00-15:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "15:00-16:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16:00-17:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17:00-18:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18:00-19:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "19:00-20:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20:00-21:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "21:00-22:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22:00-23:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "hourly",
+                    "Beschreibung": "Hourly prices",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23:00-00:00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
                 }
             ],
-            "Gültigkeit": "Year-round",
-            "Verbrauchskategorie": "Large Business",
-            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
             "Netzebene": "Niederspannung",
-            "Standardprodukt": "Nein"
+            "Standardprodukt": "Ja"
         }
     ],
     "Netznutzung": {
         "Winter": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 10.4,
-                "Von 01:00 bis 02:00 in Rp./kWh": 10.4,
-                "Von 02:00 bis 03:00 in Rp./kWh": 10.4,
-                "Von 03:00 bis 04:00 in Rp./kWh": 10.4,
-                "Von 04:00 bis 05:00 in Rp./kWh": 10.4,
-                "Von 05:00 bis 06:00 in Rp./kWh": 10.4,
-                "Von 06:00 bis 07:00 in Rp./kWh": 10.4,
-                "Von 07:00 bis 08:00 in Rp./kWh": 10.4,
-                "Von 08:00 bis 09:00 in Rp./kWh": 10.4,
-                "Von 09:00 bis 10:00 in Rp./kWh": 10.4,
-                "Von 10:00 bis 11:00 in Rp./kWh": 10.4,
-                "Von 11:00 bis 12:00 in Rp./kWh": 10.4,
-                "Von 12:00 bis 13:00 in Rp./kWh": 10.4,
-                "Von 13:00 bis 14:00 in Rp./kWh": 10.4,
-                "Von 14:00 bis 15:00 in Rp./kWh": 10.4,
-                "Von 15:00 bis 16:00 in Rp./kWh": 10.4,
-                "Von 16:00 bis 17:00 in Rp./kWh": 10.4,
-                "Von 17:00 bis 18:00 in Rp./kWh": 10.4,
-                "Von 18:00 bis 19:00 in Rp./kWh": 10.4,
-                "Von 19:00 bis 20:00 in Rp./kWh": 10.4,
-                "Von 20:00 bis 21:00 in Rp./kWh": 10.4,
-                "Von 21:00 bis 22:00 in Rp./kWh": 10.4,
-                "Von 22:00 bis 23:00 in Rp./kWh": 10.4,
-                "Von 23:00 bis 00:00 in Rp./kWh": 10.4
+                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                "Von 23:00 bis 00:00 in Rp./kWh": 0
             },
             "Samstag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 30.1,
-                "Von 01:00 bis 02:00 in Rp./kWh": 30.1,
-                "Von 02:00 bis 03:00 in Rp./kWh": 30.1,
-                "Von 03:00 bis 04:00 in Rp./kWh": 30.1,
-                "Von 04:00 bis 05:00 in Rp./kWh": 30.1,
-                "Von 05:00 bis 06:00 in Rp./kWh": 30.1,
-                "Von 06:00 bis 07:00 in Rp./kWh": 30.1,
-                "Von 07:00 bis 08:00 in Rp./kWh": 30.1,
-                "Von 08:00 bis 09:00 in Rp./kWh": 30.1,
-                "Von 09:00 bis 10:00 in Rp./kWh": 30.1,
-                "Von 10:00 bis 11:00 in Rp./kWh": 30.1,
-                "Von 11:00 bis 12:00 in Rp./kWh": 30.1,
-                "Von 12:00 bis 13:00 in Rp./kWh": 30.1,
-                "Von 13:00 bis 14:00 in Rp./kWh": 30.1,
-                "Von 14:00 bis 15:00 in Rp./kWh": 30.1,
-                "Von 15:00 bis 16:00 in Rp./kWh": 30.1,
-                "Von 16:00 bis 17:00 in Rp./kWh": 30.1,
-                "Von 17:00 bis 18:00 in Rp./kWh": 30.1,
-                "Von 18:00 bis 19:00 in Rp./kWh": 30.1,
-                "Von 19:00 bis 20:00 in Rp./kWh": 30.1,
-                "Von 20:00 bis 21:00 in Rp./kWh": 30.1,
-                "Von 21:00 bis 22:00 in Rp./kWh": 30.1,
-                "Von 22:00 bis 23:00 in Rp./kWh": 30.1,
-                "Von 23:00 bis 00:00 in Rp./kWh": 30.1
+                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                "Von 23:00 bis 00:00 in Rp./kWh": 0
             },
             "Sonntag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 30.1,
-                "Von 01:00 bis 02:00 in Rp./kWh": 30.1,
-                "Von 02:00 bis 03:00 in Rp./kWh": 30.1,
-                "Von 03:00 bis 04:00 in Rp./kWh": 30.1,
-                "Von 04:00 bis 05:00 in Rp./kWh": 30.1,
-                "Von 05:00 bis 06:00 in Rp./kWh": 30.1,
-                "Von 06:00 bis 07:00 in Rp./kWh": 30.1,
-                "Von 07:00 bis 08:00 in Rp./kWh": 30.1,
-                "Von 08:00 bis 09:00 in Rp./kWh": 30.1,
-                "Von 09:00 bis 10:00 in Rp./kWh": 30.1,
-                "Von 10:00 bis 11:00 in Rp./kWh": 30.1,
-                "Von 11:00 bis 12:00 in Rp./kWh": 30.1,
-                "Von 12:00 bis 13:00 in Rp./kWh": 30.1,
-                "Von 13:00 bis 14:00 in Rp./kWh": 30.1,
-                "Von 14:00 bis 15:00 in Rp./kWh": 30.1,
-                "Von 15:00 bis 16:00 in Rp./kWh": 30.1,
-                "Von 16:00 bis 17:00 in Rp./kWh": 30.1,
-                "Von 17:00 bis 18:00 in Rp./kWh": 30.1,
-                "Von 18:00 bis 19:00 in Rp./kWh": 30.1,
-                "Von 19:00 bis 20:00 in Rp./kWh": 30.1,
-                "Von 20:00 bis 21:00 in Rp./kWh": 30.1,
-                "Von 21:00 bis 22:00 in Rp./kWh": 30.1,
-                "Von 22:00 bis 23:00 in Rp./kWh": 30.1,
-                "Von 23:00 bis 00:00 in Rp./kWh": 30.1
+                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                "Von 23:00 bis 00:00 in Rp./kWh": 0
             }
         },
         "Sommer": {

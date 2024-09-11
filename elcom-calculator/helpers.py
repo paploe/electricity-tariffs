@@ -5,9 +5,11 @@ import numpy as np
 import warnings
 import re
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
 # Definition from Elcom H4 period consumption:
 # "Wohnung mit einem Gesamtverbrauch pro Jahr von 4,500 kWh, aufgeteilt wie folgt"
-h4_verbrauch_df = pd.read_csv(os.path.abspath("./data/hourly_verbrauch_h4.csv"))
+h4_verbrauch_df = pd.read_csv(os.path.abspath(current_directory+"/data/hourly_verbrauch_h4.csv"))
 TOT_VERBRAUCH_H4 = 4500
 
 

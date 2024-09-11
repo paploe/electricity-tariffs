@@ -1399,5 +1399,9 @@
     "output": {
         "tiefster Preis [exkl. MWST]": NaN,
         "höchster Preis [exkl. MWST]": NaN
+    },
+    "Elcom validation": {
+        "Elcom tiefster Preis [exkl. MWST]": null,
+        "Elcom höchster Preis [exkl. MWST]": null
     }
 }
