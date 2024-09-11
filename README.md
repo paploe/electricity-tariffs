@@ -163,7 +163,7 @@ cd scraper
 npm i
 npm run compile
 # run compiled script
-node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=final-output.json
+node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=harmonized_21.json
 # run in test mode
 # npx vitest --run --testNamePattern=^ ?Combined workflows  ./test/pipeline.test.ts
 ````
@@ -173,7 +173,7 @@ After we have a ``output/test/21/final-output.json`` file, we analyze it.
 cd elcom-calculator
 docker build -t elcom-calculator -f Dockerfile . --progress=plain
 # python elcom-calculator/run.py schema/sample-complete.json 
-docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/test/21/final-output.json --output ./output/analysis_21.json
+docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/harmonized_21.json --output ./output/analysis_21.json
 ````
 We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
 

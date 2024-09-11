@@ -1,7 +1,0 @@
-{
-    "text": {
-        "value": "```json\n{\n  \"tariffs\": {\n    \"valid_from\": \"2024-01-01\",\n    \"network_usage\": {\n      \"basic_fee\": {\n        \"excl_vat\": 10.50,\n        \"incl_vat\": 11.35\n      },\n      \"power_price\": {\n        \"excl_vat\": 10.00,\n        \"incl_vat\": 10.81\n      },\n      \"energy_price\": {\n        \"unit_price\": {\n          \"excl_vat\": 10.10,\n          \"incl_vat\": 10.92\n        },\n        \"renewable_energy\": {\n          \"unit_price\": {\n            \"excl_vat\": 17.15,\n            \"incl_vat\": 18.54\n          }\n        }\n      }\n    },\n    \"charges\": {\n      \"network_surcharge\": {\n        \"unit_price\": {\n          \"excl_vat\": 2.30,\n          \"incl_vat\": 2.49\n        }\n      },\n      \"system_services\": {\n        \"unit_price\": {\n          \"excl_vat\": 1.95,\n          \"incl_vat\": 2.11\n        }\n      },\n      \"municipal_fee\": {\n        \"unit_price\": {\n          \"excl_vat\": 1.40,\n          \"incl_vat\": 1.51\n        }\n      }\n    },\n    \"total_energy_price\": {\n      \"unit_price\": {\n        \"excl_vat\": 32.90,\n        \"incl_vat\": 35.56\n      }\n    },\n    \"feed_in_tariff\": {\n      \"pv_system\": {\n        \"without_compensation\": 15.52\n      }\n    },\n    \"additional_info\": {\n      \"vat_rate\": 8.1,\n      \"notes\": \"Prices are rounded.\"\n    }\n  }\n}\n```",
-        "annotations": []
-    },
-    "citations": []
-}

@@ -1,7 +1,0 @@
-{
-    "text": {
-        "value": "{\"Netzbetreiber\":\"Unknown\",\"Produkte\":[{\"Name\":\"TOPAZE\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"solaire local\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"},{\"Name\":\"hydraulique suisse\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"weitere\",\"Netzebene\":\"weitere\",\"Standardprodukt\":\"Nein\"},{\"Name\":\"AMBRE\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"solaire local\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"weitere\",\"Netzebene\":\"weitere\",\"Standardprodukt\":\"Nein\"},{\"Name\":\"OPALE\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"hydraulique\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"weitere\",\"Netzebene\":\"weitere\",\"Standardprodukt\":\"Nein\"}]}",
-        "annotations": []
-    },
-    "citations": []
-}

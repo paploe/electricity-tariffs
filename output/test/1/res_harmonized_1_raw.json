@@ -1,7 +1,0 @@
-{
-    "text": {
-        "value": "```json\n{\n  \"tariffs\": [\n    {\n      \"name\": \"TOPAZE\",\n      \"composition\": [\"solaire local\", \"hydraulique suisse\"],\n      \"rates\": {\n        \"high\": 12.41,\n        \"low\": 13.87\n      }\n    },\n    {\n      \"name\": \"AMBRE\",\n      \"composition\": [\"solaire local\"],\n      \"rates\": {\n        \"high\": 12.53,\n        \"low\": 13.99\n      }\n    },\n    {\n      \"name\": \"OPALE\",\n      \"composition\": [\"hydraulique\"],\n      \"rates\": {\n        \"high\": 12.83,\n        \"low\": 14.29\n      }\n    }\n  ],\n  \"network_usage\": {\n    \"high_rate\": 10.46,\n    \"low_rate\": 6.35,\n    \"power\": 5.04,\n    \"system_services\": 0.75,\n    \"rpc_and_protection\": 2.30,\n    \"confederation_reserve\": 1.20,\n    \"pcp\": 1.20,\n    \"subscription\": 40.00,\n    \"reactive_energy\": 5.70\n  },\n  \"federal_taxes\": {\n    \"rpc\": 2.20,\n    \"water_and_fish_protection\": 0.10,\n    \"hydraulic_reserve\": 0.62,\n    \"additional_reserves\": 0.58\n  },\n  \"communal_taxes\": {\n    \"soil_use_fee\": 0.60,\n    \"public_lighting\": 0.60\n  }\n}\n```",
-        "annotations": []
-    },
-    "citations": []
-}

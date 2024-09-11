@@ -30,7 +30,7 @@ async function searchFile(
         // @ts-expect-error
         .uploadAndPoll(vectorStore.id, fileStreams)
         .catch(async (e) => {
-          console.warn("Error uploading and polling", e.message);
+          console.warn("Error uploading and polling: ", e.message);
         });
     }
     await openai.beta.assistants.update(assistant.id, {
