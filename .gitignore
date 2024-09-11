@@ -1,2 +1,8 @@
 .idea
-database
+# Ignore everything in the database folder
+/database/*
+# Allow the database folder to be included in the repository (but not its contents)
+!database/
+!database/.gitkeep
+# Ignore all node_modules directories
+node_modules/
