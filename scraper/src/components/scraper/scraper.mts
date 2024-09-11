@@ -8,6 +8,12 @@ import { searchFile } from "../openai/openai.mjs";
 import { mergeJsonFiles } from "../util/util.mjs";
 import process from "node:process";
 
+if (!process.env.CHROME_PATH) {
+  throw new Error("CHROME_PATH is not set. Please set it in the .env file.");
+}
+
+const CHROME_PATH = process.env.CHROME_PATH;
+
 const cwd = process.cwd();
 console.log("The current working directory is", cwd);
 async function downloadPDF(outputPath: fs.PathLike, url: string) {
@@ -71,7 +77,7 @@ async function scrapePDF(operatorId: number, year: number) {
     browser = await puppeteer.launch({
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
       headless: true,
-      executablePath: "/usr/bin/google-chrome",
+      executablePath: CHROME_PATH,
       defaultViewport: null,
     });
 
