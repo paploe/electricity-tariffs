@@ -53,10 +53,11 @@ def extract_df_durchschnitt(input_json):
                     {"Category": key, "Type": sub_key, "Value": sub_value}
                 )
         elif isinstance(value, list):
-            for i, item in enumerate(value):
-                flattened_data.append(
-                    {"Category": key, "Type": f"value_{i+1}", "Value": item}
-                )
+            if len(value) == 0:  # Check if the list is empty
+                flattened_data.append({"Category": key, "Type": "value_1", "Value": 0})
+            else:
+                for i, item in enumerate(value):
+                    flattened_data.append({"Category": key, "Type": f"value_{i + 1}", "Value": item})
         else:
             flattened_data.append({"Category": key, "Type": "value", "Value": value})
     return pd.DataFrame(flattened_data)
@@ -262,7 +263,7 @@ def get_number_from_json(path):
             return int(match.group(0))
         else:
             logging.warning("The name of the input file does not contain any number. Validation not possible.")
-            return 9999
+            return None
     else:
         raise Exception("Input file is not .JSON")
 
