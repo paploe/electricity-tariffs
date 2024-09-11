@@ -235,7 +235,7 @@ async function processNetworkOperator(
       );
 
       const outputFilePath = path.resolve(
-        `${outputFile.replace("{{elcomNumber}}", elcomNumber.toString())}`,
+        `${outputFile.replaceAll("{{elcomNumber}}", elcomNumber.toString())}`,
       );
       // Ensure directory exists using fs.mkdirSync with recursive option
       fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
@@ -248,7 +248,7 @@ async function processNetworkOperator(
         `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas...`,
       );
       const textInputPath = path.resolve(
-        `${outputDirPath}/${networkOperator}/harmonized_raw.json`,
+        `${outputDirPath}/${networkOperator}/harmonized_${networkOperator}.json`,
       );
       const textInputString = fs.readFileSync(textInputPath, "utf8");
 
@@ -341,7 +341,7 @@ async function processNetworkOperator(
       }
       const resMerge = mergeJsonFiles(objectsToMerge);
       const outputMergedFilePath = path.resolve(
-        `${outputFile.replace("{{elcomNumber}}", networkOperator.toString())}`,
+        `${outputFile.replaceAll("{{elcomNumber}}", networkOperator.toString())}`,
       );
       // Ensure directory exists using fs.mkdirSync with recursive option
       fs.mkdirSync(path.dirname(outputMergedFilePath), { recursive: true });

@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import * as fs from "fs";
+import * as test from "node:test";
 const openai = new OpenAI();
 
 async function ask(
@@ -71,16 +72,23 @@ async function searchFile(
 
   return await new Promise((resolve, reject) => {
     console.log(`Running the beta threads of OpenAI: ${thread.id}`, {
-      userQuestion, attachments
+      userQuestion,
+      attachments,
     });
     try {
       openai.beta.threads.runs
         .stream(thread.id, {
           assistant_id: assistant.id,
         })
-        .on("textCreated", () => console.log("assistant >"))
-        .on("toolCallCreated", (event) =>
-          console.log("assistant " + event.type),
+        .on("textCreated", (text) =>
+          process.stdout.write(`
+assistant > ${text}`),
+        )
+        .on("textDelta", (textDelta) =>
+          process.stdout.write((textDelta as { value: string }).value),
+        )
+        .on("toolCallCreated", (toolCall) =>
+          process.stdout.write(`\nassistant > ${toolCall.type}\n\n`),
         )
         .on("messageDone", async (event) => {
           console.log("Running the beta threads of OpenAI...done.");

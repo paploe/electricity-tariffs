@@ -184,7 +184,8 @@ cd ..
 ````
 Run the scraper with docker
 ````bash
-docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user $(id -u):$(id -g) ghcr.io/puppeteer/puppeteer:23.2.2 node --env-file=scraper/.env scraper/dist/src/single-run.js --database-dir=./database --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=harmonized_21.json
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user $(id -u):$(id -g) ghcr.io/puppeteer/puppeteer:23.2.2 node --env-file=./scraper/.env ./scraper/dist/src/single-run.js --schema-dir ./schema --output-dir ./output --database-dir ./database --elcom-numbers-json=[21] --prompt-file=./prompts/simple-3.txt --output-file=./output/{{elcomNumber}}/harmonized_{{elcomNumber}}.json
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user $(id -u):$(id -g) ghcr.io/puppeteer/puppeteer:23.2.2 node --env-file=./scraper/.env ./scraper/dist/src/single-run.js --schema-dir ./schema --output-dir ./output --database-dir ./database --elcom-numbers-json=[486] --prompt-file=./prompts/simple-3.txt --output-file=./output/{{elcomNumber}}/harmonized_{{elcomNumber}}.json
 ````
 After we have a ``output/test/21/final-output.json`` file, we analyze it.
 
@@ -192,12 +193,14 @@ After we have a ``output/test/21/final-output.json`` file, we analyze it.
 
 ````bash
 docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name elcom-calculator elcom-calculator python3 ./elcom-calculator/run.py --input ./output/21/harmonized_21.json --output ./output/21/analysis_21.json
+docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name elcom-calculator elcom-calculator python3 ./elcom-calculator/run.py --input ./output/486/harmonized_486.json --output ./output/486/analysis_486.json
 ````
 We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
 
 ````bash
 # python3 ./run_validation.py --input_json ./output/21/analysis_21.json --input_elcom ./data/sample_elcom_tarife.csv --output_json ./output/21/validation_21.json
 docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name elcom-calculator elcom-calculator python3 ./elcom-calculator/run_validation.py --input_json ./output/21/analysis_21.json --input_elcom ./elcom-calculator/data/sample_elcom_tarife.csv --output_json ./output/21/validation_21.json
+docker run -v "$(pwd)/":/usr/src/app --user $(id -u):$(id -g) -it --rm --name elcom-calculator elcom-calculator python3 ./elcom-calculator/run_validation.py --input_json ./output/486/analysis_486.json --input_elcom ./elcom-calculator/data/sample_elcom_tarife.csv --output_json ./output/486/validation_486.json
 ````
 
 ## coverage-analyzer
@@ -213,6 +216,5 @@ docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root node:20.1
 
 ## [wip] Batch processing
 ````bash
-node process-multiple.js --elcom-numbers ./constants/elcom-numbers/elcom-numbers.json --from 21 --to 21
-# bash process-single.sh 21
+// TODO
 ````

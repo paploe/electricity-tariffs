@@ -11,6 +11,15 @@ import * as path from "node:path";
 import fs from "fs";
 import fsPromises from "fs/promises";
 import { mergeJsonFiles } from "../src/components/util/util.mjs";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Get the __filename equivalent
+// @ts-ignore
+const __filename = fileURLToPath(import.meta.url);
+
+// Get the __dirname equivalent
+const __dirname = dirname(__filename);
 
 let app: any;
 let server: { close: () => void };
@@ -26,11 +35,13 @@ afterAll(() => {
   console.log("Server closed.");
 });
 
+const databaseDir = path.resolve(`${__dirname}/../../database`).toString();
+
 describe.skip("Scraper", () => {
   test.skip(
     "Scrapes a single PDF by giving a network operator ID.",
     async () => {
-      const res = await scrapePDF(525, 2024);
+      const res = await scrapePDF(525, 2024, databaseDir);
       const { pdfDownloadURLFilePath, pdfDownloadURL, pdfFilePath } = res;
       expect(pdfDownloadURLFilePath).toBeDefined();
       expect(pdfDownloadURL).toBeDefined();
@@ -41,7 +52,7 @@ describe.skip("Scraper", () => {
   test.skip(
     "Doesn't crash on a non existent operator id.",
     async () => {
-      const res = await scrapePDF(-1, 2024);
+      const res = await scrapePDF(-1, 2024, databaseDir);
       const { pdfDownloadURL } = res;
       expect(pdfDownloadURL).toBeUndefined();
     },
@@ -51,7 +62,7 @@ describe.skip("Scraper", () => {
     "Scrapes 2023 PDFs in batch by giving a network operator IDs.",
     async () => {
       const operatorIdArray = elcomNumbersJSON.elcomNumbers;
-      const res = await scrapePDFBatch(operatorIdArray, 2023, 10);
+      const res = await scrapePDFBatch(operatorIdArray, 2023, 10, databaseDir);
       expect(res.length).to.equal(operatorIdArray.length);
     },
     { timeout: 100 * 1000 },
@@ -66,7 +77,7 @@ describe.skip("Scraper", () => {
         0,
         elcomNumbersJSON.elcomNumbers.length,
       );
-      const res = await scrapePDFBatch(operatorIdArray, 2024, 1);
+      const res = await scrapePDFBatch(operatorIdArray, 2024, 1, databaseDir);
       expect(res).toBeDefined();
     },
     { timeout: elcomNumbersJSON.elcomNumbers.length * 20 * 1000 },
