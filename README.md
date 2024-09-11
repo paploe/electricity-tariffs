@@ -158,14 +158,20 @@ CHROME_PATH="/usr/bin/google-chrome"
 
 
 ### Process a single network operator
+
+Install and build the scraper
 ````bash
 cd scraper
 npm i
 npm run compile
-# run compiled script
-node --env-file=.env dist/src/single-run.js --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=harmonized_21.json
-# run in test mode
-# npx vitest --run --testNamePattern=^ ?Combined workflows  ./test/pipeline.test.ts
+run compiled script
+cd ..
+````
+Run the scraper with docker
+````bash
+cd scraper
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root ghcr.io/puppeteer/puppeteer:23.2.2 node --env-file=scraper/.env scraper/dist/src/single-run.js --database-dir=./database --elcom-numbers-json=[21] --prompt-file-name=simple-3.txt --output-file-name=harmonized_21.json
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root ghcr.io/puppeteer/puppeteer:23.2.2 node --env-file=scraper/.env scraper/dist/src/single-run.js --database-dir=./database --elcom-numbers-json=[28] --prompt-file-name=simple-3.txt --output-file-name=harmonized_28.json
 ````
 After we have a ``output/test/21/final-output.json`` file, we analyze it.
 
@@ -177,8 +183,12 @@ docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calcu
 ````
 We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
 
+Install and build the coverage-analyzer
 ````bash
 cd coverage-analyzer
 npm i
-node src/index.js --directory=../output --pattern="analysis_\\d+\\.json"
+cd ..
+````
+````bash
+docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root node:20.16.0-bullseye node coverage-analyzer/src/index.js --directory=./output --pattern="analysis_\\d+\\.json"
 ````

@@ -29,12 +29,18 @@ const argv = yargs(hideBin(process.argv))
     describe:
       "Name of the output file name. E.g --output-file-name=final-output.json",
   })
+  .option("database-dir", {
+    type: "string",
+    demandOption: true,
+    describe: "Path to the pdf database directory",
+  })
   .parseSync(); // Use parseSync() instead of .argv to ensure no Promise
 
 // Parse the JSON input from the argument
 const networkOperators = JSON.parse(argv["elcom-numbers-json"]); // Use hyphenated version for consistency
 const promptFileName = argv["prompt-file-name"];
 const outputFileName = argv["output-file-name"];
+const databaseDir = argv["database-dir"];
 
 (async () => {
   for (const networkOperator of networkOperators) {
@@ -43,6 +49,7 @@ const outputFileName = argv["output-file-name"];
         networkOperator,
         promptFileName,
         outputFileName,
+        databaseDir,
       ).catch((e) => {
         console.error(
           "Could not retrieve network operator. Proceeding to the next operator.",

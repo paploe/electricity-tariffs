@@ -50,15 +50,15 @@ async function scrapePDF(operatorId: number, year: number) {
 
   // Define the path to save the PDF
   const pdfDownloadURLFilePath = path.resolve(
-    `${cwd}/../database/pdf-links/${year}`,
+    `${cwd}/database/pdf-links/${year}`,
     `operator_${operatorId}_Tarifblatt_${year}_link.txt`,
   );
   const pdfFilePath = path.resolve(
-    `${cwd}/../database/pdf/${year}`,
+    `${cwd}/database/pdf/${year}`,
     `operator_${operatorId}_Tarifblatt_${year}.pdf`,
   );
   const errorFilePath = path.resolve(
-    `${cwd}/../database/pdf-errors/${year}`,
+    `${cwd}/database/pdf-errors/${year}`,
     `operator_${operatorId}_error_Tarifblatt_${year}.json`,
   );
   if (fs.existsSync(pdfFilePath)) {
@@ -166,23 +166,30 @@ async function processNetworkOperator(
   elcomNumber: number,
   promptFileName: string,
   outputFileName: string,
+  databaseDir: string,
 ) {
   console.log(
     `Processing network operator ${elcomNumber} with prompt ${promptFileName}`,
   );
+  const databaseDirFilePath = path.isAbsolute(databaseDir)
+    ? path.resolve(databaseDir)
+    : path.resolve(`${cwd}/./${databaseDir}`);
+
   const networkOperators = [elcomNumber];
   for (const networkOperator of networkOperators) {
     try {
-      console.log(`Downloading PDF for network operator ${networkOperator}`);
+      console.log(
+        `Downloading PDF for network operator ${networkOperator} to ${databaseDirFilePath}`,
+      );
       const res = await scrapePDF(networkOperator, 2024);
       console.log(`Prompt OpenAI with the PDF and save the raw output`, res);
 
       const prompt = fs.readFileSync(
-        path.resolve(`${cwd}/../prompts/${promptFileName}`).toString(),
+        path.resolve(`${cwd}/prompts/${promptFileName}`).toString(),
         "utf8",
       );
       const inputFile = path.resolve(
-        `${cwd}/../database/pdf/2024/operator_${networkOperator}_Tarifblatt_2024.pdf`,
+        `${cwd}/database/pdf/2024/operator_${networkOperator}_Tarifblatt_2024.pdf`,
       );
       const resFileSearch = await searchFile(
         {
@@ -221,7 +228,7 @@ async function processNetworkOperator(
       );
 
       const outputFilePath = path.resolve(
-        `${cwd}/../output/${networkOperator}/harmonized_raw.json`,
+        `${cwd}/output/${networkOperator}/harmonized_raw.json`,
       );
       // Ensure directory exists using fs.mkdirSync with recursive option
       fs.mkdirSync(path.dirname(outputFilePath), { recursive: true });
@@ -234,7 +241,7 @@ async function processNetworkOperator(
         `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas...`,
       );
       const textInputPath = path.resolve(
-        `${cwd}/../output/${networkOperator}/harmonized_raw.json`,
+        `${cwd}/output/${networkOperator}/harmonized_raw.json`,
       );
       const textInputString = fs.readFileSync(textInputPath, "utf8");
 
@@ -245,7 +252,7 @@ async function processNetworkOperator(
           `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas... split ${split}`,
         );
         const JSONSchemaPath = path.resolve(
-          `${cwd}/../schema/split-schema/split-schema-part-${split}.json`,
+          `${cwd}/schema/split-schema/split-schema-part-${split}.json`,
         );
         const JSONSchemaString = fs.readFileSync(JSONSchemaPath, "utf8");
         const JSONSchema = JSON.parse(JSONSchemaString);
@@ -292,7 +299,7 @@ async function processNetworkOperator(
         );
 
         const outputSplitFilePath = path.resolve(
-          `${cwd}/../output/${networkOperator}/harmonized_split_${split}_raw.txt`,
+          `${cwd}/output/${networkOperator}/harmonized_split_${split}_raw.txt`,
         );
         // Ensure directory exists using fs.mkdirSync with recursive option
         fs.mkdirSync(path.dirname(outputSplitFilePath), { recursive: true });
@@ -301,7 +308,7 @@ async function processNetworkOperator(
           JSON.stringify(resFileSearch, null, 4),
         );
         const outputSplitFilePathParsed = path.resolve(
-          `${cwd}/../output/${networkOperator}/harmonized_split_${split}_parsed.json`,
+          `${cwd}/output/${networkOperator}/harmonized_split_${split}_parsed.json`,
         );
         // Ensure directory exists using fs.mkdirSync with recursive option
         fs.mkdirSync(path.dirname(outputSplitFilePathParsed), {
@@ -319,7 +326,7 @@ async function processNetworkOperator(
       const objectsToMerge = [];
       for (const split of splits) {
         const partialObjectPath = path.resolve(
-          `${cwd}/../output/${networkOperator}/harmonized_split_${split}_parsed.json`,
+          `${cwd}/output/${networkOperator}/harmonized_split_${split}_parsed.json`,
         );
         const partialObjectString = fs.readFileSync(partialObjectPath, "utf8");
         const partialObject = JSON.parse(partialObjectString);
@@ -327,7 +334,7 @@ async function processNetworkOperator(
       }
       const resMerge = mergeJsonFiles(objectsToMerge);
       const outputMergedFilePath = path.resolve(
-        `${cwd}/../output/${networkOperator}/${outputFileName}`,
+        `${cwd}/output/${networkOperator}/${outputFileName}`,
       );
       // Ensure directory exists using fs.mkdirSync with recursive option
       fs.mkdirSync(path.dirname(outputMergedFilePath), { recursive: true });
