@@ -173,12 +173,12 @@ After we have a ``output/test/21/final-output.json`` file, we analyze it.
 cd elcom-calculator
 docker build -t elcom-calculator -f Dockerfile . --progress=plain
 # python elcom-calculator/run.py schema/sample-complete.json 
-docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/harmonized_21.json --output ./output/analysis_21.json
+docker run -v "$(pwd)/../output":/usr/src/app/output -it --rm --name elcom-calculator elcom-calculator python3 run.py --input ./output/21/harmonized_21.json --output ./output/21/analysis_21.json
 ````
 We can analyze how many outputs we generated and how many of them are valid and withing the elcom range.
 
 ````bash
 cd coverage-analyzer
 npm i
-npm run start
+node src/index.js --directory=../output --pattern="analysis_\\d+\\.json"
 ````
