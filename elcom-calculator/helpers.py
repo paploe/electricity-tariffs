@@ -207,11 +207,12 @@ def write_output(input_json, output_values, output_json):
         raise ValueError("Invalid option. 'output_values' must be a list.")
     else:
         new_fields = {
-            "tiefster Preis [exkl. MWST]": output_values[0],
-            "höchster Preis [exkl. MWST]": output_values[1],
+            "tiefster Preis [exkl. MWST]": round(output_values[0], 2),
+            "höchster Preis [exkl. MWST]": round(output_values[1], 2),
         }
         # Create the new structure
         new_json_data = {"input": input_json, "output": new_fields}
         # Write the updated JSON data to a new file
         with open(output_json, "w", encoding="utf-8") as file:
             json.dump(new_json_data, file, indent=4, ensure_ascii=False)
+
