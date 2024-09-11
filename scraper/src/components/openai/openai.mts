@@ -19,6 +19,7 @@ async function searchFile(
     ...assistantBody,
     temperature: 0,
   });
+  console.log("Loading the following files to OpenAI: ", files);
   const fileStreams = files.map((path) => fs.createReadStream(path));
 
   // Create a vector store including our two files.
@@ -68,38 +69,52 @@ async function searchFile(
   // The thread now has a vector store in its tool resources.
   console.log("Vector stores are ready", thread.tool_resources?.file_search);
 
-  return await new Promise((resolve) => {
-    openai.beta.threads.runs
-      .stream(thread.id, {
-        assistant_id: assistant.id,
-      })
-      .on("textCreated", () => console.log("assistant >"))
-      .on("toolCallCreated", (event) => console.log("assistant " + event.type))
-      .on("messageDone", async (event) => {
-        if (event.content[0].type === "text") {
-          const { text } = event.content[0];
-          const { annotations } = text;
-          const citations: string[] = [];
+  return await new Promise((resolve, reject) => {
+    console.log(`Running the beta threads of OpenAI: ${thread.id}`, {
+      userQuestion, attachments
+    });
+    try {
+      openai.beta.threads.runs
+        .stream(thread.id, {
+          assistant_id: assistant.id,
+        })
+        .on("textCreated", () => console.log("assistant >"))
+        .on("toolCallCreated", (event) =>
+          console.log("assistant " + event.type),
+        )
+        .on("messageDone", async (event) => {
+          console.log("Running the beta threads of OpenAI...done.");
+          if (event.content[0].type === "text") {
+            const { text } = event.content[0];
+            const { annotations } = text;
+            const citations: string[] = [];
 
-          let index = 0;
-          for (const annotation of annotations) {
-            text.value = text.value.replace(annotation.text, "[" + index + "]");
-            // @ts-expect-error I don't know why TS complains here. https://platform.openai.com/docs/assistants/quickstart
-            const { file_citation } = annotation;
-            if (file_citation) {
-              const citedFile = await openai.files.retrieve(
-                file_citation.file_id,
+            let index = 0;
+            for (const annotation of annotations) {
+              text.value = text.value.replace(
+                annotation.text,
+                "[" + index + "]",
               );
-              citations.push("[" + index + "]" + citedFile.filename);
+              // @ts-expect-error I don't know why TS complains here. https://platform.openai.com/docs/assistants/quickstart
+              const { file_citation } = annotation;
+              if (file_citation) {
+                const citedFile = await openai.files.retrieve(
+                  file_citation.file_id,
+                );
+                citations.push("[" + index + "]" + citedFile.filename);
+              }
+              index++;
             }
-            index++;
+            resolve({
+              text,
+              citations,
+            });
           }
-          resolve({
-            text,
-            citations,
-          });
-        }
-      });
+        });
+    } catch (e) {
+      console.log("Error while running the beta threads of OpenAI", e);
+      reject(e);
+    }
   });
 }
 
