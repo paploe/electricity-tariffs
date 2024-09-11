@@ -58,9 +58,26 @@ This project focuses on creating a solution for harmonizing the complex and frag
 ````
 
 ## Hacking quickstart
+
+### Prerequisites
+
+Install docker
+
+````bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh ./get-docker.sh --dry-run
+# continue with the following command only if docker is not installed
+# sudo sh ./get-docker.sh
+````
+
 ### Finding the Path to the Browser Executable
 
 Before running the project, copy the ``scraper/.env.sample`` to ``scraper/.env``.
+
+````bash
+cp scraper/.env.sample scraper/.env
+````
+
 You need to provide the correct path to your Chrome or Chromium browser executable in the `scraper/.env` file.
 Follow the instructions below to find the path on your system:
 
@@ -163,7 +180,6 @@ Install and build the scraper
 cd scraper
 npm i
 npm run compile
-run compiled script
 cd ..
 ````
 Run the scraper with docker
