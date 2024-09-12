@@ -1,189 +1,86 @@
 {
-    "Netzbetreiber": "EKZ",
+    "Netzbetreiber": "",
     "Produkte": [
         {
-            "Name": "EKZ Mixstrom",
+            "Name": "Energietarife",
             "Beschreibung": "",
             "Komponenten": [
                 {
-                    "Name": "high_tariff",
+                    "Name": "Hochtarif",
                     "Beschreibung": "",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Energie",
-                    "Menge": "",
-                    "Tariftyp": "Doppeltarif",
-                    "Tarifzeiten": "Monday to Friday 07:00–20:00"
-                },
-                {
-                    "Name": "low_tariff",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Energie",
-                    "Menge": "",
-                    "Tariftyp": "Doppeltarif",
-                    "Tarifzeiten": "Other times"
-                },
-                {
-                    "Name": "unit_tariff",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Energie",
-                    "Menge": "",
+                    "Menge": "1 kWh",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "Monday to Sunday 00:00–24:00"
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
                 },
                 {
-                    "Name": "SDL",
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1 kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Netznutzungstarife",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Einheitstarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1 kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Leistungstarif",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "1 kW",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Pro kW des Monatsmaximums in CHF"
+                },
+                {
+                    "Name": "Blindenergietarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "Blindenergie",
+                    "Menge": "1 kvarh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kvarh"
+                },
+                {
+                    "Name": "Systemdienstleistungen",
                     "Beschreibung": "",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
-                    "Menge": "",
+                    "Menge": "1 kWh",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
                 },
                 {
-                    "Name": "reserve",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Stromreserve",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                },
-                {
-                    "Name": "efficiency",
+                    "Name": "Stromreserve",
                     "Beschreibung": "",
                     "Einheit": "Rp./kWh",
                     "Unterkategorie": "weitere Abgaben",
-                    "Menge": "",
+                    "Menge": "1 kWh",
                     "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                },
-                {
-                    "Name": "federal_charges",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "weitere Abgaben",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
                 }
             ],
-            "Gültigkeit": "2024-01-01 to 2024-12-31",
-            "Verbrauchskategorie": "",
-            "Verbrauchstyp": "weitere",
-            "Netzebene": "weitere",
-            "Standardprodukt": "Nein"
-        },
-        {
-            "Name": "EKZ Netz 400F",
-            "Beschreibung": "",
-            "Komponenten": [
-                {
-                    "Name": "unit_tariff",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Energie",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "Monday to Sunday 00:00–24:00"
-                },
-                {
-                    "Name": "SDL",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                },
-                {
-                    "Name": "reserve",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Stromreserve",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                }
-            ],
-            "Gültigkeit": "2024-01-01 to 2024-12-31",
-            "Verbrauchskategorie": "",
-            "Verbrauchstyp": "weitere",
-            "Netzebene": "weitere",
-            "Standardprodukt": "Nein"
-        },
-        {
-            "Name": "EKZ Netz 400B",
-            "Beschreibung": "",
-            "Komponenten": [
-                {
-                    "Name": "unit_tariff",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Energie",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "Monday to Sunday 00:00–24:00"
-                },
-                {
-                    "Name": "SDL",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                },
-                {
-                    "Name": "reserve",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Stromreserve",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                }
-            ],
-            "Gültigkeit": "2024-01-01 to 2024-12-31",
-            "Verbrauchskategorie": "",
-            "Verbrauchstyp": "weitere",
-            "Netzebene": "weitere",
-            "Standardprodukt": "Nein"
-        },
-        {
-            "Name": "EKZ Netz 400WP",
-            "Beschreibung": "",
-            "Komponenten": [
-                {
-                    "Name": "unit_tariff",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Energie",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": "Monday to Sunday 00:00–24:00"
-                },
-                {
-                    "Name": "SDL",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                },
-                {
-                    "Name": "reserve",
-                    "Beschreibung": "",
-                    "Einheit": "Rp./kWh",
-                    "Unterkategorie": "Stromreserve",
-                    "Menge": "",
-                    "Tariftyp": "Einfachtarif",
-                    "Tarifzeiten": ""
-                }
-            ],
-            "Gültigkeit": "2024-01-01 to 2024-12-31",
+            "Gültigkeit": "",
             "Verbrauchskategorie": "",
             "Verbrauchstyp": "weitere",
             "Netzebene": "weitere",
@@ -193,7 +90,7 @@
     "Netznutzung": {
         "Winter": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 19,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -219,7 +116,7 @@
                 "Von 23:00 bis 00:00 in Rp./kWh": 0
             },
             "Samstag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 17.5,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -273,7 +170,7 @@
         },
         "Sommer": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 19,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -299,7 +196,7 @@
                 "Von 23:00 bis 00:00 in Rp./kWh": 0
             },
             "Samstag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 17.5,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -355,7 +252,7 @@
     "Energielieferung": {
         "Winter": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 19,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -435,7 +332,7 @@
         },
         "Sommer": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 19,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -517,8 +414,8 @@
     "Durschschnittspreis": {
         "Netznutzung": {
             "Grundpreis in CHF": 0,
-            "Leistungspreis in CHF": 0,
-            "Systemdienstleistung in Rp./kWh": 0,
+            "Leistungspreis in CHF": 11.5,
+            "Systemdienstleistung in Rp./kWh": 0.75,
             "ZusätzlicherRabatt in Rp./kWh": 0
         },
         "Energielieferung": {
@@ -526,7 +423,13 @@
             "Leistungspreis in CHF": 0,
             "ZusätzlicherRabatt in Rp./kWh": 0
         },
-        "Abgaben in Rp./kWh": [],
+        "Abgaben in Rp./kWh": [
+            19,
+            17.5,
+            7.2,
+            4.1,
+            1.2
+        ],
         "Netzuschlag in Rp./kWh": 0,
         "Stromreserve/Winterstromreserve in in Rp./kWh": 0
     }
