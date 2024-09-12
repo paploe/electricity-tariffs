@@ -1,0 +1,8 @@
+I am trying to harmonize and classify the data contained in the following PDF. The PDF contains detailed Swiss eletricity tariff information provided by a specific provider.
+I want to extract the important information regarding eletricity tariff and convert this PDF so that it validates against the provided JSON schema. 
+The JSON schema is in German, but the PDF can be another language, please first translate it into German and then create the JSON for me and make sure it is valid according to the schema. Please respond only with the JSON without any additional words.
+
+In the JSON schema when you see something like "Von 00:00 bis 01:00 in Rp./kWh" we would like to Fill this field with the price
+in that day and hour of the day. If there is nothing specified (no matter if Summer or Winter) please use the standard tariff as this field should never be zero.
+
+In the JSON schema when you see something like "Menge", please fill this field with a string containing the amount of the "Einheit" specified in the schema.
