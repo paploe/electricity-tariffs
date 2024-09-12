@@ -2,7 +2,7 @@
     "Netznutzung": {
         "Winter": {
             "Montag-Freitag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 19,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
@@ -28,7 +28,7 @@
                 "Von 23:00 bis 00:00 in Rp./kWh": 0
             },
             "Samstag": {
-                "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                "Von 00:00 bis 01:00 in Rp./kWh": 17.5,
                 "Von 01:00 bis 02:00 in Rp./kWh": 0,
                 "Von 02:00 bis 03:00 in Rp./kWh": 0,
                 "Von 03:00 bis 04:00 in Rp./kWh": 0,
