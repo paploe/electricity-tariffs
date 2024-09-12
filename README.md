@@ -233,5 +233,6 @@ docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root node:20.1
 
 ## [wip] Batch processing
 ````bash
-// TODO
+nohup bash ./process_all.sh > myoutput.txt 2>&1 &
+tail -f myoutput.txt
 ````
