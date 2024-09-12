@@ -1,4 +1,3 @@
-import * as puppeteer from "puppeteer";
 import * as fsPromises from "fs/promises";
 import * as fs from "fs";
 import * as path from "path";
@@ -76,14 +75,9 @@ async function scrapePDF(
       query OperatorDocuments($id: String!, $locale: String!) {
           operator(id: $id, locale: $locale) {
               geverDocuments {
-                  id
-                  name
                   url
                   year
-                  category
-                  __typename
               }
-              __typename
           }
       }
     `;
@@ -93,7 +87,16 @@ async function scrapePDF(
       id: String(operatorId)
     };
 
-    const data = await graphQLClient.request(query, variables);
+    interface Data {
+      operator: {
+        geverDocuments: [{
+          year: String,
+          url: String,
+        }]
+      }
+    }
+
+    const data = await graphQLClient.request(query, variables) as Data;
     const pdfDownloadURL_BASE = 'https://www.strompreis.elcom.admin.ch'
     const pdfDownloadURL_REL = data.operator.geverDocuments.filter((doc: any) => doc.year === String(2024))[0]["url"];
     pdfDownloadURL = pdfDownloadURL_BASE + pdfDownloadURL_REL
