@@ -80,7 +80,7 @@ async function scrapePDF(
     // Launch Puppeteer browser instance
     browser = await puppeteer.launch({
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      headless: false,
+      headless: true,
       executablePath: CHROME_PATH,
       defaultViewport: null,
     });
