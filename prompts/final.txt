@@ -1,0 +1,23 @@
+I am trying to harmonize and classify the data contained in the following PDF.
+I want to convert this PDF so that it validates against the provided JSON schema. Please create the
+JSON for me and make sure it is valid according to the schema. Please respond only with the JSON without any additional words.
+
+In the JSON schema when you see something like "Menge", please fill this field with a string containing the amount of the "Einheit" specified in the schema.
+
+A pdf file with electricity tariffs of Swiss DSO is provided. Electricity tariffs are structured as follows:
+a) there ist a certain number of products
+b) for each product, the price is split into various components: there is a price for the Energy (Energie), one for the grid (Netznutzung) and one or
+more additional taxes (Abgaben)
+c) the energy price is sometimes split into a high tariff (Hochtarif) and a low tariff (Niedertarif oder Normaltarif) which depends on the time of day. Weekends are normally low tariff.
+
+I want to convert this PDF to a structured json file so that it validates against the provided JSON schema.
+Please create the JSON for me and make sure it is valid according to the schema.
+Please respond only with the JSON without any additional words.
+
+In the JSON schema when you see something like "Von 00:00 bis 01:00 in Rp./kWh" we would like to Fill this field with the price
+in that day and hour of the day. If there is nothing specified (no matter if Summer or Winter) please use the standard tariff as
+this field should never be zero.
+
+It is important to analyse the structure of the tariff sheet before extracting the data:
+Some DSOs present the products as rows and the price components as columns. Others present the products as
+the columns and the components as rows.
