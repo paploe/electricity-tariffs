@@ -7,12 +7,7 @@ import pLimit from "p-limit";
 import { searchFile } from "../openai/openai.mjs";
 import { mergeJsonFiles } from "../util/util.mjs";
 import process from "node:process";
-
-if (!process.env.CHROME_PATH) {
-  throw new Error("CHROME_PATH is not set. Please set it in the .env file.");
-}
-
-const CHROME_PATH = process.env.CHROME_PATH;
+import { GraphQLClient, gql } from 'graphql-request';
 
 const cwd = process.cwd();
 console.log("The current working directory is", cwd);
@@ -41,17 +36,12 @@ async function downloadPDF(outputPath: fs.PathLike, url: string) {
     throw error;
   }
 }
-
 async function scrapePDF(
   operatorId: number,
   year: number,
   databaseDir: string,
 ) {
-  let browser: puppeteer.Browser | null = null;
-  let page: puppeteer.Page;
-  let pdfDownloadURL: string = "";
-  const longTimeout = 10 * 1000;
-
+  let pdfDownloadURL = "";
   // Define the path to save the PDF
   const pdfDownloadURLFilePath = path.resolve(
     `${databaseDir}/pdf-links/${year}`,
@@ -77,37 +67,36 @@ async function scrapePDF(
   }
 
   try {
-    // Launch Puppeteer browser instance
-    browser = await puppeteer.launch({
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      headless: true,
-      executablePath: CHROME_PATH,
-      defaultViewport: null,
-    });
 
-    page = await browser.newPage();
+    const endpoint = 'https://www.strompreis.elcom.admin.ch/api/graphql';
 
-    // Navigate to the page
-    const url = `https://www.strompreis.elcom.admin.ch/operator/${operatorId}`;
-    console.log(`scraping page url: ${url}`);
-    await page.goto(url, { waitUntil: "networkidle2", timeout: longTimeout });
+    const graphQLClient = new GraphQLClient(endpoint, {});
 
-    // Wait for the page to load and ensure the button exists
-    await page.waitForFunction(
-      (year) => {
-        const anchorElements = Array.from(document.querySelectorAll("a"));
-        return anchorElements.some(
-          (el) => el.innerText === `Tarifblatt ${year} (PDF-Datei)`,
-        );
-      },
-      { timeout: longTimeout }, // Optional timeout
-      year, // Argument to pass to the function inside the browser context
-    );
-    pdfDownloadURL = await page.evaluate((year) => {
-      return Array.from(document.querySelectorAll("a")).filter(
-        (el) => el.innerText === `Tarifblatt ${year} (PDF-Datei)`,
-      )[0].href;
-    }, year);
+    const query = gql`
+      query OperatorDocuments($id: String!, $locale: String!) {
+          operator(id: $id, locale: $locale) {
+              geverDocuments {
+                  id
+                  name
+                  url
+                  year
+                  category
+                  __typename
+              }
+              __typename
+          }
+      }
+    `;
+
+    const variables = {
+      locale: 'de',
+      id: String(operatorId)
+    };
+
+    const data = await graphQLClient.request(query, variables);
+    const pdfDownloadURL_BASE = 'https://www.strompreis.elcom.admin.ch'
+    const pdfDownloadURL_REL = data.operator.geverDocuments.filter((doc: any) => doc.year === String(2024))[0]["url"];
+    pdfDownloadURL = pdfDownloadURL_BASE + pdfDownloadURL_REL
 
     if (!pdfDownloadURL) {
       throw new Error(
@@ -140,11 +129,6 @@ async function scrapePDF(
       JSON.stringify(error, Object.getOwnPropertyNames(error)),
     );
     throw error;
-  } finally {
-    if (browser) {
-      console.log("Closing the browser.");
-      await browser.close(); // Ensure browser is closed even on error
-    }
   }
 }
 
@@ -355,5 +339,4 @@ async function processNetworkOperator(
     }
   }
 }
-
 export { scrapePDF, scrapePDFBatch, processNetworkOperator };
