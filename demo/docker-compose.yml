@@ -34,7 +34,7 @@ services:
   scraper:
     build: scraper
     ports:
-      - 8100:8100
+      - 3000:3000
     volumes:
       - ./../scraper:/app
       - ./../database:/database

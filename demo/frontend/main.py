@@ -34,13 +34,25 @@ if not st.session_state.clicked:
     st.session_state.option = option
 
 
-def click_button():
+def click_show_analysis():
+    pass
+
+
+def click_start_process(elcom_name: str):
     st.session_state.clicked = True
+
+    # reset frontend progress bar
+    _ = requests.post(f'http://scraper:3000/scraper?elcom={elcon_dict[elcom_name]}')
+
+    # start scrapper
+    _ = requests.get(f'http://scraper:3000/scraper?elcom={elcon_dict[elcom_name]}')
+
 
 def click_reset():
     st.session_state.clicked = False
 
-st.button('Process ' + st.session_state.option, on_click=click_button)
+
+st.button('Process ' + st.session_state.option, on_click=click_start_process, args=(st.session_state.option,))
 
 if st.session_state.clicked:
 
@@ -65,6 +77,6 @@ if st.session_state.clicked:
             label="Processing complete!", state="complete", expanded=False
         )
 
-st.button("Display results", on_click=click_button)
+st.button("Display results", on_click=click_show_analysis)
 
 st.button("Reset", on_click=click_reset)
