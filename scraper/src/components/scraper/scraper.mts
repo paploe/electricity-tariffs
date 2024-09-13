@@ -58,6 +58,10 @@ async function scrapePDF(
     console.log(`PDF file already exists ${pdfFilePath}`, {
       pdfFilePath,
     });
+
+    axios.post('http://backend:8000/set_status/', { scrap_file: true });
+    axios.post('http://backend:8000/set_status/', { download_file: true });
+
     return {
       pdfDownloadURLFilePath,
       pdfDownloadURL,
@@ -90,8 +94,8 @@ async function scrapePDF(
     interface Data {
       operator: {
         geverDocuments: [{
-          year: String,
-          url: String,
+          year: string,
+          url: string,
         }]
       }
     }
@@ -100,6 +104,8 @@ async function scrapePDF(
     const pdfDownloadURL_BASE = 'https://www.strompreis.elcom.admin.ch'
     const pdfDownloadURL_REL = data.operator.geverDocuments.filter((doc: any) => doc.year === String(2024))[0]["url"];
     pdfDownloadURL = pdfDownloadURL_BASE + pdfDownloadURL_REL
+
+    axios.post('http://backend:8000/set_status/', { scrap_file: true });
 
     if (!pdfDownloadURL) {
       throw new Error(
@@ -113,6 +119,8 @@ async function scrapePDF(
     console.log(`PDF URL saved successfully to ${pdfDownloadURLFilePath}`, {
       pdfDownloadURL,
     });
+
+    axios.post('http://backend:8000/set_status/', { download_file: true });
 
     // Also save the PDF file to the disk
     await downloadPDF(pdfFilePath, pdfDownloadURL);
@@ -221,6 +229,8 @@ async function processNetworkOperator(
         JSON.stringify(resFileSearch),
       );
 
+      axios.post('http://backend:8000/set_status/', { extract_data: true });
+
       const outputFilePath = path.resolve(
         `${outputFile.replaceAll("{{elcomNumber}}", elcomNumber.toString())}`,
       );
@@ -245,6 +255,10 @@ async function processNetworkOperator(
         console.log(
           `Harmonizing PDF for network operator ${networkOperator} using partial JSON schemas... split ${split}`,
         );
+
+        const harmonize_data_label = `harmonize_data_${split}`;
+        axios.post('http://backend:8000/set_status/', { [harmonize_data_label]: true });
+
         const JSONSchemaPath = path.resolve(
           `${schemaDirPath}/split-schema/split-schema-part-${split}.json`,
         );
@@ -315,6 +329,7 @@ async function processNetworkOperator(
           outputSplitFilePathParsed,
           JSON.stringify(jsonObject, null, 4),
         );
+
       }
       console.log(`Merging all split files: ${splits.toString()}`);
       const objectsToMerge = [];
@@ -336,6 +351,9 @@ async function processNetworkOperator(
         outputMergedFilePath,
         JSON.stringify(resMerge, null, 4),
       );
+
+      axios.post('http://backend:8000/set_status/', { finalize_data: true });
+
       return { outputMergedFilePath, res: resMerge };
     } catch (e) {
       console.error(`error while processing operator ${elcomNumber}`, e);
