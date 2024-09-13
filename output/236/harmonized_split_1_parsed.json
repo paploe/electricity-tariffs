@@ -1,0 +1,256 @@
+{
+    "Netzbetreiber": "EVB",
+    "Produkte": [
+        {
+            "Name": "EVB standard",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 20:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsgebühren",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Konzessionsgebühren",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EVB activ",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 20:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsgebühren",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Konzessionsgebühren",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EVB feed-in",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EVB temporary",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 20:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsgebühren",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Konzessionsgebühren",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

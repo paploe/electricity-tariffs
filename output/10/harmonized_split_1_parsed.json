@@ -1,0 +1,81 @@
+{
+    "Netzbetreiber": "N/A",
+    "Produkte": [
+        {
+            "Name": "Tarif ae Standard",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "N/A",
+            "Verbrauchskategorie": "N/A",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif ae Basis",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "N/A",
+            "Verbrauchskategorie": "N/A",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Tarif BT - 2024",
+            "Beschreibung": "Tarif für die Netznutzung ab 2024",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "120.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif KN - 2024",
+            "Beschreibung": "Tarif für die Netznutzung ab 2024",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "20.00",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis HT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Hauptzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "6.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis NT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Nebenzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "5.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif GN - 2024",
+            "Beschreibung": "Tarif für die Netznutzung ab 2024",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "50.00",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis HT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Hauptzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "4.80",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis NT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Nebenzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "3.80",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif GH - 2024",
+            "Beschreibung": "Tarif für die Netznutzung ab 2024",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "50.00",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis HT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Hauptzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "4.80",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Arbeitspreis NT",
+                    "Beschreibung": "Preis pro kWh für den Verbrauch in der Nebenzeit",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "3.80",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

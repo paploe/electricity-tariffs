@@ -1,0 +1,301 @@
+{
+    "Netzbetreiber": "Unknown",
+    "Produkte": [
+        {
+            "Name": "Tariff A",
+            "Beschreibung": "Tariff for annual consumption ≤ 50'000 kWh",
+            "Komponenten": [
+                {
+                    "Name": "energy",
+                    "Beschreibung": "Energy pricing structure",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "highTariff",
+                    "Beschreibung": "High tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "9.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "lowTariff",
+                    "Beschreibung": "Low tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.05",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 22:00 bis 06:00"
+                },
+                {
+                    "Name": "grid",
+                    "Beschreibung": "Grid usage fee",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "taxes",
+                    "Beschreibung": "Taxes applied to the tariff",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tassa base",
+                    "Beschreibung": "Base tax",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "20.-",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tariffa di transito",
+                    "Beschreibung": "Transit tax",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Unknown",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tariff B",
+            "Beschreibung": "Tariff for annual consumption 50'000 - 100'000 kWh",
+            "Komponenten": [
+                {
+                    "Name": "energy",
+                    "Beschreibung": "Energy pricing structure",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "highTariff",
+                    "Beschreibung": "High tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "lowTariff",
+                    "Beschreibung": "Low tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 22:00 bis 06:00"
+                },
+                {
+                    "Name": "grid",
+                    "Beschreibung": "Grid usage fee",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "taxes",
+                    "Beschreibung": "Taxes applied to the tariff",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tassa base",
+                    "Beschreibung": "Base tax",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "20.-",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tariffa di transito",
+                    "Beschreibung": "Transit tax",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Unknown",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Tariff C",
+            "Beschreibung": "Tariff for temporary installations, construction sites",
+            "Komponenten": [
+                {
+                    "Name": "energy",
+                    "Beschreibung": "Energy pricing structure",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "highTariff",
+                    "Beschreibung": "High tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.70",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "lowTariff",
+                    "Beschreibung": "Low tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.70",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 22:00 bis 06:00"
+                },
+                {
+                    "Name": "grid",
+                    "Beschreibung": "Grid usage fee",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "taxes",
+                    "Beschreibung": "Taxes applied to the tariff",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tassa base",
+                    "Beschreibung": "Base tax",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "15.-",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tariffa di transito",
+                    "Beschreibung": "Transit tax",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Unknown",
+            "Verbrauchstyp": "Bau",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Tariff D",
+            "Beschreibung": "Tariff for annual consumption > 100'000 kWh",
+            "Komponenten": [
+                {
+                    "Name": "energy",
+                    "Beschreibung": "Energy pricing structure",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "highTariff",
+                    "Beschreibung": "High tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "6.40",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 06:00 bis 22:00"
+                },
+                {
+                    "Name": "lowTariff",
+                    "Beschreibung": "Low tariff for energy consumption",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "5.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 22:00 bis 06:00"
+                },
+                {
+                    "Name": "grid",
+                    "Beschreibung": "Grid usage fee",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "taxes",
+                    "Beschreibung": "Taxes applied to the tariff",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tassa base",
+                    "Beschreibung": "Base tax",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "90.-",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Tariffa di transito",
+                    "Beschreibung": "Transit tax",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Unknown",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Haushalt HT7",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hoch",
+                    "Beschreibung": "Preis für Hochtarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "19.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 07:00"
+                },
+                {
+                    "Name": "Energie Niedrig",
+                    "Beschreibung": "Preis für Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 24:00"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Netzkosten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "NEZ",
+                    "Beschreibung": "Netzebene Zuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "WResV",
+                    "Beschreibung": "Wasserkraftabgabe",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Kanton",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "AGG",
+                    "Beschreibung": "Allgemeine Gebühren",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Gewerbe GT7",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hoch",
+                    "Beschreibung": "Preis für Hochtarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 07:00"
+                },
+                {
+                    "Name": "Energie Niedrig",
+                    "Beschreibung": "Preis für Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 24:00"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Netzkosten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "5.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "NEZ",
+                    "Beschreibung": "Netzebene Zuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "WResV",
+                    "Beschreibung": "Wasserkraftabgabe",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Kanton",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "AGG",
+                    "Beschreibung": "Allgemeine Gebühren",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

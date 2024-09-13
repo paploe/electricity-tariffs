@@ -1,0 +1,119 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Einfachtarif-Messung E 3.10",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Doppeltarif-Messung D 3.10",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Lieferung U",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

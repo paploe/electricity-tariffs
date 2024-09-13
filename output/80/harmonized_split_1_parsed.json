@@ -1,0 +1,153 @@
+{
+    "Netzbetreiber": "EMAG",
+    "Produkte": [
+        {
+            "Name": "EMAG M",
+            "Beschreibung": "Tarif für Haushalte mit hohem Verbrauch.",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.86",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 07.00 bis ca. 21.00 Uhr"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16.62",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 21.00 bis ca. 07.00 Uhr"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "11.15",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 07.00 bis ca. 21.00 Uhr"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 21.00 bis ca. 07.00 Uhr"
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe",
+                    "Beschreibung": "Steuer auf den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen Swissgrid",
+                    "Beschreibung": "Kosten für Systemdienstleistungen.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.95",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgabe an das Gemeinwesen",
+                    "Beschreibung": "Abgabe an die Gemeinde.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EMAG L",
+            "Beschreibung": "Tarif für Haushalte mit niedrigem Verbrauch.",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 07.00 bis ca. 21.00 Uhr"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 21.00 bis ca. 07.00 Uhr"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "12.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 07.00 bis ca. 21.00 Uhr"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "10.00",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "von ca. 21.00 bis ca. 07.00 Uhr"
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe",
+                    "Beschreibung": "Steuer auf den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen Swissgrid",
+                    "Beschreibung": "Kosten für Systemdienstleistungen.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.95",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgabe an das Gemeinwesen",
+                    "Beschreibung": "Abgabe an die Gemeinde.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

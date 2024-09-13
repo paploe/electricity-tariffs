@@ -1,0 +1,227 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Haushalt",
+            "Beschreibung": "Tarif für Haushalte",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Energiepreise für Haushalte",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif: 25.95, Niedertarif: 11.70"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Netznutzungskosten",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuern und Abgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Business eco",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Gewerbe",
+            "Beschreibung": "Tarif für Gewerbe",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Energiepreise für Gewerbe",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif: 20.35, Niedertarif: 6.80"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Netznutzungskosten",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuern und Abgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Business eco",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Mittelspannung",
+            "Beschreibung": "Tarif für Mittelspannung",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Energiepreise für Mittelspannung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif: 15.65, Niedertarif: 2.10"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Netznutzungskosten",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuern und Abgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Business eco",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve swissgrid",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "2024-01-01",
+            "Verbrauchskategorie": "Mittelspannung",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Mittelspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

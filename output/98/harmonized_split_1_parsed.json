@@ -1,0 +1,211 @@
+{
+    "Netzbetreiber": "EKW",
+    "Produkte": [
+        {
+            "Name": "EKW-Industry NS0000 plus",
+            "Beschreibung": "Gewerbe- und Industriekunden mit Jahresbezug ab 100 MWh und Benutzungsdauer bis 3000h.",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Hoch- und Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.20 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Hoch- und Niedertarif, Leistungspreis, Grundgebühr, Systemdienstleistungen",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "14.90 Rp./kWh, 8.80 CHF/kW, 100.00 CHF/mt, 0.75 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag und Stromreserve",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30 Rp./kWh, 1.20 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Blindenergiepreis",
+                    "Beschreibung": "Preis für Blindenergie",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "Blindenergie",
+                    "Menge": "4.20 Rp./kVArh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Optionen",
+                    "Beschreibung": "Zusatzkosten für erneuerbare Energie",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "+ 1.10 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                }
+            ],
+            "Gültigkeit": "unbestimmt",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EKW-Industry NS3000",
+            "Beschreibung": "Gewerbe- und Industriekunden mit Jahresbezug ab 50 MWh bis 100 MWh und Benutzungsdauer über 3000h.",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Hoch- und Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.30 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Hoch- und Niedertarif, Leistungspreis, Grundgebühr, Systemdienstleistungen",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "14.90 Rp./kWh, 9.00 CHF/kW, 100.00 CHF/mt, 0.75 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag und Stromreserve",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30 Rp./kWh, 1.20 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Blindenergiepreis",
+                    "Beschreibung": "Preis für Blindenergie",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "Blindenergie",
+                    "Menge": "4.20 Rp./kVArh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Optionen",
+                    "Beschreibung": "Zusatzkosten für erneuerbare Energie",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "+ 1.10 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                }
+            ],
+            "Gültigkeit": "unbestimmt",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "EKW-Construction",
+            "Beschreibung": "Niederspannungsanschluss für temporäre Anlagen.",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Hoch- und Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14.30 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Hoch- und Niedertarif, Grundgebühr, Systemdienstleistungen",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "17.40 Rp./kWh, 15.00 CHF/mt, 0.75 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag und Stromreserve",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30 Rp./kWh, 1.20 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Blindenergiepreis",
+                    "Beschreibung": "Preis für Blindenergie",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "Blindenergie",
+                    "Menge": "4.20 Rp./kVArh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                }
+            ],
+            "Gültigkeit": "unbestimmt",
+            "Verbrauchskategorie": "Bau",
+            "Verbrauchstyp": "Bau",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "EKW-Private heat pump",
+            "Beschreibung": "Gilt für Messkreise, an welchen elektrisch betriebene Wärmepumpen betrieben werden.",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Hoch- und Niedertarif",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14.30 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Hoch- und Niedertarif, Grundgebühr, Systemdienstleistungen",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "17.20 Rp./kWh, 15.00 CHF/mt, 0.75 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Netzzuschlag und Stromreserve",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30 Rp./kWh, 1.20 Rp./kWh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                },
+                {
+                    "Name": "Blindenergiepreis",
+                    "Beschreibung": "Preis für Blindenergie",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "Blindenergie",
+                    "Menge": "4.20 Rp./kVArh",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Normal- und Schwachlastzeit"
+                }
+            ],
+            "Gültigkeit": "unbestimmt",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

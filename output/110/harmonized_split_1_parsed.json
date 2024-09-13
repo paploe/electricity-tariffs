@@ -1,0 +1,301 @@
+{
+    "Netzbetreiber": "Standard",
+    "Produkte": [
+        {
+            "Name": "Standard",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "8.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "erneuerbare_energie"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "system_services"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Grün",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "8.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "erneuerbare_energie"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "system_services"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Grau",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "8.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "erneuerbare_energie"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "system_services"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Augster Strom",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "8.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "hoch_tarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.65",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "niedrig_tarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "erneuerbare_energie"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "system_services"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "```json\n{\n  \"products\": [\n    {\n      \"name\": \"Standardprodukt\",\n      \"components\": {\n        \"Energie\": {\n          \"Hochtarif\": {\n            \"Von 00:00 bis 01:00 in Rp./kWh\": \"8.20\"\n          },\n          \"Niedertarif\": {\n            \"Von 00:00 bis 01:00 in Rp./kWh\": \"8.20\"\n          }\n        },\n        \"Netznutzung\": {\n          \"Grundpreis\": \"12.00\",\n          \"Leistung\": \"10.00\",\n          \"Hochtarif\": \"9.55\",\n          \"Niedertarif\": \"9.55\"\n        },\n        \"Abgaben\": {\n          \"Systemdienstleistungen\": \"0.75\",\n          \"Stromreserve\": \"1.20\",\n          \"Netzzuschlag\": \"2.30\"\n        }\n      }\n    },\n    {\n      \"name\": \"Einspeisung\",\n      \"components\": {\n        \"Energie\": {\n          \"Physisch gelieferte Energie\": {\n            \"Von 00:00 bis 01:00 in Rp./kWh\": \"6.80\"\n          },\n          \"Ökologischer Mehrwert\": {\n            \"Von 00:00 bis 01:00 in Rp./kWh\": \"1.65\"\n          }\n        },\n        \"Netznutzung\": {\n          \"Grundpreis\": \"120.00\",\n          \"Leistung\": \"10.00\",\n          \"Hochtarif\": \"1.85\",\n          \"Niedertarif\": \"1.85\"\n        },\n        \"Abgaben\": {\n          \"Systemdienstleistungen\": \"0.75\",\n          \"Stromreserve\": \"1.20\",\n          \"Netzzuschlag\": \"2.30\"\n        }\n      }\n    }\n  ]\n}\n```",
+        "annotations": []
+    },
+    "citations": []
+}

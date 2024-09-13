@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"\",\"Produkte\":[{\"Name\":\"Stromtarif 2024\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Energie\",\"Menge\":\"25.00\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Hochtarif: Von 00:00 bis 01:00: 25.00, Niedertarif: Von 00:00 bis 01:00: 25.00\"},{\"Name\":\"Netznutzung\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/kW/Monat\",\"Unterkategorie\":\"Netznutzung\",\"Menge\":\"1.30\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Netz BWK: 1.30, Netz Büetigen: 1.20, Leistung BKW: 3.20, Systemdienstleistungen: 0.75\"},{\"Name\":\"Abgaben\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"weitere Abgaben\",\"Menge\":\"2.30\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Gesetzliche Förderabgabe: 2.30\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"Haushalt\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Ja\"}]}",
+        "annotations": []
+    },
+    "citations": []
+}

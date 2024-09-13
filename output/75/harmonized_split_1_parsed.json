@@ -1,0 +1,81 @@
+{
+    "Netzbetreiber": "unknown",
+    "Produkte": [
+        {
+            "Name": "easy power / NS 2",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "55.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 3.80, Von 01:00 bis 02:00 in Rp./kWh: 3.80"
+                },
+                {
+                    "Name": "Energielieferung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 14.00, Von 01:00 bis 02:00 in Rp./kWh: 14.00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 2.30, Von 01:00 bis 02:00 in Rp./kWh: 2.30"
+                }
+            ],
+            "Gültigkeit": "unknown",
+            "Verbrauchskategorie": "unknown",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "professional classic / NS 1",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "360.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 3.50, Von 01:00 bis 02:00 in Rp./kWh: 3.50"
+                },
+                {
+                    "Name": "Energielieferung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "14.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 14.00, Von 01:00 bis 02:00 in Rp./kWh: 14.00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh: 2.30, Von 01:00 bis 02:00 in Rp./kWh: 2.30"
+                }
+            ],
+            "Gültigkeit": "unknown",
+            "Verbrauchskategorie": "unknown",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

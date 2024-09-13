@@ -1,0 +1,63 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "STANDARD",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20.6",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "6.9",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "PLUS mit Sonne",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "25.9",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "27.5",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

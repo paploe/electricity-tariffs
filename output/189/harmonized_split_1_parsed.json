@@ -1,0 +1,456 @@
+{
+    "Netzbetreiber": "Unknown",
+    "Produkte": [
+        {
+            "Name": "ELS 01",
+            "Beschreibung": "Haushalt 400 V",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hochtarif",
+                    "Beschreibung": "Von 07:00 bis 20:00 Montag bis Freitag und 07:00 bis 13:00 Uhr Samstag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10.40",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie Niedertarif",
+                    "Beschreibung": "Niedertarif übrige Zeiten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Leistungspreis",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "14.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gemeindeabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.44",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "SDL",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "ELS 02",
+            "Beschreibung": "Gewerbe 400 V",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hochtarif",
+                    "Beschreibung": "Von 07:00 bis 20:00 Montag bis Freitag und 07:00 bis 13:00 Uhr Samstag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie Niedertarif",
+                    "Beschreibung": "Niedertarif übrige Zeiten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "7.80",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Leistungspreis",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "5.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gemeindeabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.44",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "SDL",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "ELS 03",
+            "Beschreibung": "Gewerbe 400 V",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hochtarif",
+                    "Beschreibung": "Von 07:00 bis 20:00 Montag bis Freitag und 07:00 bis 13:00 Uhr Samstag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie Niedertarif",
+                    "Beschreibung": "Niedertarif übrige Zeiten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "7.80",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Leistungspreis",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "5.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gemeindeabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.44",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "SDL",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "ELS 04",
+            "Beschreibung": "Gewerbe 400 V",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hochtarif",
+                    "Beschreibung": "Von 07:00 bis 20:00 Montag bis Freitag und 07:00 bis 13:00 Uhr Samstag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "10.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie Niedertarif",
+                    "Beschreibung": "Niedertarif übrige Zeiten",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "7.80",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.40",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "6.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Leistungspreis",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Leistungspreis",
+                    "Menge": "7.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gemeindeabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.44",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "SDL",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Gewerbe",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "ELS 05",
+            "Beschreibung": "Ersatz- und Ergänzungsenergie",
+            "Komponenten": [
+                {
+                    "Name": "Energie Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "27.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Energie Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "27.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gemeindeabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.44",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "SDL",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netzzuschlag",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "Unknown",
+            "Verbrauchskategorie": "Ersatz- und Ergänzungsenergie",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "Netzbetreiber": "",
+    "Produkte": [
+        {
+            "Name": "",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "Netzbetreiber": "",
+    "Produkte": [
+        {
+            "Name": "Tarif 1 NS",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif: Von 00:00 bis 01:00: 8.60"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "8.60",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif: Von 00:00 bis 01:00: 8.60"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "300.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "0.75"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Stromreserve des Bundes: 1.20, KEV swissgrid: 0.10"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

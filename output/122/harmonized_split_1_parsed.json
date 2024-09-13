@@ -1,0 +1,301 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Einfach Haushalt",
+            "Beschreibung": "ET",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "17.70",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Gewässerschutzabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                }
+            ],
+            "Gültigkeit": "Unbekannt",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Haushalt",
+            "Beschreibung": "DT",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "13.70",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Gewässerschutzabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                }
+            ],
+            "Gültigkeit": "Unbekannt",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Hauswärme (WP)",
+            "Beschreibung": "DT",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "13.70",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Gewässerschutzabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                }
+            ],
+            "Gültigkeit": "Unbekannt",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Gewerbe",
+            "Beschreibung": "DT",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.40",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Stromreserve",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Gesetzliche Förderabgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Gewässerschutzabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                }
+            ],
+            "Gültigkeit": "Unbekannt",
+            "Verbrauchskategorie": "Unbekannt",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

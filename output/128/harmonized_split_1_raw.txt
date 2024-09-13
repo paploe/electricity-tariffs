@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"Unbekannt\",\"Produkte\":[{\"Name\":\"Strompreis Gewerbe 03 (Leistungspreistarif)\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Doppeltarif\",\"Tarifzeiten\":\"Hochtarif: 20.20, Niedertarif: 17.20\"},{\"Name\":\"Netz\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Netznutzung\",\"Menge\":\"\",\"Tariftyp\":\"Doppeltarif\",\"Tarifzeiten\":\"Hochtarif: 4.20, Niedertarif: 3.20\"},{\"Name\":\"Steuern\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"weitere Abgaben\",\"Menge\":\"\",\"Tariftyp\":\"Doppeltarif\",\"Tarifzeiten\":\"Energie aus 100% Wasserkraft naturemade basic (Zuschlag): 0.80, Kommunale Leistungen (Abgabe an Gemeinde): 1.05, Systemdienstleistungen Swissgrid (SDL), Stromreserve: 1.95, Abgabe kostendeckende Einspeisevergütung (KEV): 2.20, Abgabe zum Schutz der Fische und Gewässer: 0.10\"}],\"Gültigkeit\":\"Unbekannt\",\"Verbrauchskategorie\":\"Gewerbe\",\"Verbrauchstyp\":\"Gewerbe & Industrie\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Nein\"}]}",
+        "annotations": []
+    },
+    "citations": []
+}

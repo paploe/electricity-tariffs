@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"Standard Gewerbe\",\"Produkte\":[{\"Name\":\"Standard Gewerbe\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Energie\",\"Menge\":\"12.00 Rp./kWh\",\"Tariftyp\":\"Doppeltarif\",\"Tarifzeiten\":\"Hochtarif und Niedertarif\"},{\"Name\":\"Netznutzung\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Netznutzung\",\"Menge\":\"9.80 Rp./kWh\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"},{\"Name\":\"Abgaben\",\"Beschreibung\":\"\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"weitere Abgaben\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"Gewerbe & Industrie\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Nein\"}]}",
+        "annotations": []
+    },
+    "citations": []
+}

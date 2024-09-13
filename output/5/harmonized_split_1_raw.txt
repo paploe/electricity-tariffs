@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"\",\"Produkte\":[] }",
+        "annotations": []
+    },
+    "citations": []
+}

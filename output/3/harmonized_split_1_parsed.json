@@ -1,0 +1,335 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "TOPAZE",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.96",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12.88",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "13.40",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.10",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Swissgrid SA - Services systèmes",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "RPC et protection des eaux et poissons",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Réserve d’électricité de la Confédération",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "PCP",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "AMBRE",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.48",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17.40",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "13.70",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.54",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Swissgrid SA - Services systèmes",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "RPC et protection des eaux et poissons",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Réserve d’électricité de la Confédération",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "PCP",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "OPALE",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "13.66",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "12.58",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Hochtarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.65",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Niedertarif",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.54",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Swissgrid SA - Services systèmes",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "RPC et protection des eaux et poissons",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.30",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Réserve d’électricité de la Confédération",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "PCP",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.20",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

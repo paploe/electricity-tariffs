@@ -1,0 +1,299 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Doppeltarif < 50'000 kWh/pro Jahr",
+            "Beschreibung": "Tarif für Haushalte mit einem Verbrauch von weniger als 50'000 kWh pro Jahr.",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Grundpreis für die Netznutzung.",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "basic_price",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Hochtarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Niedertarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Förderabgabe für erneuerbare",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Bundesabgabe zum Schutz der Gewässer und Fische",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                }
+            ],
+            "Gültigkeit": "01.01.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif LG > 50'000 kWh/pro Jahr",
+            "Beschreibung": "Tarif für Haushalte mit einem Verbrauch von mehr als 50'000 kWh pro Jahr.",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Grundpreis für die Netznutzung.",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "basic_price",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Hochtarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Niedertarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Leistung",
+                    "Einheit": "CHF/kW/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Blindenergie",
+                    "Einheit": "Rp./kVarh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Förderabgabe für erneuerbare",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Bundesabgabe zum Schutz der Gewässer und Fische",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                }
+            ],
+            "Gültigkeit": "01.01.2024",
+            "Verbrauchskategorie": "Gewerbe & Industrie",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Tarif S6 < 100'000 kWh/pro Jahr",
+            "Beschreibung": "Tarif für Haushalte mit einem Verbrauch von weniger als 100'000 kWh pro Jahr.",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Tarif für den Energieverbrauch.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Grundpreis für die Netznutzung.",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "basic_price",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Hochtarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "high_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netz",
+                    "Beschreibung": "Tarif für die Netznutzung im Niedertarif.",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "low_tariff",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Systemdienstleistungen (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Stromreserve (Swissgrid)",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Förderabgabe für erneuerbare",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Bundesabgabe zum Schutz der Gewässer und Fische",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "N/A",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "N/A"
+                }
+            ],
+            "Gültigkeit": "01.01.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

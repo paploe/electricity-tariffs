@@ -1,0 +1,153 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Basis-Econo",
+            "Beschreibung": "Standardprodukt für Haushalte",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "niedrig",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "niedrig",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "Netzzuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "Abgabe an die Standortgemeinde",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Grundpreis",
+                    "Beschreibung": "Monatlicher Grundpreis",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                }
+            ],
+            "Gültigkeit": "01.01.2024 - 31.12.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "Turbo-Econo",
+            "Beschreibung": "Schneller Tarif für Haushalte",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "Kosten für den Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "niedrig",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "hoch",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "Kosten für die Nutzung des Stromnetzes",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "niedrig",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "Netzzuschlag",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "Abgabe an die Standortgemeinde",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                },
+                {
+                    "Name": "Grundpreis",
+                    "Beschreibung": "Monatlicher Grundpreis",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "01.01.2024 - 31.12.2024"
+                }
+            ],
+            "Gültigkeit": "01.01.2024 - 31.12.2024",
+            "Verbrauchskategorie": "Haushalt",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

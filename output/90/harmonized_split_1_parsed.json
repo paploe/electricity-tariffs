@@ -1,0 +1,200 @@
+{
+    "Netzbetreiber": "unknown",
+    "Produkte": [
+        {
+            "Name": "Baustrom",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "28.70",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "21.80",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (Stromreserve)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Abgaben und Leistungen an das Gemeinwesen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.25",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "unknown",
+            "Verbrauchskategorie": "unknown",
+            "Verbrauchstyp": "Bau",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Basisgruppe",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "23.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (Stromreserve)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Abgaben und Leistungen an das Gemeinwesen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.25",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "unknown",
+            "Verbrauchskategorie": "unknown",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Industrie und Grossgewerbe",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "21.80",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Systemdienstleistung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (KEV)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Gesetzliche Abgabe (Stromreserve)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                },
+                {
+                    "Name": "Abgaben und Leistungen an das Gemeinwesen",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "0.25",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00 in Rp./kWh"
+                }
+            ],
+            "Gültigkeit": "unknown",
+            "Verbrauchskategorie": "unknown",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

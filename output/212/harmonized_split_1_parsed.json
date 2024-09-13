@@ -1,0 +1,189 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "Tarif GN",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreise",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 20:00 Uhr Montag bis Freitag, 07:00 bis 13:00 Uhr Samstag"
+                },
+                {
+                    "Name": "Energiepreise",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "übrige Zeit"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "8.50",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "10.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "8.1%",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        },
+        {
+            "Name": "Tarif EH/GH",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreise",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Von 07:00 bis 20:00 Uhr Montag bis Freitag, 07:00 bis 13:00 Uhr Samstag"
+                },
+                {
+                    "Name": "Energiepreise",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "16.90",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "übrige Zeit"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "11.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Hochtarif"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "7.10",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Niedertarif"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "CHF/Monat",
+                    "Unterkategorie": "Grundpreis Netz inkl. Messung, Zählermiete, Abrechnung",
+                    "Menge": "10.00",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Stromreserve",
+                    "Menge": "1.20",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                    "Menge": "2.30",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zusätzliche Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "8.1%",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Nein"
+        }
+    ]
+}

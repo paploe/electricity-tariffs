@@ -1,0 +1,409 @@
+{
+    "Netzbetreiber": "Unbekannt",
+    "Produkte": [
+        {
+            "Name": "MAXI",
+            "Beschreibung": "Strom für Privat- und Gewerbekunden mit einem Jahresverbrauch über 50’000 kWh",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Winter"
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Sommer"
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "6 %",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "gesetzliche Mehrkostenfinanzierung",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "OeB",
+            "Beschreibung": "Strom für Kunden mit Energiebezug in Niederspannung - Öffentliche Beleuchtung",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 1 (HT) + Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 1 (HT) + Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "6 %",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "gesetzliche Mehrkostenfinanzierung",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "MINI",
+            "Beschreibung": "Strom für Privat- und Gewerbekunden mit einem Jahresverbrauch bis zu 50’000 kWh",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Netznutzung",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Konzessionsabgabe",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "6 %",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "gesetzliche Mehrkostenfinanzierung",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Systemdienstleistungen",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "PEA",
+            "Beschreibung": "Vergütung für Produzenten mit Einspeisung aus Anlagen bis 100 kVA",
+            "Komponenten": [
+                {
+                    "Name": "Energie",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 1 (HT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Zone 2 (NT)",
+                    "Beschreibung": "",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Abgaben",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Messinstrument",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                },
+                {
+                    "Name": "Auslesung",
+                    "Beschreibung": "",
+                    "Einheit": "weitere",
+                    "Unterkategorie": "Abgaben an Gemeinde",
+                    "Menge": "included",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": ""
+                }
+            ],
+            "Gültigkeit": "01.01.2024 bis 31.12.2024",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "weitere",
+            "Netzebene": "weitere",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

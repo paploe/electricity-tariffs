@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"unknown\",\"Produkte\":[{\"Name\":\"KN-24\",\"Beschreibung\":\"unknown\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"Energiepreis für den Tarif KN-24\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Energie\",\"Menge\":\"17.1\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"hoch: 17.1, niedrig: 17.1\"},{\"Name\":\"Netz\",\"Beschreibung\":\"Netznutzungspreis für den Tarif KN-24\",\"Einheit\":\"Rp./kWh\",\"Unterkategorie\":\"Netznutzung\",\"Menge\":\"8.5\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"unbekannt\"}],\"Gültigkeit\":\"2024-01-01 bis 2024-12-31\",\"Verbrauchskategorie\":\"unknown\",\"Verbrauchstyp\":\"Haushalt\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Nein\"}]}",
+        "annotations": []
+    },
+    "citations": []
+}

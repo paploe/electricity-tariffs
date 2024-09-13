@@ -1,0 +1,21 @@
+{
+    "Durschschnittspreis": {
+        "Netznutzung": {
+            "Grundpreis in CHF": 20,
+            "Leistungspreis in CHF": 11,
+            "Systemdienstleistung in Rp./kWh": 19.05,
+            "ZusätzlicherRabatt in Rp./kWh": 19.05
+        },
+        "Energielieferung": {
+            "Grundpreis in CHF": 9.25,
+            "Leistungspreis in CHF": 9.25,
+            "ZusätzlicherRabatt in Rp./kWh": 0
+        },
+        "Abgaben in Rp./kWh": [
+            1.95,
+            2.3
+        ],
+        "Netzuschlag in Rp./kWh": 0,
+        "Stromreserve/Winterstromreserve in in Rp./kWh": 0
+    }
+}

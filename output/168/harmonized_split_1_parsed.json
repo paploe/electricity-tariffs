@@ -1,0 +1,254 @@
+{
+    "Netzbetreiber": "ELO",
+    "Produkte": [
+        {
+            "Name": "ELO 01 Basistar",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22.2",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.5",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "10.3",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "5.3",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "SDL"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Stromreserve"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Netzzuschlag"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Schutz der Gewässer"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "ELO 02 Basistar",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "22.0",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "18.2",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "10.3",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "5.5",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "SDL"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Stromreserve"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Netzzuschlag"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Schutz der Gewässer"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Haushalt",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        },
+        {
+            "Name": "ELO 03 Gewerbe",
+            "Beschreibung": "",
+            "Komponenten": [
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "20.7",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Energiepreis",
+                    "Beschreibung": "Preis für Energieverbrauch",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Energie",
+                    "Menge": "17.7",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "9.2",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 00:00 bis 01:00"
+                },
+                {
+                    "Name": "Netzpreis",
+                    "Beschreibung": "Preis für Netznutzung",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "Netznutzung",
+                    "Menge": "4.8",
+                    "Tariftyp": "Doppeltarif",
+                    "Tarifzeiten": "Von 01:00 bis 02:00"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.75",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "SDL"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "1.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Stromreserve"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "2.2",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Netzzuschlag"
+                },
+                {
+                    "Name": "Steuern",
+                    "Beschreibung": "Steuerabgaben",
+                    "Einheit": "Rp./kWh",
+                    "Unterkategorie": "weitere Abgaben",
+                    "Menge": "0.1",
+                    "Tariftyp": "Einfachtarif",
+                    "Tarifzeiten": "Schutz der Gewässer"
+                }
+            ],
+            "Gültigkeit": "",
+            "Verbrauchskategorie": "",
+            "Verbrauchstyp": "Gewerbe & Industrie",
+            "Netzebene": "Niederspannung",
+            "Standardprodukt": "Ja"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "text": {
+        "value": "{\"Netzbetreiber\":\"Unknown\",\"Produkte\":[{\"Name\":\"Casa & PMI flessibilità\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Diurna (06:00-22:00)\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"Haushalt\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Ja\"},{\"Name\":\"Casa Plus 24h\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Diurna (06:00-22:00)\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"Haushalt\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Ja\"},{\"Name\":\"Casa Plus giorno-notte\",\"Beschreibung\":\"\",\"Komponenten\":[{\"Name\":\"Energie\",\"Beschreibung\":\"\",\"Einheit\":\"CHF/Monat\",\"Unterkategorie\":\"Energie\",\"Menge\":\"\",\"Tariftyp\":\"Einfachtarif\",\"Tarifzeiten\":\"Diurna (06:00-22:00)\"}],\"Gültigkeit\":\"\",\"Verbrauchskategorie\":\"\",\"Verbrauchstyp\":\"Haushalt\",\"Netzebene\":\"Niederspannung\",\"Standardprodukt\":\"Ja\"}]}",
+        "annotations": []
+    },
+    "citations": []
+}
