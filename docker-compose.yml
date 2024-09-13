@@ -12,9 +12,6 @@ services:
     networks:
       - app
     container_name: frontend
-    depends_on:
-      backend:
-        condition: service_healthy
 
   backend:
     build: demo/backend
@@ -26,11 +23,6 @@ services:
     networks:
       - app
     container_name: backend
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://backend:8000/docs"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
 
   scraper:
     build: scraper
@@ -45,9 +37,6 @@ services:
     networks:
       - app
     container_name: scraper
-    depends_on:
-      backend:
-        condition: service_healthy
 
 networks:
   app:
