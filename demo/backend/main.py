@@ -24,6 +24,22 @@ async def get_status():
     return status_dict
 
 
+@app.get("/reset/")
+async def reset():
+    status_dict.update({
+        "scrap_file": False,
+        "download_file": False,
+        "extract_data": False,
+        "harmonize_data_1": False,
+        "harmonize_data_2": False,
+        "harmonize_data_3": False,
+        "harmonize_data_4": False,
+        "harmonize_data_5": False,
+        "harmonize_data_6": False,
+        "finalize_data": False
+    })
+
+
 @app.post("/set_status/")
 async def set_status(data: dict):
     assert isinstance(data, dict)
