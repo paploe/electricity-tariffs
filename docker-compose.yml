@@ -1,20 +1,20 @@
 version: '3.8'
 services:
   frontend:
-    build: demo/frontend
+    build: frontend
     ports:
       - 8501:8501
     volumes:
-      - ./frontend:/app
-      - ./../constants:/constants
-      - ./../coverage-analyzer:/coverage-analyzer
+      - ./demo/frontend:/app
+      - ./constants:/constants
+      - ./coverage-analyzer:/coverage-analyzer
     restart: always
     networks:
       - app
     container_name: frontend
 
   backend:
-    build: demo/backend
+    build: backend
     ports:
       - 8000:8000
     volumes:
@@ -29,11 +29,11 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./../scraper:/app
-      - ./../database:/database
-      - ./../output:/output
-      - ./../schema:/schema
-      - ./../prompts:/prompts
+      - ./scraper:/app
+      - ./database:/database
+      - ./output:/output
+      - ./schema:/schema
+      - ./prompts:/prompts
     networks:
       - app
     container_name: scraper
