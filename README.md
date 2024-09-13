@@ -233,6 +233,9 @@ docker run -it --rm -v $(pwd):/usr/src/app -w /usr/src/app --user root node:20.1
 
 ## [wip] Batch processing
 ````bash
-nohup bash ./process_all.sh > myoutput.txt 2>&1 &
-tail -f myoutput.txt
+nohup bash ./process_all.sh > scraping_output.txt 2>&1 &
+tail -f scraping_output.txt
+
+nohup bash ./calculate_all.sh > calculation_output.txt 2>&1 &
+tail -f calculation_output.txt
 ````
