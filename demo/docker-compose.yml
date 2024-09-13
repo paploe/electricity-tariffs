@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  frontend:
+    build: frontend
+    ports:
+      - 8501:8501
+    volumes:
+      - ./frontend:/app
+      - ./../constants:/constants
+      - ./../coverage-analyzer:/coverage-analyzer
+    restart: always
+    networks:
+      - app
+    container_name: frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  backend:
+    build: backend
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend:/app
+    restart: always
+    networks:
+      - app
+    container_name: backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://backend:8000/docs"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  scraper:
+    build: scraper
+    ports:
+      - 3000:3000
+    volumes:
+      - ./../scraper:/app
+      - ./../database:/database
+      - ./../output:/output
+      - ./../schema:/schema
+      - ./../prompts:/prompts
+    networks:
+      - app
+    container_name: scraper
+    depends_on:
+      backend:
+        condition: service_healthy
+
+networks:
+  app:
+    driver: bridge

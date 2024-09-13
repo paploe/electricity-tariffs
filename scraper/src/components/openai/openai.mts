@@ -1,6 +1,5 @@
 import OpenAI from "openai";
 import * as fs from "fs";
-import * as test from "node:test";
 const openai = new OpenAI();
 
 async function ask(
