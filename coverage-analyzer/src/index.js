@@ -3,6 +3,11 @@ import path from 'path';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { readFile } from 'fs/promises';
+import {writeFileSync, mkdirSync } from 'fs';
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function flattenObject(obj, parent = '', res = {}) {
     for (let key in obj) {
@@ -80,9 +85,7 @@ async function analyzeFiles(filePaths) {
     const statistics = {
         countProcessed: 0,
         countInvalid: 0,
-        properties: {
-
-        }
+        properties: {}
     };
     for(let i = 0; i < filePaths.length; i++) {
         let filePath = filePaths[i];
@@ -93,10 +96,11 @@ async function analyzeFiles(filePaths) {
             const parsedData = JSON.parse(jsonData);
             const parsedDataFlat = flattenObject(parsedData);
             Object.keys(parsedDataFlat).forEach(key => {
-                statistics.properties[key] = [
-                    ...[statistics.properties[key] || []],
-                    parsedDataFlat[key]
-                ];
+                if(statistics.properties[key] === undefined) {
+                    statistics.properties[key] = [];
+                } else {
+                    statistics.properties[key].push(parsedDataFlat[key])
+                }
             })
         } catch (e){
             statistics.countInvalid+=1;
@@ -118,7 +122,9 @@ try {
     // Output the filtered file paths
     console.log('Filtered files:', filteredFiles);
     let coverageReport = await analyzeFiles(filteredFiles);
-    console.log("Coverage report: ", JSON.stringify(coverageReport, null, 2));
+    console.log("Coverage report ready to be written to disk.");
+    // Ensure directory exists using fs.mkdirSync with recursive option
+    await writeFileSync(path.resolve(`${__dirname}/stats.json`), JSON.stringify(coverageReport, null, 2));
 } catch (error) {
     console.error('Error:', error.message);
 }

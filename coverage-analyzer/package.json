@@ -4,8 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js --directory=../output --pattern=\"analysis_\\\\d+\\\\.json\"",
-    "start-alt": "node src/index.js --directory=../output --pattern=\"output.json\"",
+    "start": "node src/index.js --directory=../../output --pattern=\".*.json\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
