@@ -11,4 +11,4 @@ EXPOSE 8100
 
 ENTRYPOINT ["streamlit","run"]
 
-CMD ["main.py"]
+CMD ["home.py"]
