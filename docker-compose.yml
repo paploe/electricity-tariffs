@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   frontend:
-    build: frontend
+    build: demo/frontend
     ports:
       - 8501:8501
     volumes:
@@ -17,7 +17,7 @@ services:
         condition: service_healthy
 
   backend:
-    build: backend
+    build: demo/backend
     ports:
       - 8000:8000
     volumes:
