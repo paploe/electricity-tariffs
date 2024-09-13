@@ -42,10 +42,10 @@ def click_start_process(elcom_name: str):
     st.session_state.clicked = True
 
     # reset frontend progress bar
-    _ = requests.post(f'http://scraper:3000/scraper?elcom={elcon_dict[elcom_name]}')
+    _ = requests.get(f'http://scraper:3000/scraper?elcom={elcon_dict[elcom_name]}')
 
     # start scrapper
-    _ = requests.get(f'http://scraper:3000/scraper?elcom={elcon_dict[elcom_name]}')
+    _ = requests.get(f'http://backend:8000/reset')
 
 
 def click_reset():
