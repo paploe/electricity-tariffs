@@ -1,0 +1,775 @@
+{
+    "input": {
+        "Netzbetreiber": "Unbekannt",
+        "Produkte": [
+            {
+                "Name": "Haushalt und Kleingewerbe ELE 01",
+                "Beschreibung": "",
+                "Komponenten": [
+                    {
+                        "Name": "Energiepreis Hochtarif",
+                        "Beschreibung": "Preis für den Hochtarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.5",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 07:00 bis 20:00"
+                    },
+                    {
+                        "Name": "Energiepreis Niedertarif",
+                        "Beschreibung": "Preis für den Niedertarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.1",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 20:00 bis 07:00"
+                    },
+                    {
+                        "Name": "Netzpreis Normalbelastung",
+                        "Beschreibung": "Preis für die normale Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "7.8",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzpreis Niedrigbelastung",
+                        "Beschreibung": "Preis für die niedrige Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "5.4",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzzuschlag",
+                        "Beschreibung": "Zusatzgebühr für das Netz",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                        "Menge": "2.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Systemdienstleistungen",
+                        "Beschreibung": "Gebühr für Systemdienstleistungen",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                        "Menge": "0.75",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Stromreserve",
+                        "Beschreibung": "Gebühr für die Stromreserve",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Stromreserve",
+                        "Menge": "1.20",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Gemeindebeitrag",
+                        "Beschreibung": "Beitrag an die Gemeinde",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Abgaben an Gemeinde",
+                        "Menge": "0.39",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    }
+                ],
+                "Gültigkeit": "",
+                "Verbrauchskategorie": "",
+                "Verbrauchstyp": "Haushalt",
+                "Netzebene": "Niederspannung",
+                "Standardprodukt": "Ja"
+            },
+            {
+                "Name": "Gewerbe ELE 02",
+                "Beschreibung": "",
+                "Komponenten": [
+                    {
+                        "Name": "Energiepreis Hochtarif",
+                        "Beschreibung": "Preis für den Hochtarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.1",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 07:00 bis 20:00"
+                    },
+                    {
+                        "Name": "Energiepreis Niedertarif",
+                        "Beschreibung": "Preis für den Niedertarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 20:00 bis 07:00"
+                    },
+                    {
+                        "Name": "Netzpreis Normalbelastung",
+                        "Beschreibung": "Preis für die normale Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "6.4",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzpreis Niedrigbelastung",
+                        "Beschreibung": "Preis für die niedrige Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "4.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzzuschlag",
+                        "Beschreibung": "Zusatzgebühr für das Netz",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                        "Menge": "2.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Systemdienstleistungen",
+                        "Beschreibung": "Gebühr für Systemdienstleistungen",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                        "Menge": "0.75",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Stromreserve",
+                        "Beschreibung": "Gebühr für die Stromreserve",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Stromreserve",
+                        "Menge": "1.20",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Gemeindebeitrag",
+                        "Beschreibung": "Beitrag an die Gemeinde",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Abgaben an Gemeinde",
+                        "Menge": "0.39",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    }
+                ],
+                "Gültigkeit": "",
+                "Verbrauchskategorie": "",
+                "Verbrauchstyp": "Gewerbe & Industrie",
+                "Netzebene": "Niederspannung",
+                "Standardprodukt": "Nein"
+            },
+            {
+                "Name": "Gewerbe ELE 03 mit FNZ",
+                "Beschreibung": "",
+                "Komponenten": [
+                    {
+                        "Name": "Energiepreis Hochtarif",
+                        "Beschreibung": "Preis für den Hochtarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 07:00 bis 20:00"
+                    },
+                    {
+                        "Name": "Energiepreis Niedertarif",
+                        "Beschreibung": "Preis für den Niedertarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 20:00 bis 07:00"
+                    },
+                    {
+                        "Name": "Netzpreis Normalbelastung",
+                        "Beschreibung": "Preis für die normale Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "6.3",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzpreis Niedrigbelastung",
+                        "Beschreibung": "Preis für die niedrige Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "4.1",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzzuschlag",
+                        "Beschreibung": "Zusatzgebühr für das Netz",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                        "Menge": "2.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Systemdienstleistungen",
+                        "Beschreibung": "Gebühr für Systemdienstleistungen",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                        "Menge": "0.75",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Stromreserve",
+                        "Beschreibung": "Gebühr für die Stromreserve",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Stromreserve",
+                        "Menge": "1.20",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Gemeindebeitrag",
+                        "Beschreibung": "Beitrag an die Gemeinde",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Abgaben an Gemeinde",
+                        "Menge": "0.39",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    }
+                ],
+                "Gültigkeit": "",
+                "Verbrauchskategorie": "",
+                "Verbrauchstyp": "Gewerbe & Industrie",
+                "Netzebene": "Niederspannung",
+                "Standardprodukt": "Nein"
+            },
+            {
+                "Name": "Gewerbe ELE 04 mit FNZ",
+                "Beschreibung": "",
+                "Komponenten": [
+                    {
+                        "Name": "Energiepreis Hochtarif",
+                        "Beschreibung": "Preis für den Hochtarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 07:00 bis 20:00"
+                    },
+                    {
+                        "Name": "Energiepreis Niedertarif",
+                        "Beschreibung": "Preis für den Niedertarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 20:00 bis 07:00"
+                    },
+                    {
+                        "Name": "Netzpreis Normalbelastung",
+                        "Beschreibung": "Preis für die normale Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "6.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzpreis Niedrigbelastung",
+                        "Beschreibung": "Preis für die niedrige Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "3.9",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzzuschlag",
+                        "Beschreibung": "Zusatzgebühr für das Netz",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                        "Menge": "2.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Systemdienstleistungen",
+                        "Beschreibung": "Gebühr für Systemdienstleistungen",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                        "Menge": "0.75",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Stromreserve",
+                        "Beschreibung": "Gebühr für die Stromreserve",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Stromreserve",
+                        "Menge": "1.20",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Gemeindebeitrag",
+                        "Beschreibung": "Beitrag an die Gemeinde",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Abgaben an Gemeinde",
+                        "Menge": "0.39",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    }
+                ],
+                "Gültigkeit": "",
+                "Verbrauchskategorie": "",
+                "Verbrauchstyp": "Gewerbe & Industrie",
+                "Netzebene": "Niederspannung",
+                "Standardprodukt": "Nein"
+            },
+            {
+                "Name": "Industrie 16 kV ELE 05",
+                "Beschreibung": "",
+                "Komponenten": [
+                    {
+                        "Name": "Energiepreis Hochtarif",
+                        "Beschreibung": "Preis für den Hochtarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 07:00 bis 20:00"
+                    },
+                    {
+                        "Name": "Energiepreis Niedertarif",
+                        "Beschreibung": "Preis für den Niedertarif",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Energie",
+                        "Menge": "7.0",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": "Von 20:00 bis 07:00"
+                    },
+                    {
+                        "Name": "Netzpreis Normalbelastung",
+                        "Beschreibung": "Preis für die normale Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "4.15",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzpreis Niedrigbelastung",
+                        "Beschreibung": "Preis für die niedrige Last",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netznutzung",
+                        "Menge": "2.70",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Netzzuschlag",
+                        "Beschreibung": "Zusatzgebühr für das Netz",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Netzzuschlag (gem. Art. 35 EnG)",
+                        "Menge": "2.2",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Systemdienstleistungen",
+                        "Beschreibung": "Gebühr für Systemdienstleistungen",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Systemdienstleistungen swissgrid (SDL)",
+                        "Menge": "0.75",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Stromreserve",
+                        "Beschreibung": "Gebühr für die Stromreserve",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Stromreserve",
+                        "Menge": "1.20",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    },
+                    {
+                        "Name": "Gemeindebeitrag",
+                        "Beschreibung": "Beitrag an die Gemeinde",
+                        "Einheit": "Rp./kWh",
+                        "Unterkategorie": "Abgaben an Gemeinde",
+                        "Menge": "0.12",
+                        "Tariftyp": "Einfachtarif",
+                        "Tarifzeiten": ""
+                    }
+                ],
+                "Gültigkeit": "",
+                "Verbrauchskategorie": "",
+                "Verbrauchstyp": "Gewerbe & Industrie",
+                "Netzebene": "Mittelspannung",
+                "Standardprodukt": "Nein"
+            }
+        ],
+        "Netznutzung": {
+            "Winter": {
+                "Montag-Freitag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Samstag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Sonntag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                }
+            },
+            "Sommer": {
+                "Montag-Freitag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Samstag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Sonntag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                }
+            }
+        },
+        "Energielieferung": {
+            "Winter": {
+                "Montag-Freitag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Samstag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Sonntag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                }
+            },
+            "Sommer": {
+                "Montag-Freitag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Samstag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                },
+                "Sonntag": {
+                    "Von 00:00 bis 01:00 in Rp./kWh": 0,
+                    "Von 01:00 bis 02:00 in Rp./kWh": 0,
+                    "Von 02:00 bis 03:00 in Rp./kWh": 0,
+                    "Von 03:00 bis 04:00 in Rp./kWh": 0,
+                    "Von 04:00 bis 05:00 in Rp./kWh": 0,
+                    "Von 05:00 bis 06:00 in Rp./kWh": 0,
+                    "Von 06:00 bis 07:00 in Rp./kWh": 0,
+                    "Von 07:00 bis 08:00 in Rp./kWh": 0,
+                    "Von 08:00 bis 09:00 in Rp./kWh": 0,
+                    "Von 09:00 bis 10:00 in Rp./kWh": 0,
+                    "Von 10:00 bis 11:00 in Rp./kWh": 0,
+                    "Von 11:00 bis 12:00 in Rp./kWh": 0,
+                    "Von 12:00 bis 13:00 in Rp./kWh": 0,
+                    "Von 13:00 bis 14:00 in Rp./kWh": 0,
+                    "Von 14:00 bis 15:00 in Rp./kWh": 0,
+                    "Von 15:00 bis 16:00 in Rp./kWh": 0,
+                    "Von 16:00 bis 17:00 in Rp./kWh": 0,
+                    "Von 17:00 bis 18:00 in Rp./kWh": 0,
+                    "Von 18:00 bis 19:00 in Rp./kWh": 0,
+                    "Von 19:00 bis 20:00 in Rp./kWh": 0,
+                    "Von 20:00 bis 21:00 in Rp./kWh": 0,
+                    "Von 21:00 bis 22:00 in Rp./kWh": 0,
+                    "Von 22:00 bis 23:00 in Rp./kWh": 0,
+                    "Von 23:00 bis 00:00 in Rp./kWh": 0
+                }
+            }
+        },
+        "Durschschnittspreis": {
+            "Netznutzung": {
+                "Grundpreis in CHF": 0,
+                "Leistungspreis in CHF": 0,
+                "Systemdienstleistung in Rp./kWh": 0,
+                "ZusätzlicherRabatt in Rp./kWh": 0
+            },
+            "Energielieferung": {
+                "Grundpreis in CHF": 0,
+                "Leistungspreis in CHF": 0,
+                "ZusätzlicherRabatt in Rp./kWh": 0
+            },
+            "Abgaben in Rp./kWh": [
+                2.2,
+                0.75,
+                1.2,
+                0.39
+            ],
+            "Netzuschlag in Rp./kWh": 0,
+            "Stromreserve/Winterstromreserve in in Rp./kWh": 0
+        }
+    },
+    "output": {
+        "tiefster Preis [exkl. MWST]": 0.39,
+        "höchster Preis [exkl. MWST]": 2.2
+    },
+    "Elcom validation": {
+        "Elcom tiefster Preis [exkl. MWST]": false,
+        "Elcom höchster Preis [exkl. MWST]": false
+    }
+}

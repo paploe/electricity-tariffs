@@ -238,4 +238,7 @@ tail -f scraping_output.txt
 
 nohup bash ./calculate_all.sh > calculation_output.txt 2>&1 &
 tail -f calculation_output.txt
+
+nohup bash ./validate_all.sh > validation_output.txt 2>&1 &
+tail -f validation_output.txt
 ````

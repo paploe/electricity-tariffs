@@ -4,6 +4,20 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { readFile } from 'fs/promises';
 
+function flattenObject(obj, parent = '', res = {}) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            let propName = parent ? parent + '.' + key : key;
+            if (typeof obj[key] === 'object' && obj[key] !== null) {
+                flattenObject(obj[key], propName, res);
+            } else {
+                res[propName] = obj[key];
+            }
+        }
+    }
+    return res;
+}
+
 /**
  * Recursively lists all files in a directory.
  * @param {string} dir - The directory to start the search.
@@ -65,7 +79,10 @@ const regexPattern = argv.pattern;
 async function analyzeFiles(filePaths) {
     const statistics = {
         countProcessed: 0,
-        countInvalid: 0
+        countInvalid: 0,
+        properties: {
+
+        }
     };
     for(let i = 0; i < filePaths.length; i++) {
         let filePath = filePaths[i];
@@ -74,6 +91,13 @@ async function analyzeFiles(filePaths) {
         // Parse the JSON data
         try {
             const parsedData = JSON.parse(jsonData);
+            const parsedDataFlat = flattenObject(parsedData);
+            Object.keys(parsedDataFlat).forEach(key => {
+                statistics.properties[key] = [
+                    ...[statistics.properties[key] || []],
+                    parsedDataFlat[key]
+                ];
+            })
         } catch (e){
             statistics.countInvalid+=1;
         }
