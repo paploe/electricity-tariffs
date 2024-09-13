@@ -6,3 +6,4 @@
 !database/.gitkeep
 # Ignore all node_modules directories
 node_modules/
+tmp/
